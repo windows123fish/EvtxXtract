@@ -25,3 +25,7 @@ set(IMGUI_SRC
     external/imgui/imgui_draw.cpp
     external/imgui/imgui_tables.cpp
     external/imgui/imgui_widgets.cpp
+    external/imgui/imgui_demo.cpp
+)
+
+# Add source files for console version
