@@ -305,4 +305,5 @@ void GuiWindow::parseSelectedFile() {
         m_chunkInfo.clear();
         
         // Scan for chunks (each chunk is 64KB)
-        uint64_t file_size = fs::file_size(filepath
+        uint64_t file_size = fs::file_size(filepath);
+        uint64_t current_offset = 4096; // Skip file header
