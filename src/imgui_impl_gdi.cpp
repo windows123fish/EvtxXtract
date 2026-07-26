@@ -91,3 +91,6 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
 
     // Clear buffer
     memset(g_Buffer, 0, width * height * 4);
+
+    // Get the font texture
+    ImGuiIO& io = ImGui::GetIO();
