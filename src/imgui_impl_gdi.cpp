@@ -89,3 +89,5 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
     if (!ImGui_ImplGDI_CreateBuffer(width, height))
         return;
 
+    // Clear buffer
+    memset(g_Buffer, 0, width * height * 4);
