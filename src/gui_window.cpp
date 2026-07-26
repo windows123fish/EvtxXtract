@@ -136,3 +136,9 @@ void GuiWindow::render() {
     
     // File selection panel
     renderFileSelection();
+    
+    // File info panel
+    renderFileInfo();
+    
+    // Footer
+    renderFooter
