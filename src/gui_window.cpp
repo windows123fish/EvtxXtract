@@ -209,4 +209,5 @@ void GuiWindow::renderFileInfo() {
         ImGui::Text("块数量: %u", m_fileHeader.chunk_count);
         ImGui::Text("有效块数: %u", m_validChunkCount);
         
-        if (m_fileHeader.chunk_count != m_valid
+        if (m_fileHeader.chunk_count != m_validChunkCount) {
+            ImGui::TextColored(ImVec4(1.0f
