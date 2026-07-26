@@ -161,3 +161,11 @@ void GuiWindow::renderDrawData(ImDrawData* draw_data) {
         if (hBitmap) {
             DeleteObject(hBitmap);
             hBitmap = NULL;
+        }
+        if (buffer) {
+            delete[] buffer;
+            buffer = NULL;
+        }
+        
+        BITMAPINFO bmi;
+        ZeroMemory(&bmi, sizeof
