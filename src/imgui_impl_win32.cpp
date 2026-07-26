@@ -103,4 +103,5 @@ IMGUI_IMPL_API void ImGui_ImplWin32_NewFrame() {
     if (time == 0.0) {
         LARGE_INTEGER freq, counter;
         QueryPerformanceFrequency(&freq);
-        QueryPerformanceCounter(&counter
+        QueryPerformanceCounter(&counter);
+        time = (double)counter.QuadPart / freq.QuadPart;
