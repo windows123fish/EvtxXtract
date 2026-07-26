@@ -66,3 +66,6 @@ IMGUI_IMPL_API void ImGui_ImplWin32_DestroyWindow() {
 // Initialize ImGui for Win32
 IMGUI_IMPL_API bool ImGui_ImplWin32_Init(HWND hWnd) {
     g_hWnd = hWnd;
+    g_hDC = GetDC(hWnd);
+    
+    ImGui::CreateContext();
