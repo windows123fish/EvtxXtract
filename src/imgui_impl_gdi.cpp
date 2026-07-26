@@ -36,4 +36,8 @@ IMGUI_IMPL_API void ImGui_ImplGDI_Shutdown() {
 }
 
 // Create/resize offscreen buffer
-static
+static bool ImGui_ImplGDI_CreateBuffer(int width, int height) {
+    if (g_Width == width && g_Height == height)
+        return true;
+
+    //
