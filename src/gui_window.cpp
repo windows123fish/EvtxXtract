@@ -242,3 +242,5 @@ void GuiWindow::renderDrawData(ImDrawData* draw_data) {
                             float a = w0 * c0.w + w1 * c1.w + w2 * c2.w;
                             
                             int idx = (y * width + x) * 4;
+                            float alpha = a / 255.0f;
+                            buffer[idx] =
