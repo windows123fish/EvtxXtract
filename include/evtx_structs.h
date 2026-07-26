@@ -80,9 +80,9 @@ struct EVT_FILE_HEADER {
   uint32_t checksum;
 
   /**
-   * @brief Reserved/unused area (4056 bytes)
+   * @brief Reserved/unused area (4052 bytes)
    */
-  std::array<uint8_t, 4056> reserved;
+  std::array<uint8_t, 4052> reserved;
 
   bool validate_magic() const noexcept;
   uint16_t get_major_version() const noexcept;
