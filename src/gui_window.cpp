@@ -78,4 +78,29 @@ void CreateRenderTarget()
 {
     ID3D11Texture2D* pBackBuffer;
     g_pSwapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (LPVOID*)&pBackBuffer);
-    g_pd3dDevice
+    g_pd3dDevice->CreateRenderTargetView(pBackBuffer, nullptr, &g_mainRenderTargetView);
+    pBackBuffer->Release();
+}
+
+void CleanupRenderTarget()
+{
+    if (g_mainRenderTargetView) { g_mainRenderTargetView->Release(); g_mainRenderTargetView = nullptr; }
+}
+
+GuiWindow::GuiWindow() : 
+    m_hWnd(nullptr), 
+    m_isRunning(false),
+    m_selectedFileIndex(-1),
+    m_isParsing(false),
+    m_validChunkCount(0)
+{
+}
+
+GuiWindow::~GuiWindow() {
+    shutdown();
+}
+
+bool GuiWindow::init(HINSTANCE hInstance, const std::wstring& title, int width, int height) {
+    WNDCLASSW wc{};
+    wc.cbSize        = sizeof(WNDCLASSW);
+    wc.style         = CS_HREDRAW | CS_VREDRAW;
