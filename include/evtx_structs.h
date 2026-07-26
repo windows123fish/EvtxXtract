@@ -58,4 +58,7 @@ struct EVT_FILE_HEADER {
    * 
    * Currently always 0
    */
-  uint
+  uint16_t version_minor;
+
+  /**
+   * @brief File flags (2 bytes
