@@ -157,19 +157,26 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::string& title, int width, i
         "C:\\Windows\\Fonts\\simsun.ttc"
     };
     
-    bool font_loaded = false;
+    ImFont* loaded_font = nullptr;
     for (const char* font_path : font_paths) {
         if (fs::exists(font_path)) {
-            io.Fonts->AddFontFromFileTTF(font_path, 16.0f);
-            font_loaded = true;
-            break;
+            ImFontConfig config;
+            config.MergeMode = false;
+            config.GlyphRanges = io.Fonts->GetGlyphRangesChineseFull();
+            loaded_font = io.Fonts->AddFontFromFileTTF(font_path, 16.0f, &config);
+            if (loaded_font) {
+                break;
+            }
         }
     }
     
-    if (!font_loaded) {
+    if (!loaded_font) {
         // Fallback to default font
-        io.Fonts->AddFontDefault();
+        loaded_font = io.Fonts->AddFontDefault();
     }
+
+    // Set the loaded font as the default font
+    io.FontDefault = loaded_font;
 
     // Setup Dear ImGui style
     ImGui::StyleColorsDark();
