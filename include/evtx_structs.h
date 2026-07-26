@@ -124,4 +124,8 @@ struct EVT_FILE_HEADER {
    * 
    * @return true if file was not properly closed, false otherwise
    */
-  bool is_dirty() const noexcept
+  bool is_dirty() const noexcept;
+
+  /**
+   * @brief Get a human-readable description of the header
+   *
