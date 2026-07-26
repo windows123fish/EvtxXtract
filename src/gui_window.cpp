@@ -270,56 +270,56 @@ void GuiWindow::renderFileSelection() {
 
 void GuiWindow::renderFileInfo() {
     ImGui::SameLine();
-    ImGui::BeginChild(u8"文件信息", ImVec2(0, ImGui::GetWindowHeight() - 100), true);
+    ImGui::BeginChild("文件信息", ImVec2(0, ImGui::GetWindowHeight() - 100), true);
     
-    ImGui::TextColored(ImVec4(0.6f, 0.8f, 1.0f, 1.0f), u8"📋 文件信息");
+    ImGui::TextColored(ImVec4(0.6f, 0.8f, 1.0f, 1.0f), "📋 文件信息");
     ImGui::Separator();
     
     if (!m_isParsing && m_fileHeader.magic[0] == 0) {
-        ImGui::Text(u8"请选择一个文件并点击\"解析文件\"");
+        ImGui::Text("请选择一个文件并点击\"解析文件\"");
     } else if (m_isParsing) {
-        ImGui::TextColored(ImVec4(1.0f, 1.0f, 0.0f, 1.0f), u8"正在解析文件...");
-        ImGui::ProgressBar(0.5f, ImVec2(-1, 20), u8"处理中");
+        ImGui::TextColored(ImVec4(1.0f, 1.0f, 0.0f, 1.0f), "正在解析文件...");
+        ImGui::ProgressBar(0.5f, ImVec2(-1, 20), "处理中");
     } else {
-        ImGui::Text(u8"魔术数: %s", m_fileHeader.validate_magic() ? u8"有效 (ElfFile)" : u8"无效");
+        ImGui::Text("魔术数: %s", m_fileHeader.validate_magic() ? "有效 (ElfFile)" : "无效");
         
         uint16_t major = m_fileHeader.get_major_version();
         uint16_t minor = m_fileHeader.get_minor_version();
-        ImGui::Text(u8"版本: %u.%u", major, minor);
+        ImGui::Text("版本: %u.%u", major, minor);
         
-        ImGui::Text(u8"标志位: 0x%04X", m_fileHeader.flags);
-        ImGui::Text(u8"块数量: %u", m_fileHeader.chunk_count);
-        ImGui::Text(u8"有效块数: %u", m_validChunkCount);
+        ImGui::Text("标志位: 0x%04X", m_fileHeader.flags);
+        ImGui::Text("块数量: %u", m_fileHeader.chunk_count);
+        ImGui::Text("有效块数: %u", m_validChunkCount);
         
         if (m_fileHeader.chunk_count != m_validChunkCount) {
-            ImGui::TextColored(ImVec4(1.0f, 0.5f, 0.5f, 1.0f), u8"警告: 文件头块数与实际不符");
+            ImGui::TextColored(ImVec4(1.0f, 0.5f, 0.5f, 1.0f), "警告: 文件头块数与实际不符");
         }
         
-        ImGui::Text(u8"文件大小: %llu bytes", m_fileHeader.file_size);
-        ImGui::Text(u8"最旧块偏移: 0x%llX", m_fileHeader.oldest_chunk_offset);
-        ImGui::Text(u8"最新块偏移: 0x%llX", m_fileHeader.newest_chunk_offset);
-        ImGui::Text(u8"校验和: 0x%08X", m_fileHeader.checksum);
+        ImGui::Text("文件大小: %llu bytes", m_fileHeader.file_size);
+        ImGui::Text("最旧块偏移: 0x%llX", m_fileHeader.oldest_chunk_offset);
+        ImGui::Text("最新块偏移: 0x%llX", m_fileHeader.newest_chunk_offset);
+        ImGui::Text("校验和: 0x%08X", m_fileHeader.checksum);
         
         ImGui::Separator();
-        ImGui::TextColored(ImVec4(0.6f, 0.8f, 1.0f, 1.0f), u8"📦 块信息");
+        ImGui::TextColored(ImVec4(0.6f, 0.8f, 1.0f, 1.0f), "📦 块信息");
         
         if (m_chunkInfo.empty()) {
-            ImGui::Text(u8"未解析块信息");
+            ImGui::Text("未解析块信息");
         } else {
-            ImGui::BeginTable(u8"chunks", 3, ImGuiTableFlags_Borders);
-            ImGui::TableSetupColumn(u8"块偏移");
-            ImGui::TableSetupColumn(u8"事件数");
-            ImGui::TableSetupColumn(u8"校验和");
+            ImGui::BeginTable("chunks", 3, ImGuiTableFlags_Borders);
+            ImGui::TableSetupColumn("块偏移");
+            ImGui::TableSetupColumn("事件数");
+            ImGui::TableSetupColumn("校验和");
             ImGui::TableHeadersRow();
             
             for (const auto& info : m_chunkInfo) {
                 ImGui::TableNextRow();
                 ImGui::TableSetColumnIndex(0);
-                ImGui::Text(u8"0x%llX", info.offset);
+                ImGui::Text("0x%llX", info.offset);
                 ImGui::TableSetColumnIndex(1);
-                ImGui::Text(u8"%u", info.event_count);
+                ImGui::Text("%u", info.event_count);
                 ImGui::TableSetColumnIndex(2);
-                ImGui::Text(u8"0x%08X", info.checksum);
+                ImGui::Text("0x%08X", info.checksum);
             }
             ImGui::EndTable();
         }
