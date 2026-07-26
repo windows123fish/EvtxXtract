@@ -53,3 +53,10 @@ add_executable(EvtxXtract-GUI
 
 # Include directories for GUI
 target_include_directories(EvtxXtract-GUI PRIVATE
+    include
+    external/imgui
+    external/imgui/backends
+)
+
+# Link against Win32 libraries
+target_link_libraries(EvtxXtract-GUI PRIVATE
