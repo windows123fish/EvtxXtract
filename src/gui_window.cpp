@@ -10,4 +10,11 @@
 #include <filesystem>
 #include <algorithm>
 
-#pragma comment(lib
+#pragma comment(lib, "d3d11.lib")
+
+extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
+
+namespace fs = std::filesystem;
+
+static ID3D11Device* g_pd3dDevice = nullptr;
+static ID3D1
