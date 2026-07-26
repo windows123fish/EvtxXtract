@@ -79,3 +79,4 @@ static bool ImGui_ImplGDI_CreateBuffer(int width, int height) {
 }
 
 // Render ImGui draw data to GDI
+IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData*
