@@ -57,3 +57,4 @@ int main(int argc, char* argv[]) {
   
   // Magic (0x0000, 8 bytes)
   std::cout << "[0x0000-0x0007] Magic: ";
+  for (size_t i = 0;
