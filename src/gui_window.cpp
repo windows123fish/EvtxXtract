@@ -125,4 +125,5 @@ void GuiWindow::run() {
 
 void GuiWindow::render() {
     // Start ImGui frame
-    ImGui_ImplG
+    ImGui_ImplGDI_NewFrame();
+    ImGui_Impl
