@@ -236,4 +236,5 @@ void GuiWindow::renderDrawData(ImDrawData* draw_data) {
                             const ImVec4& c1 = cmd_list->VtxBuffer[idx1].col;
                             const ImVec4& c2 = cmd_list->VtxBuffer[idx2].col;
                             
-                            float r = w0 * c0.x + w1 * c1.x + w2 *
+                            float r = w0 * c0.x + w1 * c1.x + w2 * c2.x;
+                            float g = w0 * c0.y + w1 * c1.y + w2 * c2.y;
