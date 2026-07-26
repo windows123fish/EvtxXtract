@@ -189,6 +189,9 @@ int main(int argc, char* argv[]) {
         evtx_files.push_back(output_path);
       } else {
         std::cout << "失败\n";
+        if (log_name == "Security") {
+          std::cout << "      提示: Security日志需要管理员权限才能访问。\n";
+        }
       }
     }
     
