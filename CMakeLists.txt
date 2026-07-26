@@ -23,3 +23,5 @@ endif()
 set(IMGUI_SRC
     external/imgui/imgui.cpp
     external/imgui/imgui_draw.cpp
+    external/imgui/imgui_tables.cpp
+    external/imgui/imgui_widgets.cpp
