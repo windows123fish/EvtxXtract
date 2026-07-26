@@ -66,4 +66,6 @@ struct EVT_FILE_HEADER {
   uint16_t chunk_count;
 
   /**
-   * @
+   * @brief File size in bytes (8 bytes, little-endian)
+   */
+  uint6
