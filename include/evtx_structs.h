@@ -25,4 +25,5 @@ namespace Evtx {
  * -------|------|------
  * 0x0000 | 8    | magic ("ElfFile\x00")
  * 0x0008 | 8    | file_size
- * 0x0010 |
+ * 0x0010 | 8    | oldest_chunk_offset
+ * 0x0018 | 8
