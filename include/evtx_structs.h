@@ -107,4 +107,5 @@ struct EVT_FILE_HEADER {
  * 0x0028 | 4    | header_size
  * 0x002C | 4    | last_event_offset
  * 0x0030 | 4    | free_space_offset
- * 0x0034
+ * 0x0034 | 4    | events_checksum
+ * 0x0038 | 4
