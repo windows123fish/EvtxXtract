@@ -17,4 +17,7 @@ struct EVT_FILE_HEADER {
   uint16_t flags;
   uint16_t chunk_count;
   uint32_t checksum;
-  std::array<uint8_t, 4
+  std::array<uint8_t, 4052> reserved;
+
+  bool validate_magic() const noexcept;
+  uint1
