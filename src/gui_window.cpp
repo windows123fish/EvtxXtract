@@ -241,3 +241,10 @@ void GuiWindow::renderFileInfo() {
                 ImGui::Text("0x%08X", info.checksum);
             }
             ImGui::EndTable();
+        }
+    }
+    
+    ImGui::EndChild();
+}
+
+void GuiWindow::renderFooter
