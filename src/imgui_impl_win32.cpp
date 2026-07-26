@@ -99,4 +99,7 @@ IMGUI_IMPL_API void ImGui_ImplWin32_NewFrame() {
     io.DisplaySize = ImVec2((float)(rect.right - rect.left), (float)(rect.bottom - rect.top));
 
     // Set time
-    static double time = 0
+    static double time = 0.0;
+    if (time == 0.0) {
+        LARGE_INTEGER freq, counter;
+        QueryPerformanceFrequency
