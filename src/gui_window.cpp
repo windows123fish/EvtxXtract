@@ -151,4 +151,4 @@ void GuiWindow::render() {
 }
 
 void GuiWindow::renderFileSelection() {
-    ImGui::BeginChild("文件选择",
+    ImGui::BeginChild("文件选择", ImVec2(300, ImGui::GetWindowHeight() - 100),
