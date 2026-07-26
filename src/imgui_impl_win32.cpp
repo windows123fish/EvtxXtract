@@ -153,4 +153,5 @@ static void ImGui_ImplWin32_UpdateMouseCursor() {
             g_LastMouseCursor = imgui_cursor;
             LPCTSTR cursor_id = IDC_ARROW;
             switch (imgui_cursor) {
+                case ImGuiMouseCursor_Arrow:        cursor_id = IDC_ARROW; break;
                 case
