@@ -203,3 +203,4 @@ struct EVT_CHUNK_HEADER {
   uint32_t last_event_offset;
 
   /**
+   * @brief Offset of free space in this chunk (4 bytes, little-endian)
