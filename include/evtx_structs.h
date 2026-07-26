@@ -30,4 +30,5 @@ namespace Evtx {
  * 0x0020 | 4    | version (major << 16 | minor)
  * 0x0024 | 2    | flags
  * 0x0026 | 2    | chunk_count
- * 0x0028 |
+ * 0x0028 | 4    | checksum
+ * 0x
