@@ -219,4 +219,5 @@ void GuiWindow::renderDrawData(ImDrawData* draw_data) {
                 // Simple rasterization
                 int min_x = static_cast<int>(std::max(clip_x0, std::min(std::min(v0.x, v1.x), v2.x)));
                 int min_y = static_cast<int>(std::max(clip_y0, std::min(std::min(v0.y, v1.y), v2.y)));
-                int max_x = static_cast<int>(std::min(clip_x1, std::max(std::max(v0.x, v1.x
+                int max_x = static_cast<int>(std::min(clip_x1, std::max(std::max(v0.x, v1.x), v2.x)));
+                int max_y = static_cast<int>(std::min(
