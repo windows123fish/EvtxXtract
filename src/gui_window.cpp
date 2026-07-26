@@ -122,3 +122,7 @@ void GuiWindow::run() {
         }
     }
 }
+
+void GuiWindow::render() {
+    // Start ImGui frame
+    ImGui_ImplG
