@@ -235,11 +235,11 @@ struct EVT_CHUNK_HEADER {
   uint32_t string_offset_array_offset;
 
   /**
-   * @brief Reserved/unused area (444 bytes)
+   * @brief Reserved/unused area (440 bytes)
    * 
    * Remaining bytes of the 512-byte chunk header
    */
-  std::array<uint8_t, 444> reserved;
+  std::array<uint8_t, 440> reserved;
 
   /**
    * @brief Validate the chunk header magic number
