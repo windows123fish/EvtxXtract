@@ -169,3 +169,12 @@ void GuiWindow::renderFileSelection() {
                 m_selectedFileIndex = (int)i;
                 m_isParsing = false;
                 m_fileHeader = EVT_FILE_HEADER();
+                m_chunkInfo.clear();
+                m_validChunkCount = 0;
+            }
+            ImGui::PopID();
+        }
+        
+        ImGui::Separator();
+        
+        if (m_selectedFileIndex >= 0 && ImGui::
