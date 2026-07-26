@@ -28,4 +28,7 @@ IMGUI_IMPL_API void ImGui_ImplGDI_Shutdown() {
         g_hBitmap = NULL;
         g_hBitmapOld = NULL;
     }
-    if (g_Buffer)
+    if (g_Buffer) {
+        delete[] g_Buffer;
+        g_Buffer = NULL;
+    }
