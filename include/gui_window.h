@@ -1,0 +1,57 @@
+#pragma once
+
+#include <windows.h>
+#include <string>
+#include <vector>
+#include "evtx_structs.h"
+
+struct ChunkInfo {
+    uint64_t offset;
+    uint32_t event_count;
+    uint32_t checksum;
+};
+
+class GuiWindow {
+public:
+    GuiWindow();
+    ~GuiWindow();
+    
+    bool init(HINSTANCE hInstance, const std::wstring& title, int width, int height);
+    void shutdown();
+    void run();
+    
+private:
+    void render();
+    void renderFileSelection();
+    void renderFileInfo();
+    void renderFooter();
+    
+    void openFileDialog();
+    void scanEvtxFiles();
+    void parseSelectedFile();
+    
+    bool isAdmin();
+    bool runAsAdmin();
+    
+    LRESULT wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
+    static LRESULT CALLBACK s_wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
+    
+private:
+    HWND m_hWnd;
+    bool m_isRunning;
+    
+    // File selection
+    std::vector<std::wstring> m_evtxFiles;
+    int m_selectedFileIndex;
+    
+    // Parsing state
+    bool m_isParsing;
+    Evtx::EVT_FILE_HEADER m_fileHeader;
+    std::vector<ChunkInfo> m_chunkInfo;
+    uint32_t m_validChunkCount;
+    
+    // Event records (Phase 2)
+    std::vector<Evtx::EventRecord> m_eventRecords;
+    int m_selectedEventIndex;
+    bool m_showEventList;
+};

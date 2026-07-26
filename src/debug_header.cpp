@@ -1,27 +1,35 @@
-#include <cstdint>
-#include <fstream>
 #include <iostream>
+#include <fstream>
 #include <iomanip>
+#include <cstdint>
 
-void print_hex(const uint8_t* data, size_t size, size_t bytes_per_line = 16) {
-  for (size_t i = 0; i < size; i += bytes_per_line) {
-    std::cout << std::hex << std::setw(8) << std::setfill('0') << i << ": ";
+void print_hex_dump(const uint8_t* data, size_t size) {
+  for (size_t i = 0; i < size; i += 16) {
+    std::cout << std::hex << std::setw(8) << std::setfill('0') << i << "  ";
     
-    for (size_t j = 0; j < bytes_per_line && i + j < size; ++j) {
-      std::cout << std::setw(2) << std::setfill('0') << static_cast<int>(data[i + j]) << " ";
+    // Print hex values
+    for (size_t j = 0; j < 16 && i + j < size; ++j) {
+      std::cout << std::hex << std::setw(2) << std::setfill('0') 
+                << static_cast<int>(data[i + j]) << " ";
+      if (j == 7) std::cout << " ";
     }
     
-    std::cout << " ";
+    // Fill remaining space
+    for (size_t j = size - i; j < 16; ++j) {
+      std::cout << "   ";
+      if (j == 8) std::cout << " ";
+    }
     
-    for (size_t j = 0; j < bytes_per_line && i + j < size; ++j) {
-      char c = data[i + j];
-      if (c >= 0x20 && c < 0x7F) {
+    // Print ASCII representation
+    std::cout << " | ";
+    for (size_t j = 0; j < 16 && i + j < size; ++j) {
+      char c = static_cast<char>(data[i + j]);
+      if (c >= 0x20 && c <= 0x7E) {
         std::cout << c;
       } else {
         std::cout << ".";
       }
     }
-    
     std::cout << "\n";
   }
 }
@@ -34,52 +42,55 @@ int main(int argc, char* argv[]) {
 
   std::ifstream file(argv[1], std::ios::binary);
   if (!file) {
-    std::cerr << "Failed to open file\n";
+    std::cerr << "Failed to open file: " << argv[1] << "\n";
     return 1;
   }
 
-  // Read first 128 bytes of file header
-  uint8_t header[128];
-  file.read(reinterpret_cast<char*>(header), sizeof(header));
+  // Read first 128 bytes for analysis
+  uint8_t buffer[128];
+  file.read(reinterpret_cast<char*>(buffer), sizeof(buffer));
   
-  std::cout << "=== EVTX File Header - First 128 bytes ===\n";
-  print_hex(header, sizeof(header));
+  std::cout << "=== First 128 bytes of file ===\n";
+  print_hex_dump(buffer, sizeof(buffer));
   
-  // Also read first chunk header
-  file.seekg(4096);
-  uint8_t chunk_header[128];
-  file.read(reinterpret_cast<char*>(chunk_header), sizeof(chunk_header));
+  std::cout << "\n=== Field interpretation (Little-endian) ===\n";
   
-  std::cout << "\n=== First Chunk Header - First 128 bytes ===\n";
-  print_hex(chunk_header, sizeof(chunk_header));
+  // Magic (0x0000, 8 bytes)
+  std::cout << "[0x0000-0x0007] Magic: ";
+  for (size_t i = 0; i < 8; ++i) {
+    std::cout << buffer[i];
+  }
+  std::cout << "\n";
   
-  // Try different offset interpretations
-  std::cout << "\n=== Field Interpretation Tests ===\n";
+  // Version (0x0008, 4 bytes)
+  uint32_t version = *reinterpret_cast<uint32_t*>(&buffer[0x08]);
+  uint16_t major = (version >> 16) & 0xFFFF;
+  uint16_t minor = version & 0xFFFF;
+  std::cout << "[0x0008-0x000B] Version: 0x" << std::hex << version << " (" << major << "." << minor << ")\n";
   
-  // Test: What if version is at offset 0x2C?
-  uint32_t version_at_2c = *reinterpret_cast<uint32_t*>(&header[44]);
-  std::cout << "version at offset 0x2C: 0x" << std::hex << version_at_2c << " (" << ((version_at_2c >> 16) & 0xFFFF) << "." << (version_at_2c & 0xFFFF) << ")\n";
+  // Flags (0x000C, 2 bytes)
+  uint16_t flags = *reinterpret_cast<uint16_t*>(&buffer[0x0C]);
+  std::cout << "[0x000C-0x000D] Flags: 0x" << std::hex << flags << "\n";
   
-  // Test: What if chunk_count is at offset 0x28?
-  uint16_t chunk_count_at_28 = *reinterpret_cast<uint16_t*>(&header[40]);
-  std::cout << "chunk_count at offset 0x28: " << std::dec << chunk_count_at_28 << "\n";
+  // Chunk Count (0x000E, 2 bytes)
+  uint16_t chunk_count = *reinterpret_cast<uint16_t*>(&buffer[0x0E]);
+  std::cout << "[0x000E-0x000F] Chunk Count: 0x" << std::hex << chunk_count << " (" << std::dec << chunk_count << ")\n";
   
-  // Test: What if file_size is at offset 0x10?
-  uint64_t file_size_at_10 = *reinterpret_cast<uint64_t*>(&header[16]);
-  std::cout << "file_size at offset 0x10: " << std::dec << file_size_at_10 << "\n";
+  // File Size (0x0010, 8 bytes)
+  uint64_t file_size = *reinterpret_cast<uint64_t*>(&buffer[0x10]);
+  std::cout << "[0x0010-0x0017] File Size: 0x" << std::hex << file_size << " (" << std::dec << file_size << " bytes)\n";
   
-  // Test: What if oldest_offset is at offset 0x18?
-  uint64_t oldest_at_18 = *reinterpret_cast<uint64_t*>(&header[24]);
-  std::cout << "oldest_chunk_offset at offset 0x18: " << std::dec << oldest_at_18 << "\n";
+  // Oldest Chunk Offset (0x0018, 8 bytes)
+  uint64_t oldest_offset = *reinterpret_cast<uint64_t*>(&buffer[0x18]);
+  std::cout << "[0x0018-0x001F] Oldest Chunk Offset: 0x" << std::hex << oldest_offset << "\n";
   
-  // Test chunk header
-  uint32_t chunk_hdr_size = *reinterpret_cast<uint32_t*>(&chunk_header[40]);
-  std::cout << "\nchunk header_size at offset 0x28: " << std::dec << chunk_hdr_size << "\n";
-
-  // Get actual file size
-  file.seekg(0, std::ios::end);
-  std::streampos actual_size = file.tellg();
-  std::cout << "\nActual file size: " << actual_size << " bytes\n";
-
+  // Newest Chunk Offset (0x0020, 8 bytes)
+  uint64_t newest_offset = *reinterpret_cast<uint64_t*>(&buffer[0x20]);
+  std::cout << "[0x0020-0x0027] Newest Chunk Offset: 0x" << std::hex << newest_offset << "\n";
+  
+  // Checksum (0x0028, 4 bytes)
+  uint32_t checksum = *reinterpret_cast<uint32_t*>(&buffer[0x28]);
+  std::cout << "[0x0028-0x002B] Checksum: 0x" << std::hex << checksum << "\n";
+  
   return 0;
 }
