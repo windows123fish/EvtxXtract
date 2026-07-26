@@ -61,4 +61,5 @@ static bool ImGui_ImplGDI_CreateBuffer(int width, int height) {
     ZeroMemory(&bmi, sizeof(BITMAPINFO));
     bmi.bmiHeader.biSize = sizeof(BITMAPINFOHEADER);
     bmi.bmiHeader.biWidth = width;
-    bmi.bmiHeader.bi
+    bmi.bmiHeader.biHeight = -height; // Negative for top-down
+    bmi.bmiHeader.biPl
