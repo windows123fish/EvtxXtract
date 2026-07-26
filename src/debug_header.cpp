@@ -25,3 +25,6 @@ void print_hex_dump(const uint8_t* data, size_t size) {
     for (size_t j = 0; j < 16 && i + j < size; ++j) {
       char c = static_cast<char>(data[i + j]);
       if (c >= 0x20 && c <= 0x7E) {
+        std::cout << c;
+      } else {
+        std::cout << ".";
