@@ -10,4 +10,5 @@ static ImGuiMouseCursor     g_LastMouseCursor = ImGuiMouseCursor_COUNT;
 static bool                 g_bCursorDisabled = false;
 static bool                 g_bPrevMouseVisible = true;
 
-//
+// Helper to create a window class
+static WNDCLASSEXA CreateWindowClass(HINSTANCE h
