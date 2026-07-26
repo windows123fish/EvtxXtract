@@ -34,3 +34,5 @@ struct EVT_FILE_HEADER {
   uint64_t file_size;
   uint64_t oldest_chunk_offset;
   uint64_t newest_chunk_offset;
+  uint32_t checksum;
+  std::array<uint8_t, 405
