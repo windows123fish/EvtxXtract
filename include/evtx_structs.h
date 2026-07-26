@@ -23,4 +23,6 @@ namespace Evtx {
  * 
  * Layout verified against real .evtx files (hex dump analysis):
  * 
- * Offset | Size |
+ * Offset | Size | Field
+ * -------|------|------
+ * 0x0000 |
