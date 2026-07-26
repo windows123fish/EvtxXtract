@@ -25,6 +25,7 @@ set(IMGUI_SRC
     external/imgui/imgui_widgets.cpp
     external/imgui/imgui_demo.cpp
     external/imgui/backends/imgui_impl_win32.cpp
+    external/imgui/backends/imgui_impl_dx11.cpp
 )
 
 # Add source files for console version
