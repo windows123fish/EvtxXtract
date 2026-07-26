@@ -36,4 +36,6 @@ IMGUI_IMPL_API HWND ImGui_ImplWin32_CreateWindow(HINSTANCE hInstance, const char
         0,
         wc.lpszClassName,
         title,
-        WS
+        WS_OVERLAPPEDWINDOW,
+        CW_USEDEFAULT, CW_USEDEFAULT,
+        rect
