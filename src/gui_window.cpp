@@ -442,4 +442,37 @@ LRESULT GuiWindow::wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) {
     
     switch (msg) {
         case WM_SIZE:
-            if (g_pd3dDevice != nullptr && w
+            if (g_pd3dDevice != nullptr && wParam != SIZE_MINIMIZED) {
+                CleanupRenderTarget();
+                g_pSwapChain->ResizeBuffers(0, (UINT)LOWORD(lParam), (UINT)HIWORD(lParam), DXGI_FORMAT_UNKNOWN, 0);
+                CreateRenderTarget();
+            }
+            return 0;
+            
+        case WM_SYSCOMMAND:
+            if ((wParam & 0xfff0) == SC_KEYMENU)
+                return 0;
+            break;
+            
+        case WM_CLOSE:
+            m_isRunning = false;
+            PostQuitMessage(0);
+            return 0;
+            
+        case WM_KEYDOWN:
+            if (wParam == VK_ESCAPE) {
+                m_isRunning = false;
+                PostQuitMessage(0);
+            }
+            return 0;
+            
+        case WM_DESTROY:
+            m_isRunning = false;
+            PostQuitMessage(0);
+            return 0;
+            
+        default:
+            return DefWindowProcW(hWnd, msg, wParam, lParam);
+    }
+    return 0;
+}
