@@ -5,4 +5,4 @@
 GuiWindow* g_pWindow = nullptr;
 
 // WinMain entry point
-int WINAPI WinMain(HINSTANCE hInstance,
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
