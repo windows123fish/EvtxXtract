@@ -96,4 +96,7 @@ struct EVT_FILE_HEADER {
    * 
    * Remaining bytes of the 4KB header, typically filled with zeros
    */
-  std::array<uint8_t, 4
+  std::array<uint8_t, 4052> reserved;
+
+  /**
+   * @brief Validate the file header magic number
