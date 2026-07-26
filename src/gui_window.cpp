@@ -8,4 +8,5 @@
 
 // Forward declarations
 extern IMGUI_IMPL_API bool ImGui_ImplWin32_Init(HWND hWnd);
-extern IMGUI_IMPL_API void ImGui_ImplWin
+extern IMGUI_IMPL_API void ImGui_ImplWin32_Shutdown();
+extern IMGUI_IMPL_API void ImGui_ImplWin32
