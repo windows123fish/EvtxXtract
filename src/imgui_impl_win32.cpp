@@ -32,4 +32,8 @@ IMGUI_IMPL_API HWND ImGui_ImplWin32_CreateWindow(HINSTANCE hInstance, const char
     RECT rect = {0, 0, width, height};
     AdjustWindowRectEx(&rect, WS_OVERLAPPEDWINDOW, FALSE, 0);
     
-    g_hWnd = CreateWindowExA
+    g_hWnd = CreateWindowExA(
+        0,
+        wc.lpszClassName,
+        title,
+        WS
