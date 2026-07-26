@@ -196,4 +196,5 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
     }
 
     // Draw buffer to screen
-    g_hBitmapOld = (HBITMAP
+    g_hBitmapOld = (HBITMAP)SelectObject(g_hDC, g_hBitmap);
+    BitBlt(g_hDC,
