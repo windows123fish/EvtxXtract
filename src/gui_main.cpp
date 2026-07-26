@@ -9,4 +9,16 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     // Create window
     g_pWindow = new GuiWindow();
     
-    if (!g_pWindow
+    if (!g_pWindow->init(hInstance, "EvtxXtract - EVTX文件解析器", 1200, 800)) {
+        delete g_pWindow;
+        return 1;
+    }
+    
+    // Run main loop
+    g_pWindow->run();
+    
+    // Cleanup
+    delete g_pWindow;
+    return 0;
+}
+
