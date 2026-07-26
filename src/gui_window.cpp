@@ -172,4 +172,5 @@ void GuiWindow::renderDrawData(ImDrawData* draw_data) {
         bmi.bmiHeader.biSize = sizeof(BITMAPINFOHEADER);
         bmi.bmiHeader.biWidth = width;
         bmi.bmiHeader.biHeight = -height;
-        bmi.bmiHeader.bi
+        bmi.bmiHeader.biPlanes = 1;
+        bmi.bmiHeader.biBitCount = 3
