@@ -61,4 +61,5 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::string& title, int width, i
     );
 
     if (!m_hWnd) {
-        MessageBoxA(NULL, "窗口
+        MessageBoxA(NULL, "窗口创建失败", "错误", MB_OK | MB_ICONERROR);
+        return false;
