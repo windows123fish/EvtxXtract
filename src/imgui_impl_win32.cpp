@@ -217,4 +217,9 @@ IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARA
             ImGui_ImplWin32_UpdateMouseCursor();
             return 0;
         default:
-            return DefWindowProc(hWnd, msg
+            return DefWindowProc(hWnd, msg, wParam, lParam);
+    }
+}
+
+// Get window handle
+IMGUI
