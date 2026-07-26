@@ -172,4 +172,5 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
                         if (w0 >= 0 && w1 >= 0 && w2 >= 0) {
                             float r = w0 * c0.x + w1 * c1.x + w2 * c2.x;
                             float g = w0 * c0.y + w1 * c1.y + w2 * c2.y;
-                            float b = w0 * c0.z + w1
+                            float b = w0 * c0.z + w1 * c1.z + w2 * c2.z;
+                            float a = w0 *
