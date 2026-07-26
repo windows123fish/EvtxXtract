@@ -54,3 +54,6 @@ struct EVT_FILE_HEADER {
   uint32_t version;
 
   /**
+   * @brief File flags (2 bytes, little-endian)
+   * 
+   *
