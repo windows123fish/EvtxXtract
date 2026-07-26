@@ -326,4 +326,4 @@ void GuiWindow::parseSelectedFile() {
         m_fileHeader.file_size = fs::file_size(filepath);
         
     } catch (const std::exception& e) {
-        MessageBoxA(m_h
+        MessageBoxA(m_hWnd, ("解析错误: " + std::string(e.what())).c_str(), "错误", MB_OK | MB_ICONERROR);
