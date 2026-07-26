@@ -109,3 +109,12 @@ void GuiWindow::run() {
             TranslateMessage(&msg);
             DispatchMessage(&msg);
         } else {
+            render();
+        }
+    }
+}
+
+void GuiWindow::render() {
+    // Start ImGui frame
+    ImGui_ImplWin32_NewFrame();
+    ImGui::
