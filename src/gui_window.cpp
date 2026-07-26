@@ -80,3 +80,8 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::string& title, int width, i
     // Initialize backends
     ImGui_ImplWin32_Init(m_hWnd);
     ImGui_ImplGDI_Init(m_hDC);
+    
+    // Setup style
+    ImGui::StyleColorsDark();
+    
+    // Scan for .ev
