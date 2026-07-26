@@ -295,4 +295,10 @@ void GuiWindow::parseSelectedFile() {
         
         // Read file header
         if (!parser.read_file_header(m_fileHeader)) {
-            MessageBoxA(m_hWnd, "读取文件头
+            MessageBoxA(m_hWnd, "读取文件头失败", "错误", MB_OK | MB_ICONERROR);
+            m_isParsing = false;
+            return;
+        }
+        
+        // Validate chunks
+        m_validChunkCount =
