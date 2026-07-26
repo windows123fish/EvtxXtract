@@ -59,68 +59,68 @@ bool export_event_log(const std::string& log_name, const std::string& output_pat
 }
 
 void analyze_file(const std::string& file_path) {
-  std::cout << "\nEvtxXtract v1.0.0 - Phase 1: File Reconnaissance\n";
-  std::cout << "=================================================\n";
-  std::cout << "Analyzing file: " << file_path << "\n\n";
+  std::cout << "\nEvtxXtract v1.0.0 - 阶段1: 文件侦察\n";
+  std::cout << "=========================================\n";
+  std::cout << "正在分析文件: " << file_path << "\n\n";
 
   try {
     Evtx::EvtxParser parser(file_path);
 
-    std::cout << "[1/4] Opening file... ";
+    std::cout << "[1/4] 打开文件... ";
     if (!parser.open()) {
-      std::cerr << "FAILED\n";
-      std::cerr << "Error: " << parser.get_last_error() << "\n";
-      std::cerr << "Note: You may need to run this program as Administrator to access system logs.\n";
+      std::cerr << "失败\n";
+      std::cerr << "错误: " << parser.get_last_error() << "\n";
+      std::cerr << "注意: 访问系统日志可能需要以管理员身份运行此程序。\n";
       return;
     }
-    std::cout << "OK\n";
+    std::cout << "成功\n";
 
-    std::cout << "[2/4] Reading file header... ";
+    std::cout << "[2/4] 读取文件头... ";
     if (!parser.read_file_header()) {
-      std::cerr << "FAILED\n";
-      std::cerr << "Error: " << parser.get_last_error() << "\n";
+      std::cerr << "失败\n";
+      std::cerr << "错误: " << parser.get_last_error() << "\n";
       return;
     }
-    std::cout << "OK\n";
+    std::cout << "成功\n";
 
     const auto& file_header = parser.get_file_header();
-    std::cout << "\n--- File Header Details ---\n";
+    std::cout << "\n--- 文件头详情 ---\n";
     std::cout << file_header.to_string() << "\n";
 
-    std::cout << "\n[3/4] Validating chunks... ";
+    std::cout << "\n[3/4] 验证块... ";
     const size_t valid_chunk_count = parser.validate_chunks();
-    std::cout << "OK\n";
+    std::cout << "成功\n";
 
     const auto& chunks = parser.get_valid_chunks();
-    std::cout << "\n--- Chunk Analysis ---\n";
-    std::cout << "Total chunks found: " << valid_chunk_count << "\n";
+    std::cout << "\n--- 块分析 ---\n";
+    std::cout << "找到的块总数: " << valid_chunk_count << "\n";
 
     if (!chunks.empty()) {
-      std::cout << "\nFirst chunk:\n";
+      std::cout << "\n第一个块:\n";
       std::cout << chunks[0].to_string() << "\n";
 
       if (chunks.size() > 1) {
-        std::cout << "\nLast chunk:\n";
+        std::cout << "\n最后一个块:\n";
         std::cout << chunks.back().to_string() << "\n";
       }
     }
 
-    std::cout << "\n[4/4] Analysis Complete\n";
+    std::cout << "\n[4/4] 分析完成\n";
     std::cout << "========================\n";
-    std::cout << "File: " << file_path << "\n";
-    std::cout << "Status: " << (file_header.validate_magic() ? "VALID" : "INVALID") << "\n";
-    std::cout << "Version: " << file_header.get_major_version() << "." << file_header.get_minor_version() << "\n";
-    std::cout << "Dirty flag: " << (file_header.is_dirty() ? "SET (file may be corrupted)" : "NOT SET") << "\n";
-    std::cout << "File size: " << file_header.file_size << " bytes\n";
-    std::cout << "Expected chunks: " << file_header.chunk_count << "\n";
-    std::cout << "Validated chunks: " << valid_chunk_count << "\n";
+    std::cout << "文件: " << file_path << "\n";
+    std::cout << "状态: " << (file_header.validate_magic() ? "有效" : "无效") << "\n";
+    std::cout << "版本: " << file_header.get_major_version() << "." << file_header.get_minor_version() << "\n";
+    std::cout << "脏标记: " << (file_header.is_dirty() ? "已设置（文件可能已损坏）" : "未设置") << "\n";
+    std::cout << "文件大小: " << file_header.file_size << " 字节\n";
+    std::cout << "预期块数: " << file_header.chunk_count << "\n";
+    std::cout << "已验证块数: " << valid_chunk_count << "\n";
 
     parser.close();
 
   } catch (const std::exception& e) {
-    std::cerr << "\nUnexpected error: " << e.what() << "\n";
+    std::cerr << "\n意外错误: " << e.what() << "\n";
   } catch (...) {
-    std::cerr << "\nUnknown error occurred\n";
+    std::cerr << "\n发生未知错误\n";
   }
 }
 
