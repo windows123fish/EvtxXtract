@@ -83,3 +83,6 @@ struct EVT_FILE_HEADER {
    * @brief Reserved/unused area (4056 bytes)
    */
   std::array<uint8_t, 4056> reserved;
+
+  bool validate_magic() const noexcept;
+  uint16_t get_major_version
