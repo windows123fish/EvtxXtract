@@ -209,4 +209,7 @@ void GuiWindow::renderDrawData(ImDrawData* draw_data) {
             // Draw triangles
             for (int i = 0; i < pcmd->ElemCount; i += 3) {
                 const ImDrawIdx idx0 = idx_buffer[pcmd->IdxOffset + i];
-                const ImDrawIdx idx1 = idx_buffer[pcmd->IdxOffset + i
+                const ImDrawIdx idx1 = idx_buffer[pcmd->IdxOffset + i + 1];
+                const ImDrawIdx idx2 = idx_buffer[pcmd->IdxOffset + i + 2];
+                
+                const ImVec2& v0 = cmd_list->V
