@@ -91,4 +91,10 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::string& title, int width, i
     UpdateWindow(m_hWnd);
     m_isRunning = true;
     
-    return
+    return true;
+}
+
+void GuiWindow::shutdown() {
+    ImGui_ImplGDI_Shutdown();
+    ImGui_ImplWin32_Shutdown();
+    ImGui::
