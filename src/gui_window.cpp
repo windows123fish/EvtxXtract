@@ -7,3 +7,4 @@
 #include <filesystem>
 
 // Forward declarations
+extern IMGUI_IMPL_API bool ImGui_Impl
