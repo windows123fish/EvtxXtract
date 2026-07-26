@@ -168,4 +168,6 @@ void GuiWindow::renderFileSelection() {
             if (ImGui::Selectable(m_evtxFiles[i].c_str(), isSelected)) {
                 m_selectedFileIndex = (int)i;
                 m_isParsing = false;
-                m_file
+                m_fileHeader = Evtx::EVT_FILE_HEADER();
+                m_chunkInfo.clear();
+                m
