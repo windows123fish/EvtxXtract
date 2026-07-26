@@ -317,4 +317,8 @@ void GuiWindow::parseSelectedFile() {
                 ChunkInfo info;
                 info.offset = current_offset;
                 info.event_count = chunk_header.event_count;
-                info.checksum = chunk_header.check
+                info.checksum = chunk_header.checksum;
+                m_chunkInfo.push_back(info);
+            }
+            
+            current_offset += chunk
