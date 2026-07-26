@@ -125,4 +125,10 @@ void GuiWindow::render() {
     ImGui::Begin("EvtxXtract - EVTX文件解析器", NULL, ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse);
     
     // File selection panel
-    renderFileSelection
+    renderFileSelection();
+    
+    // File info panel
+    renderFileInfo();
+    
+    // Footer
+    render
