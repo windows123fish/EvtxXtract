@@ -102,7 +102,6 @@ GuiWindow::~GuiWindow() {
 
 bool GuiWindow::init(HINSTANCE hInstance, const std::wstring& title, int width, int height) {
     WNDCLASSW wc{};
-    wc.cbSize        = sizeof(WNDCLASSW);
     wc.style         = CS_HREDRAW | CS_VREDRAW;
     wc.lpfnWndProc   = s_wndProc;
     wc.hInstance     = hInstance;
@@ -115,7 +114,7 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::wstring& title, int width, 
     }
 
     RECT rect = {0, 0, width, height};
-    AdjustWindowRectExW(&rect, WS_OVERLAPPEDWINDOW, FALSE, 0);
+    AdjustWindowRectEx(&rect, WS_OVERLAPPEDWINDOW, FALSE, 0);
     
     m_hWnd = CreateWindowExW(
         0,
