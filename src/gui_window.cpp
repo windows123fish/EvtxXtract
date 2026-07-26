@@ -103,4 +103,11 @@ void GuiWindow::shutdown() {
         ReleaseDC(m_hWnd, m_hDC);
         m_hDC = nullptr;
     }
-    if (m
+    if (m_hWnd) {
+        DestroyWindow(m_hWnd);
+        m_hWnd = nullptr;
+    }
+}
+
+void GuiWindow::run() {
+    MSG msg;
