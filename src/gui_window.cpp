@@ -165,7 +165,6 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::wstring& title, int width, 
     }
 
     io.FontDefault = loaded_font;
-    io.Fonts->Build();
 
     ImGui::StyleColorsDark();
 
