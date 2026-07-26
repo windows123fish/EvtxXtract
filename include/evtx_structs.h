@@ -47,4 +47,5 @@ struct EVT_FILE_HEADER {
   uint64_t file_size;
 
   /**
-   * @brief
+   * @brief Offset of the oldest chunk in the file (8 bytes, little-endian)
+   */
