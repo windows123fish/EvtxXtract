@@ -198,4 +198,15 @@ void GuiWindow::renderDrawData(ImDrawData* draw_data) {
         const ImDrawIdx* idx_buffer = cmd_list->IdxBuffer.Data;
         
         for (int cmd_i = 0; cmd_i < cmd_list->CmdBuffer.Size; cmd_i++) {
-            const ImDrawCmd*
+            const ImDrawCmd* pcmd = &cmd_list->CmdBuffer[cmd_i];
+            
+            // Clip rectangle
+            float clip_x0 = pcmd->ClipRect.x;
+            float clip_y0 = pcmd->ClipRect.y;
+            float clip_x1 = pcmd->ClipRect.z;
+            float clip_y1 = pcmd->ClipRect.w;
+            
+            // Draw triangles
+            for (int i = 0; i < pcmd->ElemCount; i += 3) {
+                const ImDrawIdx idx0 = idx_buffer[pcmd->IdxOffset + i];
+                const ImDrawIdx idx1 = idx_buffer[pcmd->IdxOffset + i
