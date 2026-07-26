@@ -227,4 +227,5 @@ void GuiWindow::renderFileInfo() {
         } else {
             ImGui::BeginTable("chunks", 3, ImGuiTableFlags_Borders);
             ImGui::TableSetupColumn("块偏移");
-            ImGui
+            ImGui::TableSetupColumn("事件数");
+            ImGui::TableSetupColumn("校验和");
