@@ -234,15 +234,8 @@ std::vector<EventRecord> EvtxParser::parse_chunk_events(size_t chunk_index, size
     return records;
 }
 
-bool EvtxParser::parse_event_record(uint64_t chunk_offset, EventRecord& record) {
+bool EvtxParser::parse_event_record(const EVT_EVENT_RECORD_HEADER& record_header, EventRecord& record) {
     try {
-        EVT_EVENT_RECORD_HEADER record_header;
-        file_stream_.read(reinterpret_cast<char*>(&record_header), EVTX_EVENT_RECORD_HEADER_SIZE);
-        
-        if (!record_header.validate_magic()) {
-            return false;
-        }
-        
         record.record_id = record_header.record_id;
         record.timestamp = record_header.get_timestamp_string();
         
