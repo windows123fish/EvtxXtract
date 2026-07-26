@@ -17,3 +17,4 @@ namespace Evtx {
  * @brief EVT_FILE_HEADER structure
  * 
  * Represents the 4KB file header at the beginning of every .evtx file.
+ * The magic number "ElfFile\x
