@@ -25,4 +25,4 @@ namespace Evtx {
  * 
  * Offset | Size | Field
  * -------|------|------
- * 0x0000 | 8
+ * 0x0000 | 8    | magic ("ElfFile\x00
