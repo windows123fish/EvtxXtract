@@ -113,4 +113,5 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
         bmi.bmiHeader.biCompression = BI_RGB;
 
         hFontDC = CreateCompatibleDC(g_hDC);
-        font_buffer = new unsigned char[font
+        font_buffer = new unsigned char[font_width * font_height * 4];
+        hFontBitmap = CreateDIBSection(hFontDC, &bmi, DIB_RGB
