@@ -42,3 +42,4 @@ int main(int argc, char* argv[]) {
 
   std::ifstream file(argv[1], std::ios::binary);
   if (!file) {
+    std::cerr << "Failed to open file: " << argv[1] << "\
