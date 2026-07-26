@@ -1,5 +1,5 @@
-CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_tables.cpp.obj: \
- D:/main/EvtxXtract/external/imgui/imgui_tables.cpp \
+CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_widgets.cpp.obj: \
+ D:/main/EvtxXtract/external/imgui/imgui_widgets.cpp \
  D:/main/EvtxXtract/external/imgui/imgui.h \
  D:/main/EvtxXtract/external/imgui/imconfig.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/include/float.h \
@@ -196,4 +196,5 @@ CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_tables.cpp.obj: \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/include/avx512bmmintrin.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/include/avx512bmmvlintrin.h \
  D:/mingw64/lib/gcc/x86_64-w64-mingw32/16.1.0/include/stdint.h \
- D:/mingw64/x86_64-w64-mingw32/include/stdint.h
+ D:/mingw64/x86_64-w64-mingw32/include/stdint.h \
+ D:/main/EvtxXtract/external/imgui/imstb_textedit.h
