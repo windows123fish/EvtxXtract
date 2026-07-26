@@ -1,0 +1,3 @@
+D:/main/EvtxXtract/build/CMakeFiles/CMakeScratch/TryCompile-4cfxhk/CMakeFiles/cmTC_e9e64.dir
+D:/main/EvtxXtract/build/CMakeFiles/CMakeScratch/TryCompile-4cfxhk/CMakeFiles/edit_cache.dir
+D:/main/EvtxXtract/build/CMakeFiles/CMakeScratch/TryCompile-4cfxhk/CMakeFiles/rebuild_cache.dir
