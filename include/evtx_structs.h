@@ -40,3 +40,6 @@ struct EVT_FILE_HEADER {
    * @brief Magic number: "ElfFile\x00" (8 bytes)
    */
   std::array<uint8_t, 8> magic;
+
+  /**
+   * @brief File size in bytes (8 bytes, little-endian)
