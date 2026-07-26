@@ -51,4 +51,5 @@ add_executable(EvtxXtract-GUI
     ${IMGUI_SRC}
 )
 
-# Include
+# Include directories for GUI
+target_include_directories(EvtxXtract-GUI PRIVATE
