@@ -244,3 +244,43 @@ struct EVT_CHUNK_HEADER {
   /**
    * @brief Offset of the string offset array (4 bytes, little-endian)
    */
+  uint32_t string_offset_array_offset;
+
+  /**
+   * @brief Reserved/unused area (464 bytes)
+   * 
+   * Remaining bytes of the 512-byte chunk header
+   */
+  std::array<uint8_t, 464> reserved;
+
+  /**
+   * @brief Validate the chunk header magic number
+   * 
+   * @return true if magic matches "ElfChnk\x00", false otherwise
+   */
+  bool validate_magic() const noexcept;
+
+  /**
+   * @brief Get a human-readable description of the chunk header
+   * 
+   * @return String containing chunk header information
+   */
+  std::string to_string() const;
+};
+
+#pragma pack(pop)
+
+// Constants
+constexpr size_t EVTX_FILE_HEADER_SIZE = 4096;
+constexpr size_t EVTX_CHUNK_SIZE = 65536;
+constexpr size_t EVTX_CHUNK_HEADER_SIZE = 512;
+
+// Expected magic values
+constexpr std::array<uint8_t, 8> EVTX_FILE_MAGIC = {
+    'E', 'l', 'f', 'F', 'i', 'l', 'e', 0x00
+};
+constexpr std::array<uint8_t, 8> EVTX_CHUNK_MAGIC = {
+    'E', 'l', 'f', 'C', 'h', 'n', 'k', 0x00
+};
+
+}  // namespace Evtx
