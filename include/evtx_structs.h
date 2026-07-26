@@ -212,4 +212,7 @@ struct EVT_CHUNK_HEADER {
   /**
    * @brief Offset of free space in this chunk (4 bytes, little-endian)
    */
-  uint32_t free_space_offset
+  uint32_t free_space_offset;
+
+  /**
+   * @brief CRC
