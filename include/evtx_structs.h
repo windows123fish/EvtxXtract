@@ -20,4 +20,5 @@ struct EVT_FILE_HEADER {
   std::array<uint8_t, 4052> reserved;
 
   bool validate_magic() const noexcept;
-  uint1
+  uint16_t get_major_version() const noexcept;
+  uint16_t get_minor_version
