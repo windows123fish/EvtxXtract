@@ -11,3 +11,8 @@ struct EVT_CHUNK_HEADER;
 
 struct ChunkInfo {
     uint64_t offset;
+    uint32_t event_count;
+    uint32_t checksum;
+};
+
+class
