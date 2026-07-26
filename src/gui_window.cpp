@@ -267,4 +267,5 @@ void GuiWindow::scanEvtxFiles() {
         }
     }
     
-    // If no files found
+    // If no files found, try to export using wevtutil
+    if (m_evtxFiles.empty()) {
