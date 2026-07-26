@@ -117,3 +117,4 @@ IMGUI_IMPL_API void ImGui_ImplWin32_NewFrame() {
     POINT pos;
     GetCursorPos(&pos);
     ScreenToClient(g_hWnd, &pos);
+    io.MousePos = ImVec2((float)pos.x, (float)pos.y
