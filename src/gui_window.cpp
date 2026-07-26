@@ -68,3 +68,5 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::string& title, int width, i
     m_hDC = GetDC(m_hWnd);
     
     // Initialize ImGui
+    ImGui::CreateContext();
+    ImGuiIO& io = ImGui::GetIO();
