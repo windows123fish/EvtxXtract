@@ -82,3 +82,6 @@ static bool ImGui_ImplGDI_CreateBuffer(int width, int height) {
 IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
     if (!g_hDC || !draw_data)
         return;
+
+    // Create/resize buffer
+    int width = (int)draw_data->DisplaySize
