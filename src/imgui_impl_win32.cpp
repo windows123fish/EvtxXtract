@@ -17,4 +17,5 @@ static WNDCLASSEXA CreateWindowClass(HINSTANCE hInstance) {
     wc.style         = CS_HREDRAW | CS_VREDRAW | CS_OWNDC;
     wc.lpfnWndProc   = ImGui_ImplWin32_WndProcHandler;
     wc.hInstance     = hInstance;
-    wc.hCursor
+    wc.hCursor       = LoadCursor(NULL, IDC_ARROW);
+    wc.hbrBackground = (HBRUSH)GetStockObject(BLACK_BR
