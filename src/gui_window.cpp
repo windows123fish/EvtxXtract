@@ -165,4 +165,5 @@ void GuiWindow::renderFileSelection() {
         for (size_t i = 0; i < m_evtxFiles.size(); i++) {
             bool isSelected = (m_selectedFileIndex == (int)i);
             ImGui::PushID((int)i);
-            if (ImGui
+            if (ImGui::Selectable(m_evtxFiles[i].c_str(), isSelected)) {
+                m
