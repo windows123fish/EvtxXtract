@@ -38,4 +38,5 @@ IMGUI_IMPL_API HWND ImGui_ImplWin32_CreateWindow(HINSTANCE hInstance, const char
         title,
         WS_OVERLAPPEDWINDOW,
         CW_USEDEFAULT, CW_USEDEFAULT,
-        rect
+        rect.right - rect.left, rect.bottom - rect.top,
+        NULL, NULL, hInstance,
