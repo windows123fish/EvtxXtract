@@ -90,3 +90,6 @@ struct EVT_FILE_HEADER {
    * Computed over bytes 0x0008 through 0x0FFF of the header
    */
   uint32_t checksum;
+
+  /**
+   * @brief Reserved/unused area (4052 bytes)
