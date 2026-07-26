@@ -27,4 +27,5 @@ namespace Evtx {
  * -------|------|------
  * 0x0000 | 8    | magic ("ElfFile\x00")
  * 0x0008 | 2    | version_major
- * 0x000A |
+ * 0x000A | 2    | version_minor
+ * 0x000C | 2    |
