@@ -147,3 +147,6 @@ void GuiWindow::renderDrawData(ImDrawData* draw_data) {
         return;
 
     // Get display size
+    RECT rect;
+    GetClientRect(m_hWnd, &rect);
+    int
