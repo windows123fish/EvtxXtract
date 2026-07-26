@@ -354,4 +354,7 @@ LRESULT GuiWindow::wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) {
     switch (msg) {
         case WM_CLOSE:
             m_isRunning = false;
-            Post
+            PostQuitMessage(0);
+            return 0;
+            
+        case WM_KEYDOWN:
