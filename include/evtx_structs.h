@@ -215,4 +215,5 @@ struct EVT_CHUNK_HEADER {
   uint32_t free_space_offset;
 
   /**
-   * @brief CRC
+   * @brief CRC32 checksum of all event records (4 bytes, little-endian)
+   */
