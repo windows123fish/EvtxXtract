@@ -11,4 +11,8 @@ static unsigned char*   g_Buffer = NULL;
 // Initialize GDI rendering
 IMGUI_IMPL_API bool ImGui_ImplGDI_Init(HDC hDC) {
     g_hDC = hDC;
-    g_hBitmap
+    g_hBitmap = NULL;
+    g_hBitmapOld = NULL;
+    g_Width = 0;
+    g_Height = 0;
+    g_Buffer = NULL;
