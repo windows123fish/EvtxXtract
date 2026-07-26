@@ -131,4 +131,7 @@ IMGUI_IMPL_API void ImGui_ImplWin32_NewFrame() {
 // Update mouse cursor
 static void ImGui_ImplWin32_UpdateMouseCursor() {
     ImGuiIO& io = ImGui::GetIO();
-    if
+    if (io.ConfigFlags & ImGuiConfigFlags_NoMouseCursorChange)
+        return;
+
+    ImGui
