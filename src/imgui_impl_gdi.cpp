@@ -104,4 +104,5 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
     static unsigned char* font_buffer = NULL;
     if (!hFontBitmap) {
         BITMAPINFO bmi;
-        ZeroMemory(&bmi, sizeof(BITMAP
+        ZeroMemory(&bmi, sizeof(BITMAPINFO));
+        bmi.bmiHeader.biSize = sizeof(BITMAPINFOHEADER
