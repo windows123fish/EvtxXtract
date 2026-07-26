@@ -3,4 +3,5 @@
 #include <iomanip>
 #include <cstdint>
 
-void print_hex_dump(const uint8_t* data, size_t
+void print_hex_dump(const uint8_t* data, size_t size) {
+  for (size_t i
