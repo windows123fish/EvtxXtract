@@ -196,4 +196,6 @@ IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARA
             io.MouseDown[2] = true;
             return 0;
         case WM_MBUTTONUP:
-            io.MouseDown[
+            io.MouseDown[2] = false;
+            return 0;
+        case WM_MOUSEWHEEL
