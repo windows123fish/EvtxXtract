@@ -175,3 +175,5 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
                             float b = w0 * c0.z + w1 * c1.z + w2 * c2.z;
                             float a = w0 * c0.w + w1 * c1.w + w2 * c2.w;
 
+                            // Blend with background
+                            int idx = (y * width + x) * 4;
