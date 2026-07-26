@@ -37,4 +37,7 @@ add_executable(EvtxXtract
 # Include headers
 target_include_directories(EvtxXtract PRIVATE include)
 
-# Debug tool for analyzing .
+# Debug tool for analyzing .evtx file header
+add_executable(debug_header
+    src/debug_header.cpp
+)
