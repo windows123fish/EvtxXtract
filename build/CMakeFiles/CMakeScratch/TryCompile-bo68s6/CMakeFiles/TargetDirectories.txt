@@ -1,0 +1,3 @@
+D:/main/EvtxXtract/build/CMakeFiles/CMakeScratch/TryCompile-bo68s6/CMakeFiles/cmTC_ecf40.dir
+D:/main/EvtxXtract/build/CMakeFiles/CMakeScratch/TryCompile-bo68s6/CMakeFiles/edit_cache.dir
+D:/main/EvtxXtract/build/CMakeFiles/CMakeScratch/TryCompile-bo68s6/CMakeFiles/rebuild_cache.dir
