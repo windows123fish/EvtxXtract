@@ -144,3 +144,7 @@ static void ImGui_ImplWin32_UpdateMouseCursor() {
     } else {
         // Show OS mouse cursor
         if (!g_bPrevMouseVisible) {
+            g_bPrevMouseVisible = true;
+            ShowCursor(true);
+        }
+
