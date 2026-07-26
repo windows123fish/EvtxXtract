@@ -101,3 +101,5 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
     // Create font bitmap if not exists
     static HBITMAP hFontBitmap = NULL;
     static HDC hFontDC = NULL;
+    static unsigned char* font_buffer = NULL;
+    if (!hFontBitmap) {
