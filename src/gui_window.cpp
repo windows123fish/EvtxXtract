@@ -189,4 +189,5 @@ void GuiWindow::renderDrawData(ImDrawData* draw_data) {
     // Get font texture
     ImGuiIO& io = ImGui::GetIO();
     unsigned char* font_pixels = NULL;
-    int font_width =
+    int font_width = 0, font_height = 0, font_bpp = 0;
+    io.Fonts
