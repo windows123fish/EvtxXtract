@@ -57,4 +57,6 @@ struct EVT_FILE_HEADER {
   uint64_t newest_chunk_offset;
 
   /**
-   * @brief File format version (4 bytes
+   * @brief File format version (4 bytes, little-endian)
+   * 
+   * High 16 bits: major version
