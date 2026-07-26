@@ -31,4 +31,10 @@ set(IMGUI_SRC
 add_executable(EvtxXtract
     src/main.cpp
     src/evtx_parser.cpp
-    src/evtx_structs
+    src/evtx_structs.cpp
+)
+
+# Include headers
+target_include_directories(EvtxXtract PRIVATE include)
+
+# Debug tool for analyzing .
