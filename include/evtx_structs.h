@@ -54,4 +54,8 @@ struct EVT_FILE_HEADER {
   uint16_t version_major;
 
   /**
-   * @brief Minor version (2 bytes,
+   * @brief Minor version (2 bytes, little-endian)
+   * 
+   * Currently always 0
+   */
+  uint
