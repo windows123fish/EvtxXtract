@@ -44,3 +44,6 @@ static bool ImGui_ImplGDI_CreateBuffer(int width, int height) {
     if (g_hBitmap) {
         if (g_hDC && g_hBitmapOld)
             SelectObject(g_hDC, g_hBitmapOld);
+        DeleteObject(g_hBitmap);
+        g_hBitmap = NULL;
+        g_hBitmap
