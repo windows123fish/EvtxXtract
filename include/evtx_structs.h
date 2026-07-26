@@ -37,3 +37,6 @@ namespace Evtx {
  * -------|------|------
  * Total  | 4096 |
  */
+struct EVT_FILE_HEADER {
+  /**
+   * @brief Magic number: "El
