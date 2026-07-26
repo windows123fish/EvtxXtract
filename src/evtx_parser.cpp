@@ -1,6 +1,7 @@
 #include "evtx_parser.h"
 #include <cstring>
 #include <stdexcept>
+#include <stack>
 
 namespace Evtx {
 
