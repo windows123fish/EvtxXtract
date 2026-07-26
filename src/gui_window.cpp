@@ -51,3 +51,9 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::string& title, int width, i
     AdjustWindowRectEx(&rect, WS_OVERLAPPEDWINDOW, FALSE, 0);
     
     m_hWnd = CreateWindowExA(
+        0,
+        wc.lpszClassName,
+        title.c_str(),
+        WS_OVERLAPPEDWINDOW,
+        CW_USEDEFAULT, CW_USEDEFAULT,
+        rect.right
