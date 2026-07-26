@@ -323,4 +323,7 @@ void GuiWindow::parseSelectedFile() {
         }
         
         // Update file size with actual size
-        m_fileHeader.file_size = fs::file_size(filepath
+        m_fileHeader.file_size = fs::file_size(filepath);
+        
+    } catch (const std::exception& e) {
+        MessageBoxA(m_h
