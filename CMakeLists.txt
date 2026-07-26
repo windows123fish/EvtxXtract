@@ -65,6 +65,8 @@ target_link_libraries(EvtxXtract-GUI PRIVATE
     user32
     shell32
     dwmapi
+    d3d11
+    d3dcompiler
 )
 
 # Enable testing
