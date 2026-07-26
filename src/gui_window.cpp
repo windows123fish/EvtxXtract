@@ -88,3 +88,7 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::string& title, int width, i
     scanEvtxFiles();
     
     ShowWindow(m_hWnd, SW_SHOW);
+    UpdateWindow(m_hWnd);
+    m_isRunning = true;
+    
+    return true;
