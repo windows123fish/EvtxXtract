@@ -65,4 +65,8 @@ target_link_libraries(EvtxXtract-GUI PRIVATE
     shell32
 )
 
-# Enable
+# Enable testing
+enable_testing()
+
+# --- vcpkg integration for Phase 2 ---
+#
