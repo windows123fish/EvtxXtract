@@ -40,4 +40,6 @@ static bool ImGui_ImplGDI_CreateBuffer(int width, int height) {
     if (g_Width == width && g_Height == height)
         return true;
 
-    //
+    // Cleanup old buffer
+    if (g_hBitmap) {
+        if (g_hDC
