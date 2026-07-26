@@ -477,6 +477,61 @@ void GuiWindow::parseSelectedFile() {
     m_isParsing = false;
 }
 
+bool GuiWindow::isAdmin() {
+    BOOL is_admin = FALSE;
+    SID_IDENTIFIER_AUTHORITY nt_authority = SECURITY_NT_AUTHORITY;
+    PSID admin_sid = nullptr;
+    
+    // 创建管理员组的SID
+    if (!AllocateAndInitializeSid(
+        &nt_authority,
+        2,
+        SECURITY_BUILTIN_DOMAIN_RID,
+        DOMAIN_ALIAS_RID_ADMINS,
+        0, 0, 0, 0, 0, 0,
+        &admin_sid)) {
+        return false;
+    }
+    
+    // 检查当前进程是否属于管理员组
+    CheckTokenMembership(NULL, admin_sid, &is_admin);
+    
+    FreeSid(admin_sid);
+    return is_admin == TRUE;
+}
+
+bool GuiWindow::runAsAdmin() {
+    wchar_t path[MAX_PATH];
+    if (GetModuleFileNameW(NULL, path, MAX_PATH) == 0) {
+        return false;
+    }
+    
+    SHELLEXECUTEINFOW sei{};
+    sei.cbSize = sizeof(sei);
+    sei.fMask = SEE_MASK_NOCLOSEPROCESS;
+    sei.hwnd = m_hWnd;
+    sei.lpVerb = L"runas";
+    sei.lpFile = path;
+    sei.nShow = SW_NORMAL;
+    
+    if (!ShellExecuteExW(&sei)) {
+        // 用户取消了UAC提示
+        DWORD error = GetLastError();
+        if (error == ERROR_CANCELLED) {
+            MessageBoxW(m_hWnd, L"用户取消了管理员权限请求", L"提示", MB_OK | MB_ICONINFORMATION);
+        }
+        return false;
+    }
+    
+    // 等待新进程启动后退出当前进程
+    WaitForSingleObject(sei.hProcess, 500);
+    CloseHandle(sei.hProcess);
+    
+    m_isRunning = false;
+    PostQuitMessage(0);
+    return true;
+}
+
 LRESULT CALLBACK GuiWindow::s_wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) {
     GuiWindow* window = nullptr;
     
