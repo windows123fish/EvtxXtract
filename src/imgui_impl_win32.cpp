@@ -82,4 +82,7 @@ IMGUI_IMPL_API bool ImGui_ImplWin32_Init(HWND hWnd) {
 // Shutdown ImGui for Win32
 IMGUI_IMPL_API void ImGui_ImplWin32_Shutdown() {
     if (g_hDC) {
-        ReleaseDC(g_hWnd, g_hDC
+        ReleaseDC(g_hWnd, g_hDC);
+        g_hDC = NULL;
+    }
+    g_hWnd = NULL;
