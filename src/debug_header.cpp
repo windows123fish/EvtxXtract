@@ -73,3 +73,4 @@ int main(int argc, char* argv[]) {
   std::cout << "[0x000C-0x000D] Flags: 0x" << std::hex << flags << "\n";
   
   // Chunk Count (0x000E, 2 bytes)
+  uint16_t chunk_count = *reinterpret_cast<uint16_t*>(&buffer
