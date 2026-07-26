@@ -31,3 +31,4 @@ struct EVT_FILE_HEADER {
   uint32_t version;
   uint16_t flags;
   uint16_t chunk_count;
+  uint64_t file_size;
