@@ -253,4 +253,10 @@ struct EVT_CHUNK_HEADER {
    * 
    * @return String containing chunk header information
    */
-  std::string to
+  std::string to_string() const;
+};
+
+#pragma pack(pop)
+
+// Constants
+constexpr size_t
