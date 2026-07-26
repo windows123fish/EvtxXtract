@@ -168,4 +168,5 @@ void GuiWindow::renderDrawData(ImDrawData* draw_data) {
         }
         
         BITMAPINFO bmi;
-        ZeroMemory(&bmi, sizeof
+        ZeroMemory(&bmi, sizeof(BITMAPINFO));
+        bmi.bmiHeader.biSize = sizeof(BITMAP
