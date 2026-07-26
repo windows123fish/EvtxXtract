@@ -202,3 +202,5 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
 }
 
 // New frame
+IMGUI_IMPL_API void ImGui_ImplGDI_NewFrame() {
+}
