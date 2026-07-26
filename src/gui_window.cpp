@@ -106,3 +106,9 @@ void GuiWindow::shutdown() {
     if (m_hWnd) {
         DestroyWindow(m_hWnd);
         m_hWnd = nullptr;
+    }
+}
+
+void GuiWindow::run() {
+    MSG msg;
+    ZeroMemory
