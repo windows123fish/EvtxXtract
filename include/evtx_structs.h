@@ -43,4 +43,9 @@ struct EVT_CHUNK_HEADER {
   std::array<uint8_t, 440> reserved;
 
   bool validate_magic() const noexcept;
-  std::string
+  std::string to_string() const;
+};
+
+#pragma pack(pop)
+
+constexpr size_t EVTX
