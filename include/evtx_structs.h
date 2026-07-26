@@ -209,3 +209,8 @@ struct EVT_CHUNK_HEADER {
 
   /**
    * @brief CRC32 checksum of all event records (4 bytes, little-endian)
+   */
+  uint32_t events_checksum;
+
+  /**
+   * @brief Unknown
