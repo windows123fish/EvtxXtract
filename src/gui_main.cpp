@@ -4,4 +4,6 @@
 GuiWindow* g_pWindow = nullptr;
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int) {
-    g
+    g_pWindow = new GuiWindow();
+    
+    if
