@@ -61,4 +61,6 @@ target_include_directories(EvtxXtract-GUI PRIVATE
 )
 
 # Link against Win32 libraries
-target_link_libraries
+target_link_libraries(EvtxXtract-GUI PRIVATE
+    gdi32
+    user32
