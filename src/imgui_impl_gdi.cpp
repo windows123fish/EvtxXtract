@@ -94,3 +94,5 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
 
     // Get the font texture
     ImGuiIO& io = ImGui::GetIO();
+    unsigned char* font_pixels = NULL;
+    int font_width = 0, font_height = 0, font_bytes_per_pixel
