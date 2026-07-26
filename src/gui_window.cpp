@@ -372,4 +372,6 @@ LRESULT GuiWindow::wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) {
             return 0;
             
         default:
-            return ImGui_ImplWin32_WndProcHandler(hWnd, msg, wParam,
+            return ImGui_ImplWin32_WndProcHandler(hWnd, msg, wParam, lParam);
+    }
+}
