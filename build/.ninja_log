@@ -19,3 +19,7 @@
 58	1599	8067530054266549	CMakeFiles/EvtxXtract.dir/src/evtx_parser.cpp.obj	2f1f17b95d99d674
 19	2294	8067530053875446	CMakeFiles/EvtxXtract.dir/src/main.cpp.obj	b9807664d744cfc6
 2294	2861	8067530076630078	EvtxXtract.exe	c67885f5e99217de
+78	1435	8067531387903737	CMakeFiles/EvtxXtract.dir/src/evtx_structs.cpp.obj	97469e576bad7707
+51	1582	8067531387634426	CMakeFiles/EvtxXtract.dir/src/evtx_parser.cpp.obj	2f1f17b95d99d674
+15	2256	8067531387285777	CMakeFiles/EvtxXtract.dir/src/main.cpp.obj	b9807664d744cfc6
+2256	2820	8067531409690764	EvtxXtract.exe	c67885f5e99217de
