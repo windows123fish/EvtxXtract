@@ -14,4 +14,5 @@ void print_hex_dump(const uint8_t* data, size_t size) {
       if (j == 7) std::cout << " ";
     }
     
-    //
+    // Fill remaining space
+    for (size_t j
