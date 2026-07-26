@@ -11,4 +11,5 @@ static bool                 g_bCursorDisabled = false;
 static bool                 g_bPrevMouseVisible = true;
 
 // Helper to create a window class
-static WNDCLASSEXA CreateWindowClass(HINSTANCE h
+static WNDCLASSEXA CreateWindowClass(HINSTANCE hInstance) {
+    WNDCLASSE
