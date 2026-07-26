@@ -171,4 +171,7 @@ struct EVT_CHUNK_HEADER {
   std::array<uint8_t, 8> magic;
 
   /**
-   * @brief First event record number in this chunk (8 bytes,
+   * @brief First event record number in this chunk (8 bytes, little-endian)
+   */
+  uint64_t first_event_record_number;
+
