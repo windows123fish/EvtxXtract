@@ -138,4 +138,7 @@ static void ImGui_ImplWin32_UpdateMouseCursor() {
     if (imgui_cursor == ImGuiMouseCursor_None || io.MouseDrawCursor) {
         // Hide OS mouse cursor if ImGui is drawing it
         if (g_bPrevMouseVisible) {
-            g
+            g_bPrevMouseVisible = false;
+            ShowCursor(false);
+        }
+    } else
