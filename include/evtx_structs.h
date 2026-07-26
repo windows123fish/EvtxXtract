@@ -61,4 +61,6 @@ struct EVT_FILE_HEADER {
   uint16_t version_minor;
 
   /**
-   * @brief File flags (2 bytes
+   * @brief File flags (2 bytes, little-endian)
+   * 
+   * Bit 0: Dirty flag - set if
