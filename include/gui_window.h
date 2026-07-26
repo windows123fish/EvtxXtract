@@ -47,4 +47,5 @@ private:
     
     // Parsing state
     bool m_isParsing;
-    EVT
+    EVT_FILE_HEADER m_fileHeader;
+    std::vector<ChunkInfo> m_chunkInfo;
