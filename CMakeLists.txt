@@ -29,3 +29,5 @@ set(IMGUI_SRC
 
 # Add source files for console version
 add_executable(EvtxXtract
+    src/main.cpp
+    src/evtx
