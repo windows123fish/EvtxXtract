@@ -107,8 +107,9 @@ size_t EvtxParser::validate_chunks() {
     file_stream_.seekg(static_cast<std::streampos>(chunk_offset));
     
     if (!file_stream_.good()) {
+      // 记录错误但继续检查后续块
       set_error("Failed to seek to chunk " + std::to_string(i) + " at offset " + std::to_string(chunk_offset));
-      break;
+      continue;
     }
 
     // Read chunk header
