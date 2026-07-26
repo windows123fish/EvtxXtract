@@ -259,4 +259,5 @@ struct EVT_CHUNK_HEADER {
 #pragma pack(pop)
 
 // Constants
-constexpr size_t EVTX_FILE_HEADER_SIZE =
+constexpr size_t EVTX_FILE_HEADER_SIZE = 4096;
+constexpr size_t
