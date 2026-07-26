@@ -69,4 +69,5 @@ int main(int argc, char* argv[]) {
   std::cout << "[0x0008-0x000B] Version: 0x" << std::hex << version << " (" << major << "." << minor << ")\n";
   
   // Flags (0x000C, 2 bytes)
-  uint16_t flags = *reinterpret_cast<uint16_t*>(&buffer[
+  uint16_t flags = *reinterpret_cast<uint16_t*>(&buffer[0x0C]);
+  std::cout << "[0x000C-0
