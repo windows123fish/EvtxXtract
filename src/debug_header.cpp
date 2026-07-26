@@ -56,4 +56,4 @@ int main(int argc, char* argv[]) {
   std::cout << "\n=== Field interpretation (Little-endian) ===\n";
   
   // Magic (0x0000, 8 bytes)
-  std::cout
+  std::cout << "[0x0000-0x0007] Magic: ";
