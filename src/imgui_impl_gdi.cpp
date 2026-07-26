@@ -149,4 +149,5 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
                 const ImVec2& v1 = cmd_list->VtxBuffer[idx1].pos;
                 const ImVec2& v2 = cmd_list->VtxBuffer[idx2].pos;
 
-                const Im
+                const ImVec4& c0 = cmd_list->VtxBuffer[idx0].col;
+                const
