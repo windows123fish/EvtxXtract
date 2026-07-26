@@ -179,4 +179,6 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
                             int idx = (y * width + x) * 4;
                             unsigned char& dst_r = g_Buffer[idx];
                             unsigned char& dst_g = g_Buffer[idx + 1];
-                            unsigned char& dst_b = g_Buffer
+                            unsigned char& dst_b = g_Buffer[idx + 2];
+
+                            float alpha = a / 255.0f;
