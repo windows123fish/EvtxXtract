@@ -211,6 +211,14 @@ build CMakeFiles/EvtxXtract-GUI.dir/external/imgui/backends/imgui_impl_win32.cpp
   OBJECT_FILE_DIR = CMakeFiles\EvtxXtract-GUI.dir\external\imgui\backends
   TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract-GUI.dir
 
+build CMakeFiles/EvtxXtract-GUI.dir/external/imgui/backends/imgui_impl_dx11.cpp.obj: CXX_COMPILER__EvtxXtract-GUI_unscanned_ D$:/main/EvtxXtract/external/imgui/backends/imgui_impl_dx11.cpp || cmake_object_order_depends_target_EvtxXtract-GUI
+  DEP_FILE = CMakeFiles\EvtxXtract-GUI.dir\external\imgui\backends\imgui_impl_dx11.cpp.obj.d
+  FLAGS = -Wall -Wextra -Wpedantic -std=c++20
+  INCLUDES = -ID:/main/EvtxXtract/include -ID:/main/EvtxXtract/external/imgui -ID:/main/EvtxXtract/external/imgui/backends
+  OBJECT_DIR = CMakeFiles\EvtxXtract-GUI.dir
+  OBJECT_FILE_DIR = CMakeFiles\EvtxXtract-GUI.dir\external\imgui\backends
+  TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract-GUI.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target EvtxXtract-GUI
@@ -219,7 +227,7 @@ build CMakeFiles/EvtxXtract-GUI.dir/external/imgui/backends/imgui_impl_win32.cpp
 #############################################
 # Link the executable EvtxXtract-GUI.exe
 
-build EvtxXtract-GUI.exe: CXX_EXECUTABLE_LINKER__EvtxXtract-GUI_ CMakeFiles/EvtxXtract-GUI.dir/src/gui_main.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/src/gui_window.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/src/evtx_parser.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/src/evtx_structs.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_draw.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_tables.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_widgets.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_demo.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/external/imgui/backends/imgui_impl_win32.cpp.obj
+build EvtxXtract-GUI.exe: CXX_EXECUTABLE_LINKER__EvtxXtract-GUI_ CMakeFiles/EvtxXtract-GUI.dir/src/gui_main.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/src/gui_window.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/src/evtx_parser.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/src/evtx_structs.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_draw.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_tables.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_widgets.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_demo.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/external/imgui/backends/imgui_impl_win32.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/external/imgui/backends/imgui_impl_dx11.cpp.obj
   FLAGS = -Wall -Wextra -Wpedantic
   LINK_LIBRARIES = -lgdi32  -luser32  -lshell32  -ldwmapi  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\EvtxXtract-GUI.dir
