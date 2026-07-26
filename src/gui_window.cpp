@@ -95,4 +95,9 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::string& title, int width, i
 }
 
 void GuiWindow::shutdown() {
-    ImGui_ImplGDI_Sh
+    ImGui_ImplGDI_Shutdown();
+    ImGui_ImplWin32_Shutdown();
+    ImGui::DestroyContext();
+    
+    if (m_hDC) {
+        ReleaseDC(m_hWnd, m_h
