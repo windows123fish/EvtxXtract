@@ -76,4 +76,5 @@ int main(int argc, char* argv[]) {
   uint16_t chunk_count = *reinterpret_cast<uint16_t*>(&buffer[0x0E]);
   std::cout << "[0x000E-0x000F] Chunk Count: 0x" << std::hex << chunk_count << " (" << std::dec << chunk_count << ")\n";
   
-  //
+  // File Size (0x0010, 8 bytes)
+  uint64_t
