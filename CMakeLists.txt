@@ -20,4 +20,8 @@ endif()
 # ImGui source files
 set(IMGUI_SRC
     external/imgui/imgui.cpp
-    external/img
+    external/imgui/imgui_draw.cpp
+    external/imgui/imgui_tables.cpp
+    external/imgui/imgui_widgets.cpp
+    external/imgui/imgui_demo.cpp
+    external/imgui
