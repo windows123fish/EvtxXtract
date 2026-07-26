@@ -271,4 +271,5 @@ void GuiWindow::renderFileSelection() {
             scanEvtxFiles();
         }
     } else {
-        for (size_t i =
+        for (size_t i = 0; i < m_evtxFiles.size(); i++) {
+            bool isSelected = (m_selectedFileIndex == (int
