@@ -121,3 +121,4 @@ IMGUI_IMPL_API void ImGui_ImplWin32_NewFrame() {
 
     // Set mouse buttons
     io.MouseDown[0] = (GetAsyncKeyState(VK_LBUTTON) & 0x8000) != 0;
+    io.MouseDown[1] = (GetAsyncKeyState(VK_RBUTTON)
