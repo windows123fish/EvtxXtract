@@ -150,6 +150,27 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::string& title, int width, i
     ImGuiIO& io = ImGui::GetIO(); (void)io;
     io.IniFilename = NULL;
 
+    // Setup fonts with Chinese support
+    // Try to load Microsoft YaHei font first, fall back to SimSun
+    const char* font_paths[] = {
+        "C:\\Windows\\Fonts\\msyh.ttc",
+        "C:\\Windows\\Fonts\\simsun.ttc"
+    };
+    
+    bool font_loaded = false;
+    for (const char* font_path : font_paths) {
+        if (fs::exists(font_path)) {
+            io.Fonts->AddFontFromFileTTF(font_path, 16.0f);
+            font_loaded = true;
+            break;
+        }
+    }
+    
+    if (!font_loaded) {
+        // Fallback to default font
+        io.Fonts->AddFontDefault();
+    }
+
     // Setup Dear ImGui style
     ImGui::StyleColorsDark();
 
