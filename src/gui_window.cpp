@@ -235,4 +235,5 @@ void GuiWindow::renderFileInfo() {
                 ImGui::TableNextRow();
                 ImGui::TableSetColumnIndex(0);
                 ImGui::Text("0x%llX", info.offset);
-                ImGui
+                ImGui::TableSetColumnIndex(1);
+                ImGui::Text("%u", info.event_count);
