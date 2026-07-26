@@ -217,4 +217,5 @@ void GuiWindow::renderDrawData(ImDrawData* draw_data) {
                 const ImVec2& v2 = cmd_list->VtxBuffer[idx2].pos;
                 
                 // Simple rasterization
-                int min_x = static_cast<int>(std::max(clip_x0, std::min(std::min(v
+                int min_x = static_cast<int>(std::max(clip_x0, std::min(std::min(v0.x, v1.x), v2.x)));
+                int min_y = static_cast<int>(std::max(clip_y0, std::min(std::min(v0.y,
