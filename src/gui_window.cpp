@@ -12,4 +12,5 @@ extern IMGUI_IMPL_API void ImGui_ImplWin32_Shutdown();
 extern IMGUI_IMPL_API void ImGui_ImplWin32_NewFrame();
 extern IMGUI_IMPL_API bool ImGui_ImplGDI_Init(HDC hDC);
 extern IMGUI_IMPL_API void ImGui_ImplGDI_Shutdown();
-extern IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(
+extern IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data);
+extern IMGUI_IMPL_API void ImGui_ImplGDI
