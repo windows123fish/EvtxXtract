@@ -312,3 +312,7 @@ void GuiWindow::parseSelectedFile() {
         while (current_offset < file_size) {
             EVT_CHUNK_HEADER chunk_header;
             if (parser.read_chunk_header(current_offset, chunk_header)) {
+                m_validChunkCount++;
+                
+                ChunkInfo info;
+                info.offset = current_offset;
