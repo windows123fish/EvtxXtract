@@ -156,4 +156,6 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
                 // Simple triangle rasterization
                 // This is a simplified implementation for demonstration
                 float min_x = std::min(std::min(v0.x, v1.x), v2.x);
-                float min_y = std::min(std::min(v0.y, v1.y),
+                float min_y = std::min(std::min(v0.y, v1.y), v2.y);
+                float max_x = std::max(std::max(v0.x, v1.x), v2.x);
+                float max_y = std::max(std::max
