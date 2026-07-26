@@ -147,4 +147,8 @@ void GuiWindow::render() {
     
     // Render
     ImGui::Render();
-    ImGui
+    ImGui_ImplGDI_RenderDrawData(ImGui::GetDrawData());
+}
+
+void GuiWindow::renderFileSelection() {
+    ImGui::BeginChild("文件选择", ImVec
