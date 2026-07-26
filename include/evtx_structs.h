@@ -40,4 +40,7 @@ struct EVT_CHUNK_HEADER {
   uint32_t flags;
   uint32_t chunk_checksum;
   uint32_t string_offset_array_offset;
-  std::array<uint8_t, 4
+  std::array<uint8_t, 440> reserved;
+
+  bool validate_magic() const noexcept;
+  std::string
