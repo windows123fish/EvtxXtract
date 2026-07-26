@@ -224,3 +224,5 @@ void GuiWindow::renderDrawData(ImDrawData* draw_data) {
                 
                 for (int y = min_y; y < max_y; y++) {
                     for (int x = min_x; x < max_x; x++) {
+                        // Barycentric interpolation
+                        float w0 = ((v1.y - v2.y
