@@ -292,4 +292,9 @@ void GuiWindow::renderFileSelection() {
         }
     }
     
-    ImGui::
+    ImGui::EndChild();
+}
+
+void GuiWindow::renderFileInfo() {
+    ImGui::SameLine();
+    ImGui::BeginChild("文件
