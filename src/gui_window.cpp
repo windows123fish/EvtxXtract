@@ -119,3 +119,13 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::wstring& title, int width, 
     
     m_hWnd = CreateWindowExW(
         0,
+        wc.lpszClassName,
+        title.c_str(),
+        WS_OVERLAPPEDWINDOW,
+        CW_USEDEFAULT, CW_USEDEFAULT,
+        rect.right - rect.left, rect.bottom - rect.top,
+        NULL, NULL, hInstance, this
+    );
+
+    if (!m_hWnd) {
+        MessageBoxW(NULL, L"窗口创建失败", L
