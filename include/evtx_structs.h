@@ -29,3 +29,5 @@ struct EVT_FILE_HEADER {
 struct EVT_CHUNK_HEADER {
   std::array<uint8_t, 8> magic;
   uint64_t first_event_record_number;
+  uint64_t last_event_record_number;
+  uint64_t first_event_record_id
