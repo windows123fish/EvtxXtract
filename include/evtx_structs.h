@@ -253,4 +253,6 @@ struct EVT_CHUNK_HEADER {
    * 
    * @return String containing chunk header information
    */
-  std
+  std::string to_string() const;
+};
+
