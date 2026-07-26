@@ -43,3 +43,4 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::string& title, int width, i
     wc.lpszClassName = "EvtxXtract_GUI_Class";
     
     if (!RegisterClassExA(&wc)) {
+        MessageBoxA(NULL, "窗口类注册失败",
