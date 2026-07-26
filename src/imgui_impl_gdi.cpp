@@ -112,4 +112,5 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
         bmi.bmiHeader.biBitCount = 32;
         bmi.bmiHeader.biCompression = BI_RGB;
 
-        h
+        hFontDC = CreateCompatibleDC(g_hDC);
+        font_buffer = new unsigned char[font
