@@ -75,4 +75,7 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::string& title, int width, i
     // Build font atlas
     unsigned char* pixels;
     int width_, height_, bytes_per_pixel;
-    io.Fonts->GetTexDataAsRGBA32(&pixels, &width_,
+    io.Fonts->GetTexDataAsRGBA32(&pixels, &width_, &height_, &bytes_per_pixel);
+    
+    // Initialize backends
+    ImGui_Impl
