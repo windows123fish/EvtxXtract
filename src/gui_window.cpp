@@ -282,4 +282,9 @@ void GuiWindow::renderFileSelection() {
                 m_chunkInfo.clear();
                 m_validChunkCount = 0;
             }
-            ImGui
+            ImGui::PopID();
+        }
+        
+        ImGui::Separator();
+        
+        if (m_selected
