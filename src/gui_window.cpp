@@ -33,4 +33,5 @@ GuiWindow::~GuiWindow() {
 
 bool GuiWindow::init(HINSTANCE hInstance, const std::string& title, int width, int height) {
     // Create window
-    WND
+    WNDCLASSEXA wc = {0};
+    wc.cbSize        = sizeof(WND
