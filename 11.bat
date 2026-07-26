@@ -44,6 +44,6 @@ if "%HAS_CHANGES%"=="1" (
 )
 
 REM ===== ÓÃ ping ´úÌæ timeout£¨VS Code ÖÕ¶Ë¼æÈÝ£©=====
-ping -n 0.01 127.0.0.1 >nul
+ping -n 0.000001 127.0.0.1 >nul
 
 goto loop
