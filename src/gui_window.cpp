@@ -343,3 +343,5 @@ LRESULT CALLBACK GuiWindow::s_wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM
         window = reinterpret_cast<GuiWindow*>(GetWindowLongPtr(hWnd, GWLP_USERDATA));
     }
     
+    if (window) {
+        return window->wndProc(hWnd, msg, wParam
