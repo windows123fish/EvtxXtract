@@ -235,3 +235,6 @@ struct EVT_CHUNK_HEADER {
   uint32_t string_offset_array_offset;
 
   /**
+   * @brief Reserved/unused area (444 bytes)
+   * 
+   * Rem
