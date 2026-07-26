@@ -441,3 +441,5 @@ LRESULT GuiWindow::wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) {
     }
     
     switch (msg) {
+        case WM_SIZE:
+            if (g_pd3dDevice != nullptr && w
