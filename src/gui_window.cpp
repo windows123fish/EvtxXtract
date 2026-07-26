@@ -260,4 +260,6 @@ void GuiWindow::renderDrawData(ImDrawData* draw_data) {
 }
 
 void GuiWindow::renderFileSelection() {
-    ImGui::BeginChild("文件选择", ImVec2(300, ImGui::
+    ImGui::BeginChild("文件选择", ImVec2(300, ImGui::GetWindowHeight() - 100), true);
+    
+    ImGui::TextColored(
