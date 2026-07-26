@@ -177,4 +177,7 @@ void GuiWindow::renderDrawData(ImDrawData* draw_data) {
         bmi.bmiHeader.biCompression = BI_RGB;
         
         buffer = new unsigned char[width * height * 4];
-        hBitmap = CreateDIB
+        hBitmap = CreateDIBSection(m_hDC, &bmi, DIB_RGB_COLORS, (void**)&buffer, NULL, 0);
+        
+        buffer_width = width;
+        buffer_height = height
