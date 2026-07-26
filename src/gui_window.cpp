@@ -277,4 +277,6 @@ void GuiWindow::renderFileSelection() {
             std::string filename = fs::path(m_evtxFiles[i]).filename().string();
             if (ImGui::Selectable(filename.c_str(), isSelected)) {
                 m_selectedFileIndex = (int)i;
-                m_isParsing
+                m_isParsing = false;
+                m_fileHeader = Evtx::EVT_FILE_HEADER();
+                m
