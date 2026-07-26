@@ -129,4 +129,9 @@ struct EVT_FILE_HEADER {
   /**
    * @brief Get a human-readable description of the header
    * 
-   * @return String containing
+   * @return String containing header information
+   */
+  std::string to_string() const;
+};
+
+/**
