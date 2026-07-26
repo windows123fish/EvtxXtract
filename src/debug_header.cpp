@@ -22,4 +22,4 @@ void print_hex_dump(const uint8_t* data, size_t size) {
     
     // Print ASCII representation
     std::cout << " | ";
-    for
+    for (size_t j = 0; j < 16 && i + j < size;
