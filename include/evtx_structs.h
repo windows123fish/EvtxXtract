@@ -31,4 +31,5 @@ namespace Evtx {
  * 0x000C | 2    | flags
  * 0x000E | 2    | chunk_count
  * 0x0010 | 8    | file_size
- * 0x00
+ * 0x0018 | 8    | oldest_chunk_offset
+ * 0x0020 |
