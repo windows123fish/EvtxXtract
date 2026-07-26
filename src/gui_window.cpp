@@ -147,3 +147,5 @@ void GuiWindow::render() {
     
     // Render
     ImGui::Render();
+    ImGui_ImplGDI_RenderDrawData(ImGui::GetDrawData());
+}
