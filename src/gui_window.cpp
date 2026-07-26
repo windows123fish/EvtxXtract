@@ -225,4 +225,6 @@ void GuiWindow::renderFileInfo() {
         if (m_chunkInfo.empty()) {
             ImGui::Text("未解析块信息");
         } else {
-            ImGui::BeginTable("chunks", 3,
+            ImGui::BeginTable("chunks", 3, ImGuiTableFlags_Borders);
+            ImGui::TableSetupColumn("块偏移");
+            ImGui
