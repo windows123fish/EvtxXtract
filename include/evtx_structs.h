@@ -106,3 +106,6 @@ struct EVT_FILE_HEADER {
   std::array<uint8_t, 4068> reserved;
 
   /**
+   * @brief Validate the file header magic number
+   * 
+   * @return true
