@@ -47,3 +47,8 @@ add_executable(EvtxXtract-GUI
     src/gui_main.cpp
     src/gui_window.cpp
     src/evtx_parser.cpp
+    src/evtx_structs.cpp
+    ${IMGUI_SRC}
+)
+
+# Include
