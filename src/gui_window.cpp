@@ -287,4 +287,9 @@ void GuiWindow::renderFileSelection() {
         
         ImGui::Separator();
         
-        if (m_selected
+        if (m_selectedFileIndex >= 0 && ImGui::Button("解析文件")) {
+            parseSelectedFile();
+        }
+    }
+    
+    ImGui::
