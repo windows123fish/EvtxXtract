@@ -140,4 +140,5 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
             IntersectClipRect(g_hDC, clip_rect.left, clip_rect.top, clip_rect.right, clip_rect.bottom);
 
             // Draw indexed triangles
-            for (int i = 0; i < pcmd
+            for (int i = 0; i < pcmd->ElemCount; i += 3) {
+                const ImDrawIdx idx0 = idx
