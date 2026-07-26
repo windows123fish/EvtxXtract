@@ -63,6 +63,7 @@ target_link_libraries(EvtxXtract-GUI PRIVATE
     gdi32
     user32
     shell32
+    dwmapi
 )
 
 # Enable testing
