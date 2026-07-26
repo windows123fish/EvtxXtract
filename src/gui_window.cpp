@@ -231,4 +231,5 @@ void GuiWindow::renderDrawData(ImDrawData* draw_data) {
                                    ((v1.y - v2.y) * (v0.x - v2.x) + (v2.x - v1.x) * (v0.y - v2.y));
                         float w2 = 1.0f - w0 - w1;
                         
-                        if (w0 >= 0
+                        if (w0 >= 0 && w1 >= 0 && w2 >= 0) {
+                            const ImVec4& c0 = cmd_list->VtxBuffer
