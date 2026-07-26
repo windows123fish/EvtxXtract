@@ -149,4 +149,9 @@ void GuiWindow::renderDrawData(ImDrawData* draw_data) {
     // Get display size
     RECT rect;
     GetClientRect(m_hWnd, &rect);
-    int
+    int width = rect.right - rect.left;
+    int height = rect.bottom - rect.top;
+    
+    // Create buffer
+    static HBITMAP hBitmap = NULL;
+    static unsigned char
