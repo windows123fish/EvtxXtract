@@ -49,4 +49,8 @@ static bool ImGui_ImplGDI_CreateBuffer(int width, int height) {
         g_hBitmapOld = NULL;
     }
     if (g_Buffer) {
-        delete[]
+        delete[] g_Buffer;
+        g_Buffer = NULL;
+    }
+
+    g_Width
