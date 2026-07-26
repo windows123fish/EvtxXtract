@@ -78,3 +78,4 @@ int main(int argc, char* argv[]) {
   
   // File Size (0x0010, 8 bytes)
   uint64_t file_size = *reinterpret_cast<uint64_t*>(&buffer[0x10]);
+  std::cout << "[0x0010-0x0017
