@@ -103,3 +103,7 @@ struct EVT_FILE_HEADER {
    * 
    * @return true if magic matches "ElfFile\x00", false otherwise
    */
+  bool validate_magic() const noexcept;
+
+  /**
+   * @brief Get the major version
