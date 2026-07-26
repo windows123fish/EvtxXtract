@@ -128,4 +128,9 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::wstring& title, int width, 
     );
 
     if (!m_hWnd) {
-        MessageBoxW(NULL, L"窗口创建失败", L
+        MessageBoxW(NULL, L"窗口创建失败", L"错误", MB_OK | MB_ICONERROR);
+        return false;
+    }
+
+    if (!CreateDeviceD3D(m_hWnd)) {
+        CleanupDeviceD3
