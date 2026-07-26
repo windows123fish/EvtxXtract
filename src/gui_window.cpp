@@ -279,4 +279,7 @@ void GuiWindow::renderFileSelection() {
                 m_selectedFileIndex = (int)i;
                 m_isParsing = false;
                 m_fileHeader = Evtx::EVT_FILE_HEADER();
-                m
+                m_chunkInfo.clear();
+                m_validChunkCount = 0;
+            }
+            ImGui
