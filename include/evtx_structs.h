@@ -59,4 +59,5 @@ constexpr std::array<uint8_t, 8> EVTX_CHUNK_MAGIC = {
     'E', 'l', 'f', 'C', 'h', 'n', 'k', 0x00
 };
 
-static_assert(sizeof(EVT_FILE_HEADER) == EV
+static_assert(sizeof(EVT_FILE_HEADER) == EVTX_FILE_HEADER_SIZE,
+              "EVT_FILE_HEADER must be exactly 4096
