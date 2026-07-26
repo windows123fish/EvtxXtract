@@ -311,4 +311,6 @@ void GuiWindow::parseSelectedFile() {
         m_chunkInfo.clear();
         
         uint64_t current_offset = Evtx::EVTX_FILE_HEADER_SIZE;
-        const uint64_t chunk_size = Evtx::
+        const uint64_t chunk_size = Evtx::EVTX_CHUNK_SIZE;
+        
+        for (const auto& chunk_header : chunks) {
