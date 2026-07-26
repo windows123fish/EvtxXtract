@@ -50,4 +50,6 @@ int main(int argc, char* argv[]) {
   uint8_t buffer[128];
   file.read(reinterpret_cast<char*>(buffer), sizeof(buffer));
   
-  std::cout << "=== First 12
+  std::cout << "=== First 128 bytes of file ===\n";
+  print_hex_dump(buffer, sizeof(buffer));
+  
