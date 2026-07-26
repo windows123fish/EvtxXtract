@@ -258,4 +258,4 @@ void GuiWindow::scanEvtxFiles() {
     m_evtxFiles.clear();
     
     // Scan default Windows log directory
-    const std::string default_dir = "C:\\Windows\\System
+    const std::string default_dir = "C:\\Windows\\System32\\winevt\\Logs\\";
