@@ -63,4 +63,4 @@ int main(int argc, char* argv[]) {
   std::cout << "\n";
   
   // Version (0x0008, 4 bytes)
-  uint3
+  uint32_t version = *reinterpret_cast<uint32_t*>(&buffer[0x08
