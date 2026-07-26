@@ -16,4 +16,8 @@ if(MSVC)
 else()
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wpedantic")
     # Disable -Werror for now to avoid issues with MinGW warnings
-    # set(CMAKE_CXX_FLAGS "${CMAKE
+    # set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror")
+endif()
+
+# ImGui source files
+set(IMG
