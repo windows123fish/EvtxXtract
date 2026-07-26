@@ -193,3 +193,6 @@ struct EVT_CHUNK_HEADER {
   /**
    * @brief Header size in bytes (4 bytes, little-endian)
    * 
+   * Currently always 128 (0x80)
+   */
+  uint
