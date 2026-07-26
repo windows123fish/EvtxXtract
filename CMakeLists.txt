@@ -70,4 +70,5 @@ enable_testing()
 
 # --- vcpkg integration for Phase 2 ---
 # When nlohmann_json is needed for Phase 2, uncomment the following:
-# find
+# find_package(nlohmann_json REQUIRED)
+# target_link_libraries(EvtxXtract PR
