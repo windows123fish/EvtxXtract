@@ -1,3 +1,0 @@
-D:\mingw64\bin\cmake.exe -E rm -f CMakeFiles\EvtxXtract.dir/objects.a
-D:\mingw64\bin\ar.exe qc CMakeFiles\EvtxXtract.dir/objects.a @CMakeFiles\EvtxXtract.dir\objects1.rsp
-D:\mingw64\bin\c++.exe  -Wall -Wextra -Wpedantic -Wl,--whole-archive CMakeFiles\EvtxXtract.dir/objects.a -Wl,--no-whole-archive -o EvtxXtract.exe -Wl,--out-implib,libEvtxXtract.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\EvtxXtract.dir\linkLibs.rsp
