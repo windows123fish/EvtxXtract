@@ -230,4 +230,6 @@ struct EVT_CHUNK_HEADER {
   uint32_t flags;
 
   /**
-   * @brief CRC32 checksum of the
+   * @brief CRC32 checksum of the chunk header (4 bytes, little-endian)
+   * 
+   * Computed over bytes
