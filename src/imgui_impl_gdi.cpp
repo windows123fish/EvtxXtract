@@ -53,4 +53,9 @@ static bool ImGui_ImplGDI_CreateBuffer(int width, int height) {
         g_Buffer = NULL;
     }
 
-    g_Width
+    g_Width = width;
+    g_Height = height;
+
+    // Create new buffer
+    BITMAPINFO bmi;
+    ZeroMemory(&bmi, sizeof(BITMAPINFO));
