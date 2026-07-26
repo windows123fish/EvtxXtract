@@ -104,3 +104,5 @@ void GuiWindow::run() {
     MSG msg;
     ZeroMemory(&msg, sizeof(msg));
     
+    while (msg.message != WM_QUIT && m_isRunning) {
+        if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE)) {
