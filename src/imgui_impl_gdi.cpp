@@ -119,3 +119,5 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
         memcpy(font_buffer, font_pixels, font_width * font_height * 4);
     }
 
+    // Render commands
+    for (int n = 0; n < draw_data->Cmd
