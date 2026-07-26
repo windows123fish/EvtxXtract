@@ -87,3 +87,6 @@ struct EVT_FILE_HEADER {
   bool validate_magic() const noexcept;
   uint16_t get_major_version() const noexcept;
   uint16_t get_minor_version() const noexcept;
+  bool is_dirty() const noexcept;
+  std::string to_string() const;
+};
