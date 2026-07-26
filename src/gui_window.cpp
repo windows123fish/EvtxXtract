@@ -273,4 +273,5 @@ void GuiWindow::scanEvtxFiles() {
     }
 }
 
-void GuiWindow::parse
+void GuiWindow::parseSelectedFile() {
+    if (m_selectedFileIndex < 0 || m_selected
