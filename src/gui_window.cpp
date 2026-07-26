@@ -287,3 +287,5 @@ void GuiWindow::parseSelectedFile() {
     
     try {
         Evtx::EvtxParser parser(filepath);
+        if (!parser.open()) {
+            MessageBoxA(m_hWnd, ("无法打开文件:
