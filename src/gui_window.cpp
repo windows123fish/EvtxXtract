@@ -8,4 +8,10 @@
 #include <filesystem>
 #include <sstream>
 
-namespace fs = std
+namespace fs = std::filesystem;
+
+GuiWindow::GuiWindow() : 
+    m_hWnd(nullptr), 
+    m_hDC(nullptr), 
+    m_isRunning(false),
+    m_selected
