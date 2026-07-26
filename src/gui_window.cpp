@@ -207,4 +207,6 @@ void GuiWindow::renderFileInfo() {
         
         ImGui::Text("标志位: 0x%04X", m_fileHeader.flags);
         ImGui::Text("块数量: %u", m_fileHeader.chunk_count);
-        ImGui::Text("有效块数: %
+        ImGui::Text("有效块数: %u", m_validChunkCount);
+        
+        if (m_fileHeader.chunk_count != m_valid
