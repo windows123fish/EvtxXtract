@@ -28,3 +28,8 @@ void print_hex_dump(const uint8_t* data, size_t size) {
         std::cout << c;
       } else {
         std::cout << ".";
+      }
+    }
+    std::cout << "\n";
+  }
+}
