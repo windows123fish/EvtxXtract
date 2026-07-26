@@ -1,3 +1,9 @@
 #pragma once
 
-#include <c
+#include <cstdint>
+#include <array>
+#include <string>
+
+namespace Evtx {
+
+//
