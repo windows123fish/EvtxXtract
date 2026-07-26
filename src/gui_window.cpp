@@ -151,4 +151,6 @@ void GuiWindow::render() {
 }
 
 void GuiWindow::renderFileSelection() {
-    ImGui::BeginChild("文件选择", ImVec2(300, ImGui::GetWindowHeight() - 100),
+    ImGui::BeginChild("文件选择", ImVec2(300, ImGui::GetWindowHeight() - 100), true);
+    
+    ImGui::TextColored(ImVec4(0.4f,
