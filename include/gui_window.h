@@ -30,4 +30,7 @@ private:
     void renderFileInfo();
     void renderFooter();
     
-    void
+    void scanEvtxFiles();
+    void parseSelectedFile();
+    
+    LRESULT wndProc(H
