@@ -1,4 +1,5 @@
 D:/main/EvtxXtract/build/CMakeFiles/EvtxXtract.dir
+D:/main/EvtxXtract/build/CMakeFiles/debug_header.dir
 D:/main/EvtxXtract/build/CMakeFiles/test.dir
 D:/main/EvtxXtract/build/CMakeFiles/edit_cache.dir
 D:/main/EvtxXtract/build/CMakeFiles/rebuild_cache.dir
