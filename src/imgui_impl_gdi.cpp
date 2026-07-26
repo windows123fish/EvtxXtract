@@ -99,4 +99,5 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
     io.Fonts->GetTexDataAsRGBA32(&font_pixels, &font_width, &font_height, &font_bytes_per_pixel);
 
     // Create font bitmap if not exists
-    static
+    static HBITMAP hFontBitmap = NULL;
+    static HDC hFontDC = NULL;
