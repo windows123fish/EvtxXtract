@@ -223,4 +223,8 @@ IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARA
 
 // Get window handle
 IMGUI_IMPL_API HWND ImGui_ImplWin32_GetHwnd() {
-    return
+    return g_hWnd;
+}
+
+// Get device context
+IMGUI_IMPL_API HDC ImGui
