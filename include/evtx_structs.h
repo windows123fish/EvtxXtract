@@ -14,4 +14,6 @@ namespace Evtx {
 #pragma pack(push, 1)
 
 /**
- * @brief
+ * @brief EVT_FILE_HEADER structure
+ * 
+ * Rep
