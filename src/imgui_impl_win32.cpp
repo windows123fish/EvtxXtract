@@ -24,3 +24,4 @@ static WNDCLASSEXA CreateWindowClass(HINSTANCE hInstance) {
 }
 
 // Create the main window
+IMGUI_IMPL_API HWND ImGui_ImplWin32_CreateWindow(HINSTANCE h
