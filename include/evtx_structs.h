@@ -54,4 +54,7 @@ struct EVT_FILE_HEADER {
   /**
    * @brief Offset of the newest chunk in the file (8 bytes, little-endian)
    */
-  uint6
+  uint64_t newest_chunk_offset;
+
+  /**
+   * @brief File format version (4 bytes
