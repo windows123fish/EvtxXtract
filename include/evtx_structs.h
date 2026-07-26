@@ -35,3 +35,5 @@ namespace Evtx {
  * 0x0020 | 8    | newest_chunk_offset
  * 0x0028 | 4    | checksum
  * 0x002C | 4068 | reserved
+ * -------|------|------
+ * Total  | 4096 |
