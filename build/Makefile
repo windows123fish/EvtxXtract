@@ -151,6 +151,163 @@ debug_header/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\debug_header.dir\build.make CMakeFiles/debug_header.dir/build
 .PHONY : debug_header/fast
 
+#=============================================================================
+# Target rules for targets named EvtxXtract-GUI
+
+# Build rule for target.
+EvtxXtract-GUI: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 EvtxXtract-GUI
+.PHONY : EvtxXtract-GUI
+
+# fast build rule for target.
+EvtxXtract-GUI/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/build
+.PHONY : EvtxXtract-GUI/fast
+
+external/imgui/backends/imgui_impl_win32.obj: external/imgui/backends/imgui_impl_win32.cpp.obj
+.PHONY : external/imgui/backends/imgui_impl_win32.obj
+
+# target to build an object file
+external/imgui/backends/imgui_impl_win32.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/external/imgui/backends/imgui_impl_win32.cpp.obj
+.PHONY : external/imgui/backends/imgui_impl_win32.cpp.obj
+
+external/imgui/backends/imgui_impl_win32.i: external/imgui/backends/imgui_impl_win32.cpp.i
+.PHONY : external/imgui/backends/imgui_impl_win32.i
+
+# target to preprocess a source file
+external/imgui/backends/imgui_impl_win32.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/external/imgui/backends/imgui_impl_win32.cpp.i
+.PHONY : external/imgui/backends/imgui_impl_win32.cpp.i
+
+external/imgui/backends/imgui_impl_win32.s: external/imgui/backends/imgui_impl_win32.cpp.s
+.PHONY : external/imgui/backends/imgui_impl_win32.s
+
+# target to generate assembly for a file
+external/imgui/backends/imgui_impl_win32.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/external/imgui/backends/imgui_impl_win32.cpp.s
+.PHONY : external/imgui/backends/imgui_impl_win32.cpp.s
+
+external/imgui/imgui.obj: external/imgui/imgui.cpp.obj
+.PHONY : external/imgui/imgui.obj
+
+# target to build an object file
+external/imgui/imgui.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui.cpp.obj
+.PHONY : external/imgui/imgui.cpp.obj
+
+external/imgui/imgui.i: external/imgui/imgui.cpp.i
+.PHONY : external/imgui/imgui.i
+
+# target to preprocess a source file
+external/imgui/imgui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui.cpp.i
+.PHONY : external/imgui/imgui.cpp.i
+
+external/imgui/imgui.s: external/imgui/imgui.cpp.s
+.PHONY : external/imgui/imgui.s
+
+# target to generate assembly for a file
+external/imgui/imgui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui.cpp.s
+.PHONY : external/imgui/imgui.cpp.s
+
+external/imgui/imgui_demo.obj: external/imgui/imgui_demo.cpp.obj
+.PHONY : external/imgui/imgui_demo.obj
+
+# target to build an object file
+external/imgui/imgui_demo.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_demo.cpp.obj
+.PHONY : external/imgui/imgui_demo.cpp.obj
+
+external/imgui/imgui_demo.i: external/imgui/imgui_demo.cpp.i
+.PHONY : external/imgui/imgui_demo.i
+
+# target to preprocess a source file
+external/imgui/imgui_demo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_demo.cpp.i
+.PHONY : external/imgui/imgui_demo.cpp.i
+
+external/imgui/imgui_demo.s: external/imgui/imgui_demo.cpp.s
+.PHONY : external/imgui/imgui_demo.s
+
+# target to generate assembly for a file
+external/imgui/imgui_demo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_demo.cpp.s
+.PHONY : external/imgui/imgui_demo.cpp.s
+
+external/imgui/imgui_draw.obj: external/imgui/imgui_draw.cpp.obj
+.PHONY : external/imgui/imgui_draw.obj
+
+# target to build an object file
+external/imgui/imgui_draw.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_draw.cpp.obj
+.PHONY : external/imgui/imgui_draw.cpp.obj
+
+external/imgui/imgui_draw.i: external/imgui/imgui_draw.cpp.i
+.PHONY : external/imgui/imgui_draw.i
+
+# target to preprocess a source file
+external/imgui/imgui_draw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_draw.cpp.i
+.PHONY : external/imgui/imgui_draw.cpp.i
+
+external/imgui/imgui_draw.s: external/imgui/imgui_draw.cpp.s
+.PHONY : external/imgui/imgui_draw.s
+
+# target to generate assembly for a file
+external/imgui/imgui_draw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_draw.cpp.s
+.PHONY : external/imgui/imgui_draw.cpp.s
+
+external/imgui/imgui_tables.obj: external/imgui/imgui_tables.cpp.obj
+.PHONY : external/imgui/imgui_tables.obj
+
+# target to build an object file
+external/imgui/imgui_tables.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_tables.cpp.obj
+.PHONY : external/imgui/imgui_tables.cpp.obj
+
+external/imgui/imgui_tables.i: external/imgui/imgui_tables.cpp.i
+.PHONY : external/imgui/imgui_tables.i
+
+# target to preprocess a source file
+external/imgui/imgui_tables.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_tables.cpp.i
+.PHONY : external/imgui/imgui_tables.cpp.i
+
+external/imgui/imgui_tables.s: external/imgui/imgui_tables.cpp.s
+.PHONY : external/imgui/imgui_tables.s
+
+# target to generate assembly for a file
+external/imgui/imgui_tables.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_tables.cpp.s
+.PHONY : external/imgui/imgui_tables.cpp.s
+
+external/imgui/imgui_widgets.obj: external/imgui/imgui_widgets.cpp.obj
+.PHONY : external/imgui/imgui_widgets.obj
+
+# target to build an object file
+external/imgui/imgui_widgets.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_widgets.cpp.obj
+.PHONY : external/imgui/imgui_widgets.cpp.obj
+
+external/imgui/imgui_widgets.i: external/imgui/imgui_widgets.cpp.i
+.PHONY : external/imgui/imgui_widgets.i
+
+# target to preprocess a source file
+external/imgui/imgui_widgets.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_widgets.cpp.i
+.PHONY : external/imgui/imgui_widgets.cpp.i
+
+external/imgui/imgui_widgets.s: external/imgui/imgui_widgets.cpp.s
+.PHONY : external/imgui/imgui_widgets.s
+
+# target to generate assembly for a file
+external/imgui/imgui_widgets.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_widgets.cpp.s
+.PHONY : external/imgui/imgui_widgets.cpp.s
+
 src/debug_header.obj: src/debug_header.cpp.obj
 .PHONY : src/debug_header.obj
 
@@ -181,6 +338,7 @@ src/evtx_parser.obj: src/evtx_parser.cpp.obj
 # target to build an object file
 src/evtx_parser.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract.dir\build.make CMakeFiles/EvtxXtract.dir/src/evtx_parser.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/src/evtx_parser.cpp.obj
 .PHONY : src/evtx_parser.cpp.obj
 
 src/evtx_parser.i: src/evtx_parser.cpp.i
@@ -189,6 +347,7 @@ src/evtx_parser.i: src/evtx_parser.cpp.i
 # target to preprocess a source file
 src/evtx_parser.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract.dir\build.make CMakeFiles/EvtxXtract.dir/src/evtx_parser.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/src/evtx_parser.cpp.i
 .PHONY : src/evtx_parser.cpp.i
 
 src/evtx_parser.s: src/evtx_parser.cpp.s
@@ -197,6 +356,7 @@ src/evtx_parser.s: src/evtx_parser.cpp.s
 # target to generate assembly for a file
 src/evtx_parser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract.dir\build.make CMakeFiles/EvtxXtract.dir/src/evtx_parser.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/src/evtx_parser.cpp.s
 .PHONY : src/evtx_parser.cpp.s
 
 src/evtx_structs.obj: src/evtx_structs.cpp.obj
@@ -205,6 +365,7 @@ src/evtx_structs.obj: src/evtx_structs.cpp.obj
 # target to build an object file
 src/evtx_structs.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract.dir\build.make CMakeFiles/EvtxXtract.dir/src/evtx_structs.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/src/evtx_structs.cpp.obj
 .PHONY : src/evtx_structs.cpp.obj
 
 src/evtx_structs.i: src/evtx_structs.cpp.i
@@ -213,6 +374,7 @@ src/evtx_structs.i: src/evtx_structs.cpp.i
 # target to preprocess a source file
 src/evtx_structs.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract.dir\build.make CMakeFiles/EvtxXtract.dir/src/evtx_structs.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/src/evtx_structs.cpp.i
 .PHONY : src/evtx_structs.cpp.i
 
 src/evtx_structs.s: src/evtx_structs.cpp.s
@@ -221,7 +383,56 @@ src/evtx_structs.s: src/evtx_structs.cpp.s
 # target to generate assembly for a file
 src/evtx_structs.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract.dir\build.make CMakeFiles/EvtxXtract.dir/src/evtx_structs.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/src/evtx_structs.cpp.s
 .PHONY : src/evtx_structs.cpp.s
+
+src/gui_main.obj: src/gui_main.cpp.obj
+.PHONY : src/gui_main.obj
+
+# target to build an object file
+src/gui_main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/src/gui_main.cpp.obj
+.PHONY : src/gui_main.cpp.obj
+
+src/gui_main.i: src/gui_main.cpp.i
+.PHONY : src/gui_main.i
+
+# target to preprocess a source file
+src/gui_main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/src/gui_main.cpp.i
+.PHONY : src/gui_main.cpp.i
+
+src/gui_main.s: src/gui_main.cpp.s
+.PHONY : src/gui_main.s
+
+# target to generate assembly for a file
+src/gui_main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/src/gui_main.cpp.s
+.PHONY : src/gui_main.cpp.s
+
+src/gui_window.obj: src/gui_window.cpp.obj
+.PHONY : src/gui_window.obj
+
+# target to build an object file
+src/gui_window.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/src/gui_window.cpp.obj
+.PHONY : src/gui_window.cpp.obj
+
+src/gui_window.i: src/gui_window.cpp.i
+.PHONY : src/gui_window.i
+
+# target to preprocess a source file
+src/gui_window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/src/gui_window.cpp.i
+.PHONY : src/gui_window.cpp.i
+
+src/gui_window.s: src/gui_window.cpp.s
+.PHONY : src/gui_window.s
+
+# target to generate assembly for a file
+src/gui_window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EvtxXtract-GUI.dir\build.make CMakeFiles/EvtxXtract-GUI.dir/src/gui_window.cpp.s
+.PHONY : src/gui_window.cpp.s
 
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
@@ -257,7 +468,26 @@ help:
 	@echo ... rebuild_cache
 	@echo ... test
 	@echo ... EvtxXtract
+	@echo ... EvtxXtract-GUI
 	@echo ... debug_header
+	@echo ... external/imgui/backends/imgui_impl_win32.obj
+	@echo ... external/imgui/backends/imgui_impl_win32.i
+	@echo ... external/imgui/backends/imgui_impl_win32.s
+	@echo ... external/imgui/imgui.obj
+	@echo ... external/imgui/imgui.i
+	@echo ... external/imgui/imgui.s
+	@echo ... external/imgui/imgui_demo.obj
+	@echo ... external/imgui/imgui_demo.i
+	@echo ... external/imgui/imgui_demo.s
+	@echo ... external/imgui/imgui_draw.obj
+	@echo ... external/imgui/imgui_draw.i
+	@echo ... external/imgui/imgui_draw.s
+	@echo ... external/imgui/imgui_tables.obj
+	@echo ... external/imgui/imgui_tables.i
+	@echo ... external/imgui/imgui_tables.s
+	@echo ... external/imgui/imgui_widgets.obj
+	@echo ... external/imgui/imgui_widgets.i
+	@echo ... external/imgui/imgui_widgets.s
 	@echo ... src/debug_header.obj
 	@echo ... src/debug_header.i
 	@echo ... src/debug_header.s
@@ -267,6 +497,12 @@ help:
 	@echo ... src/evtx_structs.obj
 	@echo ... src/evtx_structs.i
 	@echo ... src/evtx_structs.s
+	@echo ... src/gui_main.obj
+	@echo ... src/gui_main.i
+	@echo ... src/gui_main.s
+	@echo ... src/gui_window.obj
+	@echo ... src/gui_window.i
+	@echo ... src/gui_window.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
