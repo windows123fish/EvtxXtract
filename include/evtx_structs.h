@@ -234,3 +234,7 @@ struct EVT_CHUNK_HEADER {
    * 
    * Computed over bytes 0x0008 through 0x01FF of the header
    */
+  uint32_t chunk_checksum;
+
+  /**
+   * @brief Offset of
