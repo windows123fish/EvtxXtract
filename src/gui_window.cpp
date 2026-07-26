@@ -173,4 +173,8 @@ void GuiWindow::renderDrawData(ImDrawData* draw_data) {
         bmi.bmiHeader.biWidth = width;
         bmi.bmiHeader.biHeight = -height;
         bmi.bmiHeader.biPlanes = 1;
-        bmi.bmiHeader.biBitCount = 3
+        bmi.bmiHeader.biBitCount = 32;
+        bmi.bmiHeader.biCompression = BI_RGB;
+        
+        buffer = new unsigned char[width * height * 4];
+        hBitmap = CreateDIB
