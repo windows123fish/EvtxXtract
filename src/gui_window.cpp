@@ -502,6 +502,18 @@ LRESULT GuiWindow::wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) {
         return 0;
     }
     
+    // 处理 WM_SYSCOMMAND (点击窗口右上角按钮)
+    if (msg == WM_SYSCOMMAND) {
+        // SC_CLOSE = 0xF060，点击关闭按钮
+        if ((wParam & 0xFFF0) == SC_CLOSE) {
+            m_isRunning = false;
+            PostQuitMessage(0);
+            return 0;
+        }
+        // 其他系统命令交给 DefWindowProc 处理
+        return DefWindowProcW(hWnd, msg, wParam, lParam);
+    }
+    
     if (ImGui_ImplWin32_WndProcHandler(hWnd, msg, wParam, lParam)) {
         return 0;
     }
