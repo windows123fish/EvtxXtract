@@ -191,3 +191,6 @@ void GuiWindow::renderFileInfo() {
     
     ImGui::TextColored(ImVec4(0.6f, 0.8f, 1.0f, 1.0f), "📋 文件信息");
     ImGui::Separator();
+    
+    if (!m_isParsing && m_fileHeader.magic[0] == 0) {
+        ImGui::Text("请选择一个
