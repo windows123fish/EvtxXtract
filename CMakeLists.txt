@@ -20,4 +20,5 @@ else()
 endif()
 
 # ImGui source files
-set(IMG
+set(IMGUI_SRC
+    external/imgui/imgui.cpp
