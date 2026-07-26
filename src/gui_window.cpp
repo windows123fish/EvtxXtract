@@ -301,4 +301,7 @@ void GuiWindow::parseSelectedFile() {
         }
         
         // Validate chunks
-        m_validChunkCount =
+        m_validChunkCount = 0;
+        m_chunkInfo.clear();
+        
+        // Scan for chunks (each chunk is
