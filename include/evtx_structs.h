@@ -131,4 +131,10 @@ struct EVT_FILE_HEADER {
    * 
    * @return String containing header information
    */
-  std::string to_string()
+  std::string to_string() const;
+};
+
+/**
+ * @brief EVT_CHUNK_HEADER structure
+ * 
+ *
