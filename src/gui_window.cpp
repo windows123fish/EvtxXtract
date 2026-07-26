@@ -278,3 +278,9 @@ void GuiWindow::parseSelectedFile() {
         return;
     }
     
+    m_isParsing = true;
+    
+    // Force immediate render to show loading state
+    render();
+    
+    const std::string& filepath =
