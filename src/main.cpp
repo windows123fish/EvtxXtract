@@ -116,10 +116,24 @@ void analyze_file(const std::string& file_path) {
     std::cout << "========================\n";
     std::cout << "文件: " << file_path << "\n";
     std::cout << "状态: " << (file_header.validate_magic() ? "有效" : "无效") << "\n";
-    std::cout << "版本: " << file_header.get_major_version() << "." << file_header.get_minor_version() << "\n";
+    
+    // 使用文件头版本或显示未知
+    uint16_t major = file_header.get_major_version();
+    uint16_t minor = file_header.get_minor_version();
+    std::cout << "版本: " << (major != 0 || minor != 0 ? std::to_string(major) + "." + std::to_string(minor) : "未知（文件头未填充）") << "\n";
+    
     std::cout << "脏标记: " << (file_header.is_dirty() ? "已设置（文件可能已损坏）" : "未设置") << "\n";
+    
+    // 使用实际文件大小
     std::cout << "文件大小: " << actual_file_size << " 字节\n";
+    
+    // 显示块信息
     std::cout << "已验证块数: " << valid_chunk_count << "\n";
+    
+    // 如果文件头中的块数与实际不一致，显示警告
+    if (file_header.chunk_count != valid_chunk_count) {
+      std::cout << "警告: 文件头中记录的块数(" << file_header.chunk_count << ")与实际验证的块数(" << valid_chunk_count << ")不一致\n";
+    }
 
     parser.close();
 
