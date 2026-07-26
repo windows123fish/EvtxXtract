@@ -93,4 +93,5 @@ constexpr size_t EVTX_FILE_HEADER_SIZE = 4096;
 constexpr size_t EVTX_CHUNK_SIZE = 65536;
 constexpr size_t EVTX_CHUNK_HEADER_SIZE = 512;
 
-constexpr std::array<uint8_t, 8> EV
+constexpr std::array<uint8_t, 8> EVTX_FILE_MAGIC = {
+    '
