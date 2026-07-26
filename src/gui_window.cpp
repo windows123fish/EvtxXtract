@@ -223,4 +223,6 @@ void GuiWindow::renderFileInfo() {
         ImGui::TextColored(ImVec4(0.6f, 0.8f, 1.0f, 1.0f), "📦 块信息");
         
         if (m_chunkInfo.empty()) {
-            ImGui::Text("未解析块
+            ImGui::Text("未解析块信息");
+        } else {
+            ImGui::BeginTable("chunks", 3,
