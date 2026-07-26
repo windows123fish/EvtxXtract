@@ -13,3 +13,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int) {
     
     g_pWindow->run();
     
+    delete g_pWindow;
+    return 0;
+}
+
+BOOL APIENTRY DllMain
