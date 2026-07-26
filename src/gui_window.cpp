@@ -337,4 +337,5 @@ LRESULT CALLBACK GuiWindow::s_wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM
     
     if (msg == WM_NCCREATE) {
         CREATESTRUCT* cs = reinterpret_cast<CREATESTRUCT*>(lParam);
-        window = reinterpret_cast<GuiWindow
+        window = reinterpret_cast<GuiWindow*>(cs->lpCreateParams);
+        SetWindowLongPtr(hWnd, GWLP_USERDATA
