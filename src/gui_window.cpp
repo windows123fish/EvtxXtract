@@ -9,6 +9,10 @@
 #include <filesystem>
 #include <algorithm>
 
+// Forward declaration for ImGui Win32 message handler
+// This is intentionally commented out in imgui_impl_win32.h to avoid dragging windows.h dependency
+extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
+
 namespace fs = std::filesystem;
 
 GuiWindow::GuiWindow() : 
