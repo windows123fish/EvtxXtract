@@ -117,3 +117,5 @@ struct EVT_FILE_HEADER {
  * Total  | 512  |
  */
 struct EVT_CHUNK_HEADER {
+  std::array<uint8_t, 8> magic;
+  uint64_t
