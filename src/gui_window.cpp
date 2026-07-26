@@ -81,3 +81,10 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::string& title, int width, i
     ImGui_ImplWin32_Init(m_hWnd);
     ImGui_ImplGDI_Init(m_hDC);
     
+    // Setup style
+    ImGui::StyleColorsDark();
+    
+    // Scan for .evtx files
+    scanEvtxFiles();
+    
+    ShowWindow(m_hWnd, SW_SHOW);
