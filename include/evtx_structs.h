@@ -237,4 +237,6 @@ struct EVT_CHUNK_HEADER {
   uint32_t chunk_checksum;
 
   /**
-   * @brief Offset of
+   * @brief Offset of the string offset array (4 bytes, little-endian)
+   */
+  uint32
