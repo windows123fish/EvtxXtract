@@ -90,3 +90,8 @@ struct EVT_FILE_HEADER {
   bool is_dirty() const noexcept;
   std::string to_string() const;
 };
+
+/**
+ * @brief EVT_CHUNK_HEADER structure
+ * 
+ * Represents the
