@@ -24,4 +24,11 @@ static ID3D11RenderTargetView* g_mainRenderTargetView = nullptr;
 bool CreateDeviceD3D(HWND hWnd);
 void CleanupDeviceD3D();
 void CreateRenderTarget();
-void Cleanup
+void CleanupRenderTarget();
+
+bool CreateDeviceD3D(HWND hWnd)
+{
+    DXGI_SWAP_CHAIN_DESC sd;
+    ZeroMemory(&sd, sizeof(sd));
+    sd.BufferCount = 2;
+    sd.BufferDesc.Width = 0
