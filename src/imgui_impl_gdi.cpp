@@ -109,4 +109,7 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
         bmi.bmiHeader.biWidth = font_width;
         bmi.bmiHeader.biHeight = -font_height;
         bmi.bmiHeader.biPlanes = 1;
-        bmi.bmiHeader.biBitCount = 32
+        bmi.bmiHeader.biBitCount = 32;
+        bmi.bmiHeader.biCompression = BI_RGB;
+
+        h
