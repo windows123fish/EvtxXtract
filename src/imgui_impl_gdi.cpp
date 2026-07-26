@@ -67,4 +67,5 @@ static bool ImGui_ImplGDI_CreateBuffer(int width, int height) {
     bmi.bmiHeader.biCompression = BI_RGB;
     bmi.bmiHeader.biSizeImage = width * height * 4;
 
-    g_B
+    g_Buffer = new unsigned char[width * height * 4];
+    g_hBitmap = CreateD
