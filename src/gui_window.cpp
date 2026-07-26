@@ -357,6 +357,49 @@ void GuiWindow::renderFileInfo() {
             }
             ImGui::EndTable();
         }
+        
+        // Phase 2: Event records
+        ImGui::Separator();
+        ImGui::TextColored(ImVec4(0.6f, 0.8f, 1.0f, 1.0f), "事件记录");
+        ImGui::Text("已解析 %zu 条事件", m_eventRecords.size());
+        
+        if (m_eventRecords.empty()) {
+            ImGui::Text("未解析到事件记录");
+        } else {
+            ImGui::BeginChild("EventList", ImVec2(-1, 150), true);
+            
+            for (size_t i = 0; i < m_eventRecords.size(); ++i) {
+                const auto& evt = m_eventRecords[i];
+                bool isSelected = (m_selectedEventIndex == (int)i);
+                
+                ImGui::PushID((int)i);
+                if (ImGui::Selectable(("事件 " + std::to_string(evt.record_id)).c_str(), isSelected)) {
+                    m_selectedEventIndex = (int)i;
+                }
+                
+                if (isSelected) {
+                    ImGui::SameLine();
+                    ImGui::TextColored(ImVec4(0.5f, 1.0f, 0.5f, 1.0f), 
+                        "[ID:%llu | Time:%s | Provider:%s]", 
+                        evt.record_id, 
+                        evt.timestamp.c_str(), 
+                        evt.provider_name.c_str());
+                    
+                    ImGui::Indent();
+                    ImGui::Text("事件ID: %u", evt.event_id);
+                    ImGui::Text("级别: %s", evt.level.c_str());
+                    ImGui::Text("通道: %s", evt.channel.c_str());
+                    ImGui::Text("计算机: %s", evt.computer.c_str());
+                    if (!evt.message.empty()) {
+                        ImGui::Text("消息: %s", evt.message.c_str());
+                    }
+                    ImGui::Unindent();
+                }
+                ImGui::PopID();
+            }
+            
+            ImGui::EndChild();
+        }
     }
     
     ImGui::EndChild();
