@@ -73,3 +73,9 @@ static bool ImGui_ImplGDI_CreateBuffer(int width, int height) {
         delete[] g_Buffer;
         g_Buffer = NULL;
         return false;
+    }
+
+    return true;
+}
+
+// Render ImGui draw data to GDI
