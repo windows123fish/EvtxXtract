@@ -49,3 +49,5 @@ private:
     bool m_isParsing;
     EVT_FILE_HEADER m_fileHeader;
     std::vector<ChunkInfo> m_chunkInfo;
+    uint32_t m_validChunkCount;
+};
