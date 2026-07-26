@@ -25,4 +25,23 @@ struct EVT_CHUNK_HEADER {
 void print_hex(const uint8_t* data, size_t size) {
     for (size_t i = 0; i < size; i += 16) {
         std::cout << std::hex << std::setw(8) << std::setfill('0') << i << ": ";
-        for
+        for (size_t j = 0; j < 16 && i + j < size; ++j) {
+            std::cout << std::hex << std::setw(2) << std::setfill('0') << static_cast<int>(data[i + j]) << " ";
+        }
+        std::cout << " | ";
+        for (size_t j = 0; j < 16 && i + j < size; ++j) {
+            char c = data[i + j];
+            std::cout << (c >= 32 && c < 127 ? c : '.');
+        }
+        std::cout << std::endl;
+    }
+}
+
+int main(int argc, char* argv[]) {
+    if (argc < 2) {
+        std::cout << "Usage: debug_chunk <evtx_file>" << std::endl;
+        return 1;
+    }
+    
+    std::ifstream file(argv[1], std::ios::binary);
+    if (!file.is_open())
