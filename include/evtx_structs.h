@@ -75,3 +75,7 @@ struct EVT_FILE_HEADER {
    * 
    * If no chunks exist, this is set to 0xFFFFFFFFFFFFFFFF
    */
+  uint64_t oldest_chunk_offset;
+
+  /**
+   * @brief Offset of the newest
