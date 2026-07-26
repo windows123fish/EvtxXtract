@@ -248,3 +248,5 @@ void GuiWindow::renderFileInfo() {
 }
 
 void GuiWindow::renderFooter() {
+    ImGui::Separator();
+    ImGui::
