@@ -69,3 +69,11 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::string& title, int width, i
     unsigned char* pixels;
     int width_, height_, bytes_per_pixel;
     io.Fonts->GetTexDataAsRGBA32(&pixels, &width_, &height_, &bytes_per_pixel);
+    
+    // Initialize Win32 backend
+    ImGui_ImplWin32_Init(m_hWnd);
+    
+    // Setup style
+    ImGui::StyleColorsDark();
+    
+    // Scan for .
