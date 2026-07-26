@@ -135,3 +135,4 @@ struct EVT_FILE_HEADER {
 };
 
 /**
+ * @brief EVT_CHUNK_HEADER structure
