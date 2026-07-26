@@ -25,6 +25,9 @@ CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=D:/main/EvtxXtract/build/CMakeFiles/pkgR
 //No help, variable specified on the command line.
 CMAKE_GENERATOR_INSTANCE:UNINITIALIZED=D:/Program Files/Microsoft Visual Studio/18/Community
 
+//No help, variable specified on the command line.
+CMAKE_GENERATOR_VERSION:UNINITIALIZED=17
+
 //Value Computed by CMake
 CMAKE_PROJECT_COMPAT_VERSION:STATIC=
 
