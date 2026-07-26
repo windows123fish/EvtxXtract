@@ -256,4 +256,6 @@ struct EVT_CHUNK_HEADER {
   bool validate_magic() const noexcept;
 
   /**
-   * @brief
+   * @brief Get a human-readable description of the chunk header
+   * 
+   * @return String containing chunk
