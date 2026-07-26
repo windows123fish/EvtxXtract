@@ -220,3 +220,7 @@ struct EVT_CHUNK_HEADER {
   /**
    * @brief Chunk flags (4 bytes, little-endian)
    */
+  uint32_t flags;
+
+  /**
+   * @brief CRC32 checksum
