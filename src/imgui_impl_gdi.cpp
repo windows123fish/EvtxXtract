@@ -23,4 +23,6 @@ IMGUI_IMPL_API bool ImGui_ImplGDI_Init(HDC hDC) {
 IMGUI_IMPL_API void ImGui_ImplGDI_Shutdown() {
     if (g_hBitmap) {
         if (g_hDC && g_hBitmapOld)
-            SelectObject(g_hDC, g
+            SelectObject(g_hDC, g_hBitmapOld);
+        DeleteObject(g_hBitmap);
+        g_hBitmap = NULL;
