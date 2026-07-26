@@ -23,3 +23,8 @@ GuiWindow::GuiWindow() :
     m_isRunning(false),
     m_selectedFileIndex(-1),
     m_isParsing(false),
+    m_validChunkCount(0)
+{
+}
+
+GuiWindow::~GuiWindow() {
