@@ -61,3 +61,7 @@ IMGUI_IMPL_API void ImGui_ImplWin32_DestroyWindow() {
         DestroyWindow(g_hWnd);
         g_hWnd = NULL;
     }
+}
+
+// Initialize ImGui for Win32
+IMGUI_IMPL_API bool ImGui_Impl
