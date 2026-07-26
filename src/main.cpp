@@ -4,6 +4,7 @@
 #include <vector>
 #include <filesystem>
 #include <algorithm>
+#include <cstdio>
 
 namespace fs = std::filesystem;
 
@@ -49,6 +50,12 @@ std::vector<std::string> find_evtx_files(const std::string& directory) {
   
   std::sort(files.begin(), files.end());
   return files;
+}
+
+bool export_event_log(const std::string& log_name, const std::string& output_path) {
+  std::string command = "wevtutil epl " + log_name + " \"" + output_path + "\"";
+  int result = std::system(command.c_str());
+  return result == 0;
 }
 
 void analyze_file(const std::string& file_path) {
@@ -138,14 +145,34 @@ int main(int argc, char* argv[]) {
 
   std::vector<std::string> evtx_files = find_evtx_files(default_log_dir);
 
+  // If no files found in default directory, try to export using wevtutil
   if (evtx_files.empty()) {
-    std::cerr << "No .evtx files found in the default directory.\n";
-    std::cerr << "Possible reasons:\n";
-    std::cerr << "  1. You need to run this program as Administrator\n";
-    std::cerr << "  2. The directory does not exist on your system\n";
-    std::cerr << "  3. There are no event log files\n\n";
-    std::cerr << "Usage: " << argv[0] << " <evtx_file_path>\n";
-    return 1;
+    std::cout << "No .evtx files found in the default directory.\n";
+    std::cout << "Attempting to export event logs using wevtutil...\n\n";
+    
+    const std::string temp_dir = fs::temp_directory_path().string();
+    const std::vector<std::string> log_names = {"System", "Application", "Security"};
+    
+    for (const auto& log_name : log_names) {
+      std::string output_path = temp_dir + "\\" + log_name + "_export.evtx";
+      std::cout << "Exporting " << log_name << " log... ";
+      
+      if (export_event_log(log_name, output_path)) {
+        std::cout << "OK\n";
+        evtx_files.push_back(output_path);
+      } else {
+        std::cout << "FAILED (may need Administrator privileges)\n";
+      }
+    }
+    
+    if (evtx_files.empty()) {
+      std::cerr << "\nFailed to access event logs.\n";
+      std::cerr << "Please run this program as Administrator or specify a file path.\n";
+      std::cerr << "\nUsage: " << argv[0] << " <evtx_file_path>\n";
+      return 1;
+    }
+    
+    std::cout << "\n";
   }
 
   std::cout << "Found " << evtx_files.size() << " .evtx file(s):\n";

@@ -25,17 +25,14 @@ namespace Evtx {
  * Offset | Size | Field
  * -------|------|------
  * 0x0000 | 8    | magic ("ElfFile\x00")
- * 0x0008 | 2    | version_major
- * 0x000A | 2    | version_minor
+ * 0x0008 | 4    | version (major in high 16 bits, minor in low 16 bits)
  * 0x000C | 2    | flags
  * 0x000E | 2    | chunk_count
- * 0x0010 | 4    | unknown1
- * 0x0014 | 8    | file_size
- * 0x001C | 8    | oldest_chunk_offset
- * 0x0024 | 8    | newest_chunk_offset
- * 0x002C | 8    | unknown2
- * 0x0034 | 4    | checksum
- * 0x0038 | 4040 | reserved
+ * 0x0010 | 8    | file_size
+ * 0x0018 | 8    | oldest_chunk_offset
+ * 0x0020 | 8    | newest_chunk_offset
+ * 0x0028 | 4    | checksum
+ * 0x002C | 4068 | reserved
  * -------|------|------
  * Total  | 4096 |
  */
@@ -48,18 +45,12 @@ struct EVT_FILE_HEADER {
   std::array<uint8_t, 8> magic;
 
   /**
-   * @brief Major version (2 bytes, little-endian)
+   * @brief File format version (4 bytes, little-endian)
    * 
-   * Currently always 1
+   * Major version in high 16 bits, minor version in low 16 bits.
+   * Currently always 0x00010000 (version 1.0).
    */
-  uint16_t version_major;
-
-  /**
-   * @brief Minor version (2 bytes, little-endian)
-   * 
-   * Currently always 0
-   */
-  uint16_t version_minor;
+  uint32_t version;
 
   /**
    * @brief File flags (2 bytes, little-endian)
@@ -72,13 +63,6 @@ struct EVT_FILE_HEADER {
    * @brief Number of chunks in the file (2 bytes, little-endian)
    */
   uint16_t chunk_count;
-
-  /**
-   * @brief Unknown field (4 bytes)
-   * 
-   * Reserved for future use, typically 0
-   */
-  uint32_t unknown1;
 
   /**
    * @brief File size in bytes (8 bytes, little-endian)
@@ -100,13 +84,6 @@ struct EVT_FILE_HEADER {
   uint64_t newest_chunk_offset;
 
   /**
-   * @brief Unknown field (8 bytes)
-   * 
-   * Reserved for future use, typically 0
-   */
-  uint64_t unknown2;
-
-  /**
    * @brief CRC32 checksum of the file header (4 bytes, little-endian)
    * 
    * Computed over bytes 0x0008 through 0x0FFF of the header
@@ -114,11 +91,11 @@ struct EVT_FILE_HEADER {
   uint32_t checksum;
 
   /**
-   * @brief Reserved/unused area (4040 bytes)
+   * @brief Reserved/unused area (4068 bytes)
    * 
    * Remaining bytes of the 4KB header, typically filled with zeros
    */
-  std::array<uint8_t, 4040> reserved;
+  std::array<uint8_t, 4068> reserved;
 
   /**
    * @brief Validate the file header magic number
@@ -130,14 +107,14 @@ struct EVT_FILE_HEADER {
   /**
    * @brief Get the major version number
    * 
-   * @return Major version
+   * @return Major version (high 16 bits of version field)
    */
   uint16_t get_major_version() const noexcept;
 
   /**
    * @brief Get the minor version number
    * 
-   * @return Minor version
+   * @return Minor version (low 16 bits of version field)
    */
   uint16_t get_minor_version() const noexcept;
 
@@ -232,65 +209,3 @@ struct EVT_CHUNK_HEADER {
   /**
    * @brief CRC32 checksum of all event records (4 bytes, little-endian)
    */
-  uint32_t events_checksum;
-
-  /**
-   * @brief Unknown field (4 bytes)
-   */
-  uint32_t unknown1;
-
-  /**
-   * @brief Chunk flags (4 bytes, little-endian)
-   */
-  uint32_t flags;
-
-  /**
-   * @brief CRC32 checksum of the chunk header (4 bytes, little-endian)
-   * 
-   * Computed over bytes 0x0008 through 0x01FF of the header
-   */
-  uint32_t chunk_checksum;
-
-  /**
-   * @brief Offset of the string offset array (4 bytes, little-endian)
-   */
-  uint32_t string_offset_array_offset;
-
-  /**
-   * @brief Reserved/unused area (464 bytes)
-   * 
-   * Remaining bytes of the 512-byte chunk header
-   */
-  std::array<uint8_t, 464> reserved;
-
-  /**
-   * @brief Validate the chunk header magic number
-   * 
-   * @return true if magic matches "ElfChnk\x00", false otherwise
-   */
-  bool validate_magic() const noexcept;
-
-  /**
-   * @brief Get a human-readable description of the chunk header
-   * 
-   * @return String containing chunk header information
-   */
-  std::string to_string() const;
-};
-
-#pragma pack(pop)
-
-// Constants
-constexpr size_t EVTX_FILE_HEADER_SIZE = 4096;
-constexpr size_t EVTX_CHUNK_SIZE = 65536;
-constexpr size_t EVTX_CHUNK_HEADER_SIZE = 512;
-
-// Expected magic values
-constexpr std::array<uint8_t, 8> EVTX_FILE_MAGIC = {
-    'E', 'l', 'f', 'F', 'i', 'l', 'e', 0x00
-};
-constexpr std::array<uint8_t, 8> EVTX_CHUNK_MAGIC = {
-    'E', 'l', 'f', 'C', 'h', 'n', 'k', 0x00
-};
-
-}  // namespace Evtx
