@@ -16,4 +16,5 @@ namespace Evtx {
 /**
  * @brief EVT_FILE_HEADER structure
  * 
- * Represents the 4KB file header at the
+ * Represents the 4KB file header at the beginning of every .evtx file.
+ *
