@@ -1,3 +1,0 @@
-D:/main/EvtxXtract/build/CMakeFiles/CMakeScratch/TryCompile-gsvpgj/CMakeFiles/cmTC_d6ad3.dir
-D:/main/EvtxXtract/build/CMakeFiles/CMakeScratch/TryCompile-gsvpgj/CMakeFiles/edit_cache.dir
-D:/main/EvtxXtract/build/CMakeFiles/CMakeScratch/TryCompile-gsvpgj/CMakeFiles/rebuild_cache.dir
