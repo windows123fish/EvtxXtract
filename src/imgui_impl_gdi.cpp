@@ -107,4 +107,5 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
         ZeroMemory(&bmi, sizeof(BITMAPINFO));
         bmi.bmiHeader.biSize = sizeof(BITMAPINFOHEADER);
         bmi.bmiHeader.biWidth = font_width;
-        bmi.b
+        bmi.bmiHeader.biHeight = -font_height;
+        bmi.bmiHeader.biPl
