@@ -38,4 +38,5 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::string& title, int width, i
     wc.style         = CS_HREDRAW | CS_VREDRAW | CS_OWNDC;
     wc.lpfnWndProc   = s_wndProc;
     wc.hInstance     = hInstance;
-    wc.hCursor       =
+    wc.hCursor       = LoadCursor(NULL, IDC_ARROW);
+    wc.hbrBackground = (HBRUSH
