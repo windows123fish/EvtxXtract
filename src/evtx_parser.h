@@ -1,6 +1,6 @@
 #pragma once
 
-#include "evtx_structs.h"
+#include "../include/evtx_structs.h"
 #include <fstream>
 #include <string>
 #include <vector>
