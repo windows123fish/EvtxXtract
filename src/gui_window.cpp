@@ -100,4 +100,7 @@ void GuiWindow::shutdown() {
     }
 }
 
-void GuiWindow::
+void GuiWindow::run() {
+    MSG msg;
+    ZeroMemory(&msg, sizeof(msg));
+    
