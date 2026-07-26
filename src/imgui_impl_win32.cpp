@@ -51,4 +51,5 @@ IMGUI_IMPL_API HWND ImGui_ImplWin32_CreateWindow(HINSTANCE hInstance, const char
     return g_hWnd;
 }
 
-// Destroy
+// Destroy the window
+IMGUI_IMPL_API void ImGui_ImplWin32_DestroyWindow() {
