@@ -146,4 +146,5 @@ struct EVT_FILE_HEADER {
  * Offset | Size | Field
  * -------|------|------
  * 0x0000 | 8    | magic ("ElfChnk\x00")
- * 0x0008 | 8    |
+ * 0x0008 | 8    | first_event_record_number
+ * 0x0010 | 8    | last_event
