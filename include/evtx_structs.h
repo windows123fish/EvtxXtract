@@ -76,4 +76,6 @@ struct EVT_CHUNK_HEADER {
   uint32_t header_size;
   uint32_t last_event_offset;
   uint32_t free_space_offset;
-  uint32_t events_check
+  uint32_t events_checksum;
+  uint32_t unknown1;
+  uint32_t flags;
