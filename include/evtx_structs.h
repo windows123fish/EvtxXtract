@@ -70,4 +70,6 @@ struct EVT_FILE_HEADER {
   uint16_t flags;
 
   /**
-   * @brief Number of
+   * @brief Number of chunks in the file (2 bytes, little-endian)
+   */
+  uint16
