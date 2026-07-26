@@ -59,3 +59,4 @@ static bool ImGui_ImplGDI_CreateBuffer(int width, int height) {
     // Create new buffer
     BITMAPINFO bmi;
     ZeroMemory(&bmi, sizeof(BITMAPINFO));
+    bmi.bmiHeader.biSize = sizeof(BITMAPINFOHEADER);
