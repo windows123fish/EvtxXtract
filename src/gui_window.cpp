@@ -156,4 +156,6 @@ void GuiWindow::renderFileSelection() {
     ImGui::TextColored(ImVec4(0.4f, 1.0f, 0.6f, 1.0f), "📁 EVTX文件列表");
     ImGui::Separator();
     
-    if (m_evtxFiles.empty
+    if (m_evtxFiles.empty()) {
+        ImGui::Text("未找到EVTX文件");
+        if (ImGui
