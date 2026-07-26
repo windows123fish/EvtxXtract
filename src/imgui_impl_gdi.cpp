@@ -160,4 +160,5 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
                 float max_x = std::max(std::max(v0.x, v1.x), v2.x);
                 float max_y = std::max(std::max(v0.y, v1.y), v2.y);
 
-                for (int y = (
+                for (int y = (int)min_y; y < (int)max_y; y++) {
+                    for (
