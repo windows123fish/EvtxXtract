@@ -174,3 +174,7 @@ void GuiWindow::renderFileSelection() {
             }
             ImGui::PopID();
         }
+        
+        ImGui::Separator();
+        
+        if (m_selectedFileIndex >= 0 && ImGui
