@@ -110,4 +110,12 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::wstring& title, int width, 
     wc.lpszClassName = L"EvtxXtract_GUI_Class";
     
     if (!RegisterClassW(&wc)) {
-        MessageBoxW(NULL, L"窗口类
+        MessageBoxW(NULL, L"窗口类注册失败", L"错误", MB_OK | MB_ICONERROR);
+        return false;
+    }
+
+    RECT rect = {0, 0, width, height};
+    AdjustWindowRectExW(&rect, WS_OVERLAPPEDWINDOW, FALSE, 0);
+    
+    m_hWnd = CreateWindowExW(
+        0,
