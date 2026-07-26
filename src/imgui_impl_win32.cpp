@@ -45,4 +45,10 @@ IMGUI_IMPL_API HWND ImGui_ImplWin32_CreateWindow(HINSTANCE hInstance, const char
     if (g_hWnd) {
         g_hDC = GetDC(g_hWnd);
         ShowWindow(g_hWnd, SW_SHOW);
-        Update
+        UpdateWindow(g_hWnd);
+    }
+
+    return g_hWnd;
+}
+
+// Destroy
