@@ -167,3 +167,7 @@ static void ImGui_ImplWin32_UpdateMouseCursor() {
             SetCursor(LoadCursor(NULL, cursor_id));
         }
     }
+}
+
+// WndProc handler
+IMGUI_IMPL_API LRESULT ImGui_ImplWin
