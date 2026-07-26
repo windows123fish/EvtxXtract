@@ -196,4 +196,5 @@ void GuiWindow::renderFileInfo() {
         ImGui::Text("请选择一个文件并点击\"解析文件\"");
     } else if (m_isParsing) {
         ImGui::TextColored(ImVec4(1.0f, 1.0f, 0.0f, 1.0f), "正在解析文件...");
-        ImGui::ProgressBar(0.
+        ImGui::ProgressBar(0.5f, ImVec2(-1, 20), "处理中");
+    }
