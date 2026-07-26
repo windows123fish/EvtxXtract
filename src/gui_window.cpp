@@ -126,4 +126,9 @@ void GuiWindow::run() {
 void GuiWindow::render() {
     // Start ImGui frame
     ImGui_ImplGDI_NewFrame();
-    ImGui_Impl
+    ImGui_ImplWin32_NewFrame();
+    ImGui::NewFrame();
+    
+    // Main window
+    ImGui::SetNextWindowPos(ImVec2(0, 0));
+    ImGui::SetNextWindowSize(ImGui::Get
