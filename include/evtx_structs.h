@@ -51,3 +51,5 @@ struct EVT_FILE_HEADER {
    */
   uint64_t oldest_chunk_offset;
 
+  /**
+   * @brief Offset of the
