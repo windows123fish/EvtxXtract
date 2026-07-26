@@ -109,4 +109,5 @@ IMGUI_IMPL_API void ImGui_ImplWin32_NewFrame() {
     LARGE_INTEGER freq, counter;
     QueryPerformanceFrequency(&freq);
     QueryPerformanceCounter(&counter);
-    double current_time = (double)counter.QuadPart
+    double current_time = (double)counter.QuadPart / freq.QuadPart;
+    io.D
