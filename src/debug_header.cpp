@@ -48,4 +48,6 @@ int main(int argc, char* argv[]) {
 
   // Read first 128 bytes for analysis
   uint8_t buffer[128];
-  file.read(reinterpret
+  file.read(reinterpret_cast<char*>(buffer), sizeof(buffer));
+  
+  std::cout << "=== First 12
