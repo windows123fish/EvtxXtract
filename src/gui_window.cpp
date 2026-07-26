@@ -268,4 +268,7 @@ void GuiWindow::renderFileSelection() {
     if (m_evtxFiles.empty()) {
         ImGui::Text("未找到EVTX文件");
         if (ImGui::Button("重新扫描")) {
-            scan
+            scanEvtxFiles();
+        }
+    } else {
+        for (size_t i =
