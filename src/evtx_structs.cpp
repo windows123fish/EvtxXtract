@@ -2,6 +2,7 @@
 #include <cstring>
 #include <iomanip>
 #include <sstream>
+#include <ctime>
 
 namespace Evtx {
 
