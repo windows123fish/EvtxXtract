@@ -31,4 +31,6 @@ GuiWindow::~GuiWindow() {
     shutdown();
 }
 
-bool GuiWindow::init(HINSTANCE hInstance, const std::
+bool GuiWindow::init(HINSTANCE hInstance, const std::string& title, int width, int height) {
+    // Create window
+    WND
