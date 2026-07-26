@@ -198,4 +198,8 @@ struct EVT_CHUNK_HEADER {
   uint32_t header_size;
 
   /**
-   * @brief Offset of the last event record in this chunk (4 bytes,
+   * @brief Offset of the last event record in this chunk (4 bytes, little-endian)
+   */
+  uint32_t last_event_offset;
+
+  /**
