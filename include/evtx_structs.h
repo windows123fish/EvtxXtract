@@ -2,4 +2,11 @@
 
 #include <cstdint>
 #include <array>
-#include <string
+#include <string>
+
+namespace Evtx {
+
+#pragma pack(push, 1)
+
+/**
+ * @
