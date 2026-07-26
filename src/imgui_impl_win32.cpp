@@ -19,4 +19,8 @@ static WNDCLASSEXA CreateWindowClass(HINSTANCE hInstance) {
     wc.hInstance     = hInstance;
     wc.hCursor       = LoadCursor(NULL, IDC_ARROW);
     wc.hbrBackground = (HBRUSH)GetStockObject(BLACK_BRUSH);
-    wc.lpszClassName = "
+    wc.lpszClassName = "ImGui_Window_Class";
+    return wc;
+}
+
+// Create the main window
