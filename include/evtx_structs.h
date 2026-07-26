@@ -12,3 +12,6 @@ namespace Evtx {
  * @brief EVT_FILE_HEADER structure
  * 
  * MS-EVTX Section 2.1: File Header Structure (4096 bytes)
+ * 
+ * Verified against real .evtx file hex dump:
+ * Offset | Size |
