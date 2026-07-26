@@ -117,4 +117,7 @@ struct EVT_FILE_HEADER {
    * 
    * @return Major version
    */
-  uint16_t get_m
+  uint16_t get_major_version() const noexcept;
+
+  /**
+   * @brief Get the minor version number
