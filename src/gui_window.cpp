@@ -100,4 +100,7 @@ void GuiWindow::shutdown() {
     ImGui::DestroyContext();
     
     if (m_hDC) {
-        ReleaseDC(m_hWnd,
+        ReleaseDC(m_hWnd, m_hDC);
+        m_hDC = nullptr;
+    }
+    if (m
