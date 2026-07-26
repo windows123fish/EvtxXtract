@@ -139,3 +139,7 @@ struct EVT_FILE_HEADER {
  * 
  * Represents the 512-byte header at the beginning of each 64KB chunk.
  * The magic number "ElfChnk\x00" identifies valid chunks.
+ * 
+ * Reference: MS-EVTX Section 2.2
+ * 
+ * Layout verified
