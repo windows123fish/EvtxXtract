@@ -213,4 +213,6 @@ void GuiWindow::renderDrawData(ImDrawData* draw_data) {
                 const ImDrawIdx idx2 = idx_buffer[pcmd->IdxOffset + i + 2];
                 
                 const ImVec2& v0 = cmd_list->VtxBuffer[idx0].pos;
-                const
+                const ImVec2& v1 = cmd_list->VtxBuffer[idx1].pos;
+                const ImVec2& v2 = cmd_list->VtxBuffer[idx2].pos;
+                
