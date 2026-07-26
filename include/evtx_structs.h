@@ -19,4 +19,6 @@ namespace Evtx {
  * Represents the 4KB file header at the beginning of every .evtx file.
  * The magic number "ElfFile\x00" identifies valid EVTX files.
  * 
- *
+ * Reference: MS-EVTX Section 2.1
+ * 
+ * Layout verified against real .
