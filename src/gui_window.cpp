@@ -39,4 +39,5 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::string& title, int width, i
     wc.lpfnWndProc   = s_wndProc;
     wc.hInstance     = hInstance;
     wc.hCursor       = LoadCursor(NULL, IDC_ARROW);
-    wc.hbrBackground = (HBRUSH
+    wc.hbrBackground = (HBRUSH)GetStockObject(BLACK_BRUSH);
+    wc.lpszClassName = "Ev
