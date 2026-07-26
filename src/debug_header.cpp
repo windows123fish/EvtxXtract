@@ -36,4 +36,8 @@ void print_hex_dump(const uint8_t* data, size_t size) {
 
 int main(int argc, char* argv[]) {
   if (argc != 2) {
-    std::cerr << "Usage: " << argv[0] << "
+    std::cerr << "Usage: " << argv[0] << " <evtx_file_path>\n";
+    return 1;
+  }
+
+  std::
