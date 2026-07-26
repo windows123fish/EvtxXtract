@@ -92,3 +92,4 @@ struct EVT_FILE_HEADER {
   uint64_t newest_chunk_offset;
 
   /**
+   * @brief CRC32 checksum of the file header (4 bytes, little-endian)
