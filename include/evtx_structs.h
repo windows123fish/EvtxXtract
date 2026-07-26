@@ -63,4 +63,8 @@ struct EVT_FILE_HEADER {
   /**
    * @brief File flags (2 bytes, little-endian)
    * 
-   * Bit 0: Dirty flag - set if
+   * Bit 0: Dirty flag - set if the file was not properly closed
+   */
+  uint16_t flags;
+
+  /**
