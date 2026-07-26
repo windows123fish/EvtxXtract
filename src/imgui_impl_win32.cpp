@@ -159,4 +159,5 @@ static void ImGui_ImplWin32_UpdateMouseCursor() {
                 case ImGuiMouseCursor_ResizeNS:     cursor_id = IDC_SIZENS; break;
                 case ImGuiMouseCursor_ResizeEW:     cursor_id = IDC_SIZEWE; break;
                 case ImGuiMouseCursor_ResizeNESW:   cursor_id = IDC_SIZENESW; break;
-                case ImGuiMouseCursor_ResizeNWSE:
+                case ImGuiMouseCursor_ResizeNWSE:   cursor_id = IDC_SIZENWSE; break;
+                case ImGuiMouseCursor_
