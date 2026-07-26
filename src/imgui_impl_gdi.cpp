@@ -62,4 +62,5 @@ static bool ImGui_ImplGDI_CreateBuffer(int width, int height) {
     bmi.bmiHeader.biSize = sizeof(BITMAPINFOHEADER);
     bmi.bmiHeader.biWidth = width;
     bmi.bmiHeader.biHeight = -height; // Negative for top-down
-    bmi.bmiHeader.biPl
+    bmi.bmiHeader.biPlanes = 1;
+    bmi.bmiHeader.biBitCount = 32
