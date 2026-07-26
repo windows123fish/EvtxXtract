@@ -1,24 +1,16 @@
-﻿{
+{
   "version": 3,
   "configurePresets": [
     {
       "name": "base",
       "hidden": true,
       "generator": "Ninja",
-      "toolset": "v145", // VS2026对应的最新工具集，别用旧的v142/v141
       "architecture": "x64",
       "binaryDir": "${sourceDir}/build/${presetName}",
       "installDir": "${sourceDir}/dist",
-      // 👇 强制指定你装的Windows 11 SDK版本，彻底解决8.1找不到的问题
       "cacheVariables": {
-        "CMAKE_SYSTEM_VERSION": "10.0.26100.0", // 换成你电脑实际的SDK版本
         "CMAKE_CXX_STANDARD": 20,
-        "CMAKE_CXX_STANDARD_REQUIRED": true,
-        // 👇 启用vcpkg，自动拉取Allegro5等依赖（你项目有vcpkg.json，这步必须有）
-        "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/vcpkg/scripts/buildsystems/vcpkg.cmake"
-      },
-      "environment": {
-        "VCPKG_ROOT": "${sourceDir}/vcpkg"
+        "CMAKE_CXX_STANDARD_REQUIRED": true
       }
     },
     {
