@@ -35,4 +35,5 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::string& title, int width, i
     // Create window
     WNDCLASSEXA wc = {0};
     wc.cbSize        = sizeof(WNDCLASSEXA);
-    wc.style         = CS_HREDRAW | CS_V
+    wc.style         = CS_HREDRAW | CS_VREDRAW | CS_OWNDC;
+    wc.lpfnWndProc   = s_w
