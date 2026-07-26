@@ -6,4 +6,4 @@ GuiWindow* g_pWindow = nullptr;
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int) {
     g_pWindow = new GuiWindow();
     
-    if
+    if (!g_pWindow->init(hInstance, L"EvtxXtract - EVTX文件解析
