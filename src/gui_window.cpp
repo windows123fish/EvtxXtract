@@ -123,4 +123,8 @@ void GuiWindow::run() {
     }
 }
 
-void
+void GuiWindow::render() {
+    // Start ImGui frame
+    ImGui_ImplGDI_NewFrame();
+    ImGui_ImplWin32_NewFrame();
+    ImGui::New
