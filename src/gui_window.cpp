@@ -186,3 +186,5 @@ void GuiWindow::renderFileSelection() {
 }
 
 void GuiWindow::renderFileInfo() {
+    ImGui::SameLine();
+    ImGui::BeginChild("文件信息", ImVec2(0
