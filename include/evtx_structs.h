@@ -6,4 +6,5 @@
 
 namespace Evtx {
 
-// According to MS-EVTX documentation and real .evtx file
+// According to MS-EVTX documentation and real .evtx file analysis:
+// Section 2.1:
