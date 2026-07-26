@@ -32,3 +32,8 @@ IMGUI_IMPL_API void ImGui_ImplGDI_Shutdown() {
         delete[] g_Buffer;
         g_Buffer = NULL;
     }
+    g_hDC = NULL;
+}
+
+// Create/resize offscreen buffer
+static
