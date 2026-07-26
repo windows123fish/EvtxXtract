@@ -180,4 +180,8 @@ void GuiWindow::renderDrawData(ImDrawData* draw_data) {
         hBitmap = CreateDIBSection(m_hDC, &bmi, DIB_RGB_COLORS, (void**)&buffer, NULL, 0);
         
         buffer_width = width;
-        buffer_height = height
+        buffer_height = height;
+    }
+    
+    // Clear buffer
+    memset(buffer, 0, width * height
