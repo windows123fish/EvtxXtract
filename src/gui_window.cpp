@@ -301,4 +301,7 @@ void GuiWindow::parseSelectedFile() {
         }
         
         // Get file header
-        m_fileHeader
+        m_fileHeader = parser.get_file_header();
+        
+        // Validate chunks
+        m_validChunkCount = parser.validate
