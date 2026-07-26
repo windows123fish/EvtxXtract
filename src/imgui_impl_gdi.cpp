@@ -46,4 +46,7 @@ static bool ImGui_ImplGDI_CreateBuffer(int width, int height) {
             SelectObject(g_hDC, g_hBitmapOld);
         DeleteObject(g_hBitmap);
         g_hBitmap = NULL;
-        g_hBitmap
+        g_hBitmapOld = NULL;
+    }
+    if (g_Buffer) {
+        delete[]
