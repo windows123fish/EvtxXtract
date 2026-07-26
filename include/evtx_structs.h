@@ -66,3 +66,8 @@ struct EVT_FILE_HEADER {
 
   /**
    * @brief File flags (2 bytes, little-endian)
+   */
+  uint16_t flags;
+
+  /**
+   * @brief Number of
