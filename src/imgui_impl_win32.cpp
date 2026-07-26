@@ -154,4 +154,4 @@ static void ImGui_ImplWin32_UpdateMouseCursor() {
             LPCTSTR cursor_id = IDC_ARROW;
             switch (imgui_cursor) {
                 case ImGuiMouseCursor_Arrow:        cursor_id = IDC_ARROW; break;
-                case
+                case ImGuiMouseCursor_TextInput:    cursor_id = IDC_IBEAM; break;
