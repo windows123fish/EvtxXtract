@@ -275,4 +275,6 @@ void GuiWindow::renderFileSelection() {
             bool isSelected = (m_selectedFileIndex == (int)i);
             ImGui::PushID((int)i);
             std::string filename = fs::path(m_evtxFiles[i]).filename().string();
-            if (Im
+            if (ImGui::Selectable(filename.c_str(), isSelected)) {
+                m_selectedFileIndex = (int)i;
+                m_isParsing
