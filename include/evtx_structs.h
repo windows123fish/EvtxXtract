@@ -245,3 +245,5 @@ struct EVT_CHUNK_HEADER {
    * @brief Validate the chunk header magic number
    * 
    * @return true if magic matches "ElfChnk\x00", false otherwise
+   */
+  bool validate_magic() const noexcept
