@@ -49,4 +49,9 @@ private:
     Evtx::EVT_FILE_HEADER m_fileHeader;
     std::vector<ChunkInfo> m_chunkInfo;
     uint32_t m_validChunkCount;
+    
+    // Event records (Phase 2)
+    std::vector<Evtx::EventRecord> m_eventRecords;
+    int m_selectedEventIndex;
+    bool m_showEventList;
 };
