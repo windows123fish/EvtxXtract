@@ -36,4 +36,6 @@ add_executable(EvtxXtract
 )
 
 # Include headers
-target_include
+target_include_directories(EvtxXtract PRIVATE include)
+
+# Debug tool for analyzing .ev
