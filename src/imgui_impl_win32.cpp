@@ -178,4 +178,6 @@ IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARA
 
     switch (msg) {
         case WM_MOUSEMOVE:
-            io.MousePos = ImVec2((float)LOWORD(lParam
+            io.MousePos = ImVec2((float)LOWORD(lParam), (float)HIWORD(lParam));
+            return 0;
+        case WM_L
