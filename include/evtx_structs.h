@@ -82,4 +82,7 @@ struct EVT_FILE_HEADER {
    * 
    * If no chunks exist, this is set to 0xFFFFFFFFFFFFFFFF
    */
-  uint64_t
+  uint64_t newest_chunk_offset;
+
+  /**
+   * @brief CRC32 checksum of the file
