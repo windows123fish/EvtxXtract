@@ -293,7 +293,7 @@ uint64_t EvtxParser::read_vlq(const uint8_t*& data) {
 }
 
 std::string EvtxParser::read_bxml_string(const uint8_t*& data, const uint8_t* end) {
-    if (ptr >= end) {
+    if (data >= end) {
         return "";
     }
     
