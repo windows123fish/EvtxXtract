@@ -2,4 +2,8 @@
 
 #include <cstdint>
 #include <array>
-#include
+#include <string>
+
+namespace Evtx {
+
+// According to MS-EVTX documentation and real .ev
