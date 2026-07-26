@@ -58,3 +58,7 @@ struct EVT_FILE_HEADER {
    * 
    * Bit 0: Dirty flag - set if the file was not properly closed
    */
+  uint16_t flags;
+
+  /**
+   * @brief Number of chunks in the file
