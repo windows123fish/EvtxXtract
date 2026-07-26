@@ -136,11 +136,11 @@ class EvtxParser {
   /**
    * @brief Parse a single event record from current file position
    * 
-   * @param chunk_offset Offset of the chunk containing this record
+   * @param record_header Already read event record header
    * @param record Event record to populate
    * @return true if parsing succeeded
    */
-  bool parse_event_record(uint64_t chunk_offset, EventRecord& record);
+  bool parse_event_record(const EVT_EVENT_RECORD_HEADER& record_header, EventRecord& record);
 
   /**
    * @brief Parse binary XML data
