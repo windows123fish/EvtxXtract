@@ -4,4 +4,7 @@
 #include <windows.h>
 #include <string>
 #include <vector>
-#include
+#include <filesystem>
+
+// Forward declarations
+extern IMGUI_IMPL_API bool ImGui_ImplWin3
