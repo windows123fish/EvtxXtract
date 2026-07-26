@@ -1,3 +1,0 @@
-D:/main/EvtxXtract/build/CMakeFiles/CMakeScratch/TryCompile-tbu83z/CMakeFiles/cmTC_3118c.dir
-D:/main/EvtxXtract/build/CMakeFiles/CMakeScratch/TryCompile-tbu83z/CMakeFiles/edit_cache.dir
-D:/main/EvtxXtract/build/CMakeFiles/CMakeScratch/TryCompile-tbu83z/CMakeFiles/rebuild_cache.dir
