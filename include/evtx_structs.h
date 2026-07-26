@@ -237,4 +237,6 @@ struct EVT_CHUNK_HEADER {
   /**
    * @brief Reserved/unused area (444 bytes)
    * 
-   * Rem
+   * Remaining bytes of the 512-byte chunk header
+   */
+  std::array
