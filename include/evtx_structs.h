@@ -157,3 +157,5 @@ struct EVT_FILE_HEADER {
  * 0x0038 | 4    | unknown1
  * 0x003C | 4    | flags
  * 0x0040 | 4    | chunk_checksum
+ * 0x0044 | 4    | string_offset_array_offset
+ *
