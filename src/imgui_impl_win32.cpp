@@ -74,4 +74,9 @@ IMGUI_IMPL_API bool ImGui_ImplWin32_Init(HWND hWnd) {
     // Setup back-end capabilities flags
     io.BackendPlatformName = "imgui_impl_win32";
     io.BackendFlags |= ImGuiBackendFlags_HasMouseCursors;
-    io.BackendFlags |= ImGuiBackendFlags
+    io.BackendFlags |= ImGuiBackendFlags_HasSetMousePos;
+    
+    return true;
+}
+
+// Shutdown ImGui for Win
