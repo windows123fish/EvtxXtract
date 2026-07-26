@@ -117,4 +117,7 @@ struct EVT_FILE_HEADER {
    * 
    * @return Minor version
    */
-  uint16_t
+  uint16_t get_minor_version() const noexcept;
+
+  /**
+   * @brief Check if the dirty
