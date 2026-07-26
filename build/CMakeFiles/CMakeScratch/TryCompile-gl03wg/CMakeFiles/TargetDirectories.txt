@@ -1,3 +1,0 @@
-D:/main/EvtxXtract/build/CMakeFiles/CMakeScratch/TryCompile-gl03wg/CMakeFiles/cmTC_97a71.dir
-D:/main/EvtxXtract/build/CMakeFiles/CMakeScratch/TryCompile-gl03wg/CMakeFiles/edit_cache.dir
-D:/main/EvtxXtract/build/CMakeFiles/CMakeScratch/TryCompile-gl03wg/CMakeFiles/rebuild_cache.dir
