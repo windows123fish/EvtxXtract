@@ -28,4 +28,5 @@ namespace Evtx {
  * 0x0000 | 8    | magic ("ElfFile\x00")
  * 0x0008 | 4    | version (major << 16 | minor)
  * 0x000C | 2    | flags
- * 0x000E | 2
+ * 0x000E | 2    | chunk_count
+ * 0x0010 | 8    | file_size
