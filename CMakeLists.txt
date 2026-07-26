@@ -74,7 +74,8 @@ target_link_libraries(EvtxXtract-GUI PRIVATE
 
 # Force entry point for MSVC
 target_link_options(EvtxXtract-GUI PRIVATE
-    "$<$<CXX_COMPILER_ID:MSVC>:/subsystem:windows /entry:WinMainCRTStartup>"
+    "$<$<CXX_COMPILER_ID:MSVC>:/subsystem:windows>"
+    "$<$<CXX_COMPILER_ID:MSVC>:/entry:WinMainCRTStartup>"
 )
 
 # Enable testing
