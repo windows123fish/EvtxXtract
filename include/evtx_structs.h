@@ -11,4 +11,6 @@ namespace Evtx {
 struct EVT_FILE_HEADER {
   std::array<uint8_t, 8> magic;
   uint64_t file_size;
-  uint64
+  uint64_t oldest_chunk_offset;
+  uint64_t newest_chunk_offset;
+  uint32
