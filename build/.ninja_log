@@ -8,3 +8,7 @@
 11	667	8067539937207263	D:/main/EvtxXtract/build/CTestTestfile.cmake	985975f1082a7255
 9	1276	8067539937854604	CMakeFiles/debug_header.dir/src/debug_header.cpp.obj	f3e5f305ea2f1b5
 1278	1823	8067539950535133	debug_header.exe	4354c83cef164bb9
+67	1237	8067543732839498	CMakeFiles/EvtxXtract.dir/src/evtx_structs.cpp.obj	97469e576bad7707
+44	1311	8067543732606238	CMakeFiles/EvtxXtract.dir/src/evtx_parser.cpp.obj	2f1f17b95d99d674
+11	1932	8067543732281279	CMakeFiles/EvtxXtract.dir/src/main.cpp.obj	b9807664d744cfc6
+1932	2396	8067543751484273	EvtxXtract.exe	c67885f5e99217de
