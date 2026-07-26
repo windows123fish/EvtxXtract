@@ -70,3 +70,6 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::string& title, int width, i
     // Initialize ImGui
     ImGui::CreateContext();
     ImGuiIO& io = ImGui::GetIO();
+    io.IniFilename = NULL; // Disable .ini file
+    
+    // Build font atlas
