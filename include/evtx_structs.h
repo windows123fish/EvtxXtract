@@ -11,3 +11,7 @@ namespace Evtx {
 // Section 2.2: Chunk Header Structure (512 bytes)
 
 // Ensure no padding between struct members
+#pragma pack(push, 1)
+
+/**
+ * @brief EVT_FILE_HEADER structure
