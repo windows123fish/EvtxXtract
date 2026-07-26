@@ -231,4 +231,6 @@ void GuiWindow::renderFileInfo() {
             ImGui::TableSetupColumn("校验和");
             ImGui::TableHeadersRow();
             
-            for (const auto& info : m_chunkInfo)
+            for (const auto& info : m_chunkInfo) {
+                ImGui::TableNextRow();
+                ImGui::TableSetColumnIndex(0);
