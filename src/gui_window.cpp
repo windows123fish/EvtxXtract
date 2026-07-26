@@ -221,6 +221,20 @@ void GuiWindow::render() {
     ImGui::SetNextWindowSize(ImGui::GetIO().DisplaySize);
     ImGui::Begin("EvtxXtract - EVTX文件解析器", NULL, ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse);
     
+    // 可拖拽标题栏
+    ImGui::PushStyleColor(ImGuiCol_ChildBg, ImVec4(0.15f, 0.15f, 0.15f, 1.0f));
+    ImGui::BeginChild("TitleBar", ImVec2(0, 30), true, ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoScrollWithMouse);
+    ImGui::Text("EvtxXtract - EVTX文件解析器");
+    ImGui::PopStyleColor();
+    
+    // 允许拖拽窗口
+    if (ImGui::IsMouseDown(0) && ImGui::IsWindowHovered() && ImGui::GetMousePos().y < 30) {
+        ReleaseCapture();
+        SendMessageW(m_hWnd, WM_NCLBUTTONDOWN, HTCAPTION, 0);
+    }
+    
+    ImGui::EndChild();
+    
     renderFileSelection();
     renderFileInfo();
     renderFooter();
