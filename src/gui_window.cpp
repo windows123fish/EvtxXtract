@@ -410,4 +410,9 @@ void GuiWindow::parseSelectedFile() {
     } catch (const std::exception& e) {
         std::wstring error_msg = L"解析错误: ";
         std::string what = e.what();
-        error_msg += std::wstring(what.begin(), what
+        error_msg += std::wstring(what.begin(), what.end());
+        MessageBoxW(m_hWnd, error_msg.c_str(), L"错误", MB_OK | MB_ICONERROR);
+    }
+    
+    m_isParsing = false;
+}
