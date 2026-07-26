@@ -356,7 +356,7 @@ void GuiWindow::scanEvtxFiles() {
             try { fs::remove(output_path); } catch (...) {}
             
             std::wstring command = L"wevtutil epl " + log_name + L" \"" + output_path + L"\"";
-            if (std::system(command.c_str()) == 0 && fs::exists(output_path)) {
+            if (_wsystem(command.c_str()) == 0 && fs::exists(output_path)) {
                 m_evtxFiles.push_back(output_path);
             }
         }
