@@ -122,3 +122,6 @@ struct EVT_CHUNK_HEADER {
   uint64_t last_event_record_number;
   uint64_t first_event_record_id;
   uint64_t last_event_record_id;
+  uint32_t header_size;
+  uint32_t last_event_offset;
+  uint
