@@ -42,3 +42,5 @@ private:
     bool m_isRunning;
     
     // File selection
+    std::vector<std::string> m_evtxFiles;
+    int m_selected
