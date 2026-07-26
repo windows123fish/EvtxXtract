@@ -249,4 +249,4 @@ void GuiWindow::renderFileInfo() {
 
 void GuiWindow::renderFooter() {
     ImGui::Separator();
-    ImGui::
+    ImGui::Text("EvtxXtract v1.0
