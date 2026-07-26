@@ -122,4 +122,4 @@ struct EVT_FILE_HEADER {
   /**
    * @brief Check if the dirty flag is set
    * 
-   * @return true if
+   * @return true if file was not properly closed, false otherwise
