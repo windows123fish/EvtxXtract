@@ -222,4 +222,5 @@ IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARA
 }
 
 // Get window handle
-IMGUI
+IMGUI_IMPL_API HWND ImGui_ImplWin32_GetHwnd() {
+    return
