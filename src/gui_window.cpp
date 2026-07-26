@@ -170,4 +170,7 @@ void GuiWindow::renderFileSelection() {
                 m_isParsing = false;
                 m_fileHeader = Evtx::EVT_FILE_HEADER();
                 m_chunkInfo.clear();
-                m
+                m_validChunkCount = 0;
+            }
+            ImGui::PopID();
+        }
