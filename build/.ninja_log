@@ -6,3 +6,5 @@
 256	5182	8067617880773067	CMakeFiles/EvtxXtract-GUI.dir/src/evtx_parser.cpp.obj	827a51e33bb5d201
 319	5198	8067617881391838	CMakeFiles/EvtxXtract-GUI.dir/src/evtx_structs.cpp.obj	47bf39bb742be9b5
 12	5470	8067617878320727	CMakeFiles/EvtxXtract.dir/src/main.cpp.obj	456a3e81653efb69
+691	6413	8067617885114076	CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_demo.cpp.obj	cc5263a4990546ab
+5470	7278	8067617932907968	EvtxXtract.exe	b13f8c7520e78bf
