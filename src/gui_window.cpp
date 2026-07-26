@@ -421,4 +421,4 @@ LRESULT CALLBACK GuiWindow::s_wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM
     GuiWindow* window = nullptr;
     
     if (msg == WM_NCCREATE) {
-        CREATESTRUCTW*
+        CREATESTRUCTW* cs = reinterpret_cast<CREATESTRUCTW*>(lParam
