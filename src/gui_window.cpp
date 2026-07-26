@@ -261,6 +261,16 @@ void GuiWindow::renderFileSelection() {
         scanEvtxFiles();
     }
     
+    ImGui::SameLine();
+    
+    if (!isAdmin()) {
+        if (ImGui::Button("以管理员身份运行")) {
+            runAsAdmin();
+        }
+    } else {
+        ImGui::TextColored(ImVec4(0.5f, 1.0f, 0.5f, 1.0f), "已以管理员身份运行");
+    }
+    
     ImGui::Separator();
     
     if (m_evtxFiles.empty()) {
