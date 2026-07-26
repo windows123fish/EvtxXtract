@@ -90,4 +90,6 @@ void GuiWindow::shutdown() {
     ImGui_ImplWin32_Shutdown();
     ImGui::DestroyContext();
     
-    if (m_hDC
+    if (m_hDC) {
+        ReleaseDC(m_hWnd, m_hDC);
+        m_hDC =
