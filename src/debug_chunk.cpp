@@ -44,4 +44,18 @@ int main(int argc, char* argv[]) {
     }
     
     std::ifstream file(argv[1], std::ios::binary);
-    if (!file.is_open())
+    if (!file.is_open()) {
+        std::cout << "Failed to open file: " << argv[1] << std::endl;
+        return 1;
+    }
+    
+    // Skip file header (4096 bytes)
+    file.seekg(4096);
+    
+    EVT_CHUNK_HEADER header;
+    file.read(reinterpret_cast<char*>(&header), sizeof(header));
+    
+    std::cout << "=== Chunk Header Hex Dump (First 64 bytes) ===" << std::endl;
+    print_hex(reinterpret_cast<uint8_t*>(&header), 64);
+    
+    std::cout << "\n=== Struct Fields ==
