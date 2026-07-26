@@ -233,4 +233,6 @@ void GuiWindow::renderFileInfo() {
             
             for (const auto& info : m_chunkInfo) {
                 ImGui::TableNextRow();
-                ImGui::TableSetColumnIndex(
+                ImGui::TableSetColumnIndex(0);
+                ImGui::Text("0x%llX", info.offset);
+                ImGui
