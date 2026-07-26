@@ -64,3 +64,10 @@ target_include_directories(EvtxXtract-GUI PRIVATE
 target_link_libraries(EvtxXtract-GUI PRIVATE
     gdi32
     user32
+    shell32
+)
+
+# Enable testing
+enable_testing()
+
+# --- v
