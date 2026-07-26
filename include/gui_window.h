@@ -26,4 +26,8 @@ public:
     
 private:
     void render();
+    void renderFileSelection();
+    void renderFileInfo();
+    void renderFooter();
+    
     void
