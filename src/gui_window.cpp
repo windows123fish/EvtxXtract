@@ -220,3 +220,4 @@ void GuiWindow::renderFileInfo() {
         
         // Show chunk info
         ImGui::Separator();
+        ImGui::TextColored(ImVec4(0.6f, 0.
