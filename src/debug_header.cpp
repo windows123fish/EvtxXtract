@@ -38,49 +38,48 @@ int main(int argc, char* argv[]) {
     return 1;
   }
 
-  // Read first 64 bytes of file header
-  uint8_t header[64];
+  // Read first 128 bytes of file header
+  uint8_t header[128];
   file.read(reinterpret_cast<char*>(header), sizeof(header));
   
-  std::cout << "=== EVTX File Header - First 64 bytes ===\n";
+  std::cout << "=== EVTX File Header - First 128 bytes ===\n";
   print_hex(header, sizeof(header));
   
-  // Extract values assuming different layouts
-  std::cout << "\n=== Value Extraction Tests ===\n";
+  // Also read first chunk header
+  file.seekg(4096);
+  uint8_t chunk_header[128];
+  file.read(reinterpret_cast<char*>(chunk_header), sizeof(chunk_header));
   
-  // Test Layout 1: version at offset 8 (4 bytes)
-  uint32_t version1 = *reinterpret_cast<uint32_t*>(&header[8]);
-  uint16_t flags1 = *reinterpret_cast<uint16_t*>(&header[12]);
-  uint16_t chunk_count1 = *reinterpret_cast<uint16_t*>(&header[14]);
-  uint64_t file_size1 = *reinterpret_cast<uint64_t*>(&header[16]);
-  uint64_t oldest_offset1 = *reinterpret_cast<uint64_t*>(&header[24]);
-  uint64_t newest_offset1 = *reinterpret_cast<uint64_t*>(&header[32]);
-  uint32_t checksum1 = *reinterpret_cast<uint32_t*>(&header[40]);
+  std::cout << "\n=== First Chunk Header - First 128 bytes ===\n";
+  print_hex(chunk_header, sizeof(chunk_header));
   
-  std::cout << "Layout 1 (MS-EVTX spec):\n";
-  std::cout << "  version (0x08): 0x" << std::hex << version1 << " (" << ((version1 >> 16) & 0xFFFF) << "." << (version1 & 0xFFFF) << ")\n";
-  std::cout << "  flags (0x0C): 0x" << std::hex << flags1 << "\n";
-  std::cout << "  chunk_count (0x0E): " << std::dec << chunk_count1 << "\n";
-  std::cout << "  file_size (0x10): " << std::dec << file_size1 << "\n";
-  std::cout << "  oldest_offset (0x18): " << std::dec << oldest_offset1 << "\n";
-  std::cout << "  newest_offset (0x20): " << std::dec << newest_offset1 << "\n";
-  std::cout << "  checksum (0x28): 0x" << std::hex << checksum1 << "\n";
+  // Try different offset interpretations
+  std::cout << "\n=== Field Interpretation Tests ===\n";
   
-  // Test Layout 2: version as two 2-byte fields
-  uint16_t major2 = *reinterpret_cast<uint16_t*>(&header[8]);
-  uint16_t minor2 = *reinterpret_cast<uint16_t*>(&header[10]);
-  uint16_t flags2 = *reinterpret_cast<uint16_t*>(&header[12]);
-  uint16_t chunk_count2 = *reinterpret_cast<uint16_t*>(&header[14]);
-  uint32_t unknown2 = *reinterpret_cast<uint32_t*>(&header[16]);
-  uint64_t file_size2 = *reinterpret_cast<uint64_t*>(&header[20]);
+  // Test: What if version is at offset 0x2C?
+  uint32_t version_at_2c = *reinterpret_cast<uint32_t*>(&header[44]);
+  std::cout << "version at offset 0x2C: 0x" << std::hex << version_at_2c << " (" << ((version_at_2c >> 16) & 0xFFFF) << "." << (version_at_2c & 0xFFFF) << ")\n";
   
-  std::cout << "\nLayout 2 (version as two 16-bit):\n";
-  std::cout << "  major (0x08): " << std::dec << major2 << "\n";
-  std::cout << "  minor (0x0A): " << std::dec << minor2 << "\n";
-  std::cout << "  flags (0x0C): 0x" << std::hex << flags2 << "\n";
-  std::cout << "  chunk_count (0x0E): " << std::dec << chunk_count2 << "\n";
-  std::cout << "  unknown (0x10): 0x" << std::hex << unknown2 << "\n";
-  std::cout << "  file_size (0x14): " << std::dec << file_size2 << "\n";
+  // Test: What if chunk_count is at offset 0x28?
+  uint16_t chunk_count_at_28 = *reinterpret_cast<uint16_t*>(&header[40]);
+  std::cout << "chunk_count at offset 0x28: " << std::dec << chunk_count_at_28 << "\n";
+  
+  // Test: What if file_size is at offset 0x10?
+  uint64_t file_size_at_10 = *reinterpret_cast<uint64_t*>(&header[16]);
+  std::cout << "file_size at offset 0x10: " << std::dec << file_size_at_10 << "\n";
+  
+  // Test: What if oldest_offset is at offset 0x18?
+  uint64_t oldest_at_18 = *reinterpret_cast<uint64_t*>(&header[24]);
+  std::cout << "oldest_chunk_offset at offset 0x18: " << std::dec << oldest_at_18 << "\n";
+  
+  // Test chunk header
+  uint32_t chunk_hdr_size = *reinterpret_cast<uint32_t*>(&chunk_header[40]);
+  std::cout << "\nchunk header_size at offset 0x28: " << std::dec << chunk_hdr_size << "\n";
+
+  // Get actual file size
+  file.seekg(0, std::ios::end);
+  std::streampos actual_size = file.tellg();
+  std::cout << "\nActual file size: " << actual_size << " bytes\n";
 
   return 0;
 }
