@@ -199,4 +199,6 @@ IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARA
             io.MouseDown[2] = false;
             return 0;
         case WM_MOUSEWHEEL:
-            io.MouseWheel += (float)GET_WHEEL_DELTA_WPARAM(w
+            io.MouseWheel += (float)GET_WHEEL_DELTA_WPARAM(wParam) / WHEEL_DELTA;
+            return 0;
+        case WM_KEY
