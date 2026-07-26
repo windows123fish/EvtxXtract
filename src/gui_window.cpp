@@ -104,3 +104,10 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::wstring& title, int width, 
     WNDCLASSW wc{};
     wc.cbSize        = sizeof(WNDCLASSW);
     wc.style         = CS_HREDRAW | CS_VREDRAW;
+    wc.lpfnWndProc   = s_wndProc;
+    wc.hInstance     = hInstance;
+    wc.hCursor       = LoadCursorW(NULL, IDC_ARROW);
+    wc.lpszClassName = L"EvtxXtract_GUI_Class";
+    
+    if (!RegisterClassW(&wc)) {
+        MessageBoxW(NULL, L"窗口类
