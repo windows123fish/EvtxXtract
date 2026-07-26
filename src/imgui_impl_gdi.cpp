@@ -136,3 +136,5 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
             clip_rect.left = (LONG)pcmd->ClipRect.x;
             clip_rect.top = (LONG)pcmd->ClipRect.y;
             clip_rect.right = (LONG)pcmd->ClipRect.z;
+            clip_rect.bottom = (LONG)pcmd->ClipRect.w;
+            IntersectClipRect
