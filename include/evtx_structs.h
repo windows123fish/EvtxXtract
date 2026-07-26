@@ -232,4 +232,7 @@ struct EVT_CHUNK_HEADER {
   /**
    * @brief Offset of the string offset array (4 bytes, little-endian)
    */
-  uint
+  uint32_t string_offset_array_offset;
+
+  /**
+   * @brief Reserved/unused area
