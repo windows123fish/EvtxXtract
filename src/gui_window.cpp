@@ -48,4 +48,6 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::string& title, int width, i
     }
 
     RECT rect = {0, 0, width, height};
-    AdjustWindowRectEx(&rect, WS_OVERLAPP
+    AdjustWindowRectEx(&rect, WS_OVERLAPPEDWINDOW, FALSE, 0);
+    
+    m_hWnd = CreateWindowExA(
