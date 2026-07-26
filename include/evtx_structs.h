@@ -173,3 +173,4 @@ struct EVT_CHUNK_HEADER {
   /**
    * @brief Magic number: "ElfChnk\x00" (8 bytes)
    * 
+   * Must be exactly {0x45,
