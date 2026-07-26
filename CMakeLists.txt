@@ -41,3 +41,9 @@ target_include_directories(EvtxXtract PRIVATE include)
 add_executable(debug_header
     src/debug_header.cpp
 )
+
+# GUI version with ImGui
+add_executable(EvtxXtract-GUI
+    src/gui_main.cpp
+    src/gui_window.cpp
+    src/evtx_parser.cpp
