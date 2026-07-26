@@ -131,4 +131,13 @@ void GuiWindow::render() {
     renderFileInfo();
     
     // Footer
-    render
+    renderFooter();
+    
+    ImGui::End();
+    
+    // Render
+    ImGui::Render();
+    
+    // Custom GDI rendering
+    renderDrawData(ImGui::GetDrawData());
+}
