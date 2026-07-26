@@ -48,3 +48,6 @@ add_executable(EvtxXtract-GUI
     src/gui_main.cpp
     src/gui_window.cpp
     src/imgui_impl_win32.cpp
+    src/imgui_impl_gdi.cpp
+    src/evtx_parser.cpp
+    src
