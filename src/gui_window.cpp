@@ -76,4 +76,7 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::string& title, int width, i
     // Setup style
     ImGui::StyleColorsDark();
     
-    // Scan for .
+    // Scan for .evtx files
+    scanEvtxFiles();
+    
+    ShowWindow(m_hWnd, SW_SH
