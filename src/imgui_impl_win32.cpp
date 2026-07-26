@@ -163,3 +163,7 @@ static void ImGui_ImplWin32_UpdateMouseCursor() {
                 case ImGuiMouseCursor_Hand:         cursor_id = IDC_HAND; break;
                 case ImGuiMouseCursor_NotAllowed:   cursor_id = IDC_NO; break;
                 default: break;
+            }
+            SetCursor(LoadCursor(NULL, cursor_id));
+        }
+    }
