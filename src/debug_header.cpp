@@ -1,2 +1,6 @@
 #include <iostream>
-#include <fstream
+#include <fstream>
+#include <iomanip>
+#include <cstdint>
+
+void print_hex_dump(const uint8_t* data, size_t
