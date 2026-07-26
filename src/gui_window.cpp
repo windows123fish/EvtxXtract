@@ -205,4 +205,5 @@ void GuiWindow::renderFileInfo() {
         uint16_t minor = m_fileHeader.get_minor_version();
         ImGui::Text("版本: %u.%u", major, minor);
         
-        ImGui::Text("标志位: 0x%
+        ImGui::Text("标志位: 0x%04X", m_fileHeader.flags);
+        ImGui::Text("块数量: %
