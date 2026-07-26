@@ -46,4 +46,6 @@ int main(int argc, char* argv[]) {
     return 1;
   }
 
-  // Read first 128
+  // Read first 128 bytes for analysis
+  uint8_t buffer[128];
+  file.read(reinterpret
