@@ -182,3 +182,8 @@ void GuiWindow::renderFileSelection() {
         }
     }
     
+    ImGui::EndChild();
+}
+
+void GuiWindow::renderFileInfo() {
+    ImGui
