@@ -6,4 +6,7 @@
 
 namespace Evtx {
 
-#pragma pack(p
+#pragma pack(push, 1)
+
+struct EVT_FILE_HEADER {
+  std::array<uint8_t
