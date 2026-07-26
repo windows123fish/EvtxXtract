@@ -1,5 +1,5 @@
-CMakeFiles/EvtxXtract.dir/src/evtx_structs.cpp.obj: \
- D:/main/EvtxXtract/src/evtx_structs.cpp \
+CMakeFiles/EvtxXtract.dir/src/main.cpp.obj: \
+ D:/main/EvtxXtract/src/main.cpp D:/main/EvtxXtract/src/evtx_parser.h \
  D:/main/EvtxXtract/include/evtx_structs.h \
  D:/mingw64/include/c++/16.1.0/cstdint \
  D:/mingw64/include/c++/16.1.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -117,10 +117,13 @@ CMakeFiles/EvtxXtract.dir/src/evtx_structs.cpp.obj: \
  D:/mingw64/include/c++/16.1.0/tuple \
  D:/mingw64/include/c++/16.1.0/bits/invoke.h \
  D:/mingw64/include/c++/16.1.0/bits/ranges_util.h \
- D:/mingw64/include/c++/16.1.0/cstring \
- D:/mingw64/x86_64-w64-mingw32/include/string.h \
- D:/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h \
- D:/mingw64/include/c++/16.1.0/iomanip \
+ D:/mingw64/include/c++/16.1.0/fstream \
+ D:/mingw64/include/c++/16.1.0/istream D:/mingw64/include/c++/16.1.0/ios \
+ D:/mingw64/include/c++/16.1.0/exception \
+ D:/mingw64/include/c++/16.1.0/bits/exception_ptr.h \
+ D:/mingw64/include/c++/16.1.0/bits/cxxabi_init_exception.h \
+ D:/mingw64/include/c++/16.1.0/typeinfo \
+ D:/mingw64/include/c++/16.1.0/bits/nested_exception.h \
  D:/mingw64/include/c++/16.1.0/bits/ios_base.h \
  D:/mingw64/include/c++/16.1.0/ext/atomicity.h \
  D:/mingw64/include/c++/16.1.0/x86_64-w64-mingw32/bits/gthr.h \
@@ -146,37 +149,67 @@ CMakeFiles/EvtxXtract.dir/src/evtx_structs.cpp.obj: \
  D:/mingw64/include/c++/16.1.0/system_error \
  D:/mingw64/include/c++/16.1.0/x86_64-w64-mingw32/bits/error_constants.h \
  D:/mingw64/include/c++/16.1.0/stdexcept \
- D:/mingw64/include/c++/16.1.0/exception \
- D:/mingw64/include/c++/16.1.0/bits/exception_ptr.h \
- D:/mingw64/include/c++/16.1.0/bits/cxxabi_init_exception.h \
- D:/mingw64/include/c++/16.1.0/typeinfo \
- D:/mingw64/include/c++/16.1.0/bits/nested_exception.h \
  D:/mingw64/include/c++/16.1.0/bits/stdexcept_except.h \
- D:/mingw64/include/c++/16.1.0/locale \
+ D:/mingw64/include/c++/16.1.0/streambuf \
+ D:/mingw64/include/c++/16.1.0/bits/streambuf.tcc \
+ D:/mingw64/include/c++/16.1.0/bits/basic_ios.h \
  D:/mingw64/include/c++/16.1.0/bits/locale_facets.h \
  D:/mingw64/include/c++/16.1.0/cwctype \
  D:/mingw64/x86_64-w64-mingw32/include/wctype.h \
  D:/mingw64/include/c++/16.1.0/x86_64-w64-mingw32/bits/ctype_base.h \
- D:/mingw64/include/c++/16.1.0/streambuf \
- D:/mingw64/include/c++/16.1.0/bits/streambuf.tcc \
  D:/mingw64/include/c++/16.1.0/bits/streambuf_iterator.h \
  D:/mingw64/include/c++/16.1.0/x86_64-w64-mingw32/bits/ctype_inline.h \
  D:/mingw64/include/c++/16.1.0/bits/locale_facets.tcc \
- D:/mingw64/include/c++/16.1.0/bits/locale_facets_nonio.h \
- D:/mingw64/include/c++/16.1.0/ctime \
- D:/mingw64/include/c++/16.1.0/x86_64-w64-mingw32/bits/time_members.h \
- D:/mingw64/include/c++/16.1.0/x86_64-w64-mingw32/bits/messages_members.h \
- D:/mingw64/include/c++/16.1.0/bits/codecvt.h \
- D:/mingw64/include/c++/16.1.0/bits/locale_facets_nonio.tcc \
- D:/mingw64/include/c++/16.1.0/bits/locale_conv.h \
- D:/mingw64/include/c++/16.1.0/bits/quoted_string.h \
- D:/mingw64/include/c++/16.1.0/sstream \
- D:/mingw64/include/c++/16.1.0/istream D:/mingw64/include/c++/16.1.0/ios \
- D:/mingw64/include/c++/16.1.0/bits/basic_ios.h \
  D:/mingw64/include/c++/16.1.0/bits/basic_ios.tcc \
  D:/mingw64/include/c++/16.1.0/ostream \
  D:/mingw64/include/c++/16.1.0/bits/ostream.h \
  D:/mingw64/include/c++/16.1.0/bits/ostream_print.h \
  D:/mingw64/include/c++/16.1.0/bits/ostream.tcc \
  D:/mingw64/include/c++/16.1.0/bits/istream.tcc \
- D:/mingw64/include/c++/16.1.0/bits/sstream.tcc
+ D:/mingw64/include/c++/16.1.0/bits/codecvt.h \
+ D:/mingw64/include/c++/16.1.0/x86_64-w64-mingw32/bits/basic_file.h \
+ D:/mingw64/include/c++/16.1.0/x86_64-w64-mingw32/bits/c++io.h \
+ D:/mingw64/include/c++/16.1.0/bits/fstream.tcc \
+ D:/mingw64/include/c++/16.1.0/vector \
+ D:/mingw64/include/c++/16.1.0/bits/stl_uninitialized.h \
+ D:/mingw64/include/c++/16.1.0/bits/stl_vector.h \
+ D:/mingw64/include/c++/16.1.0/bits/stl_bvector.h \
+ D:/mingw64/include/c++/16.1.0/bits/vector.tcc \
+ D:/mingw64/include/c++/16.1.0/iostream \
+ D:/mingw64/include/c++/16.1.0/filesystem \
+ D:/mingw64/include/c++/16.1.0/bits/fs_fwd.h \
+ D:/mingw64/include/c++/16.1.0/bits/chrono.h \
+ D:/mingw64/include/c++/16.1.0/ratio D:/mingw64/include/c++/16.1.0/ctime \
+ D:/mingw64/include/c++/16.1.0/bits/parse_numbers.h \
+ D:/mingw64/include/c++/16.1.0/bits/fs_path.h \
+ D:/mingw64/include/c++/16.1.0/locale \
+ D:/mingw64/include/c++/16.1.0/bits/locale_facets_nonio.h \
+ D:/mingw64/include/c++/16.1.0/x86_64-w64-mingw32/bits/time_members.h \
+ D:/mingw64/include/c++/16.1.0/x86_64-w64-mingw32/bits/messages_members.h \
+ D:/mingw64/include/c++/16.1.0/bits/locale_facets_nonio.tcc \
+ D:/mingw64/include/c++/16.1.0/bits/locale_conv.h \
+ D:/mingw64/include/c++/16.1.0/iomanip \
+ D:/mingw64/include/c++/16.1.0/bits/quoted_string.h \
+ D:/mingw64/include/c++/16.1.0/sstream \
+ D:/mingw64/include/c++/16.1.0/bits/sstream.tcc \
+ D:/mingw64/include/c++/16.1.0/codecvt \
+ D:/mingw64/include/c++/16.1.0/ext/concurrence.h \
+ D:/mingw64/include/c++/16.1.0/bits/shared_ptr.h \
+ D:/mingw64/include/c++/16.1.0/bits/shared_ptr_base.h \
+ D:/mingw64/include/c++/16.1.0/bits/allocated_ptr.h \
+ D:/mingw64/include/c++/16.1.0/bits/refwrap.h \
+ D:/mingw64/include/c++/16.1.0/bits/unique_ptr.h \
+ D:/mingw64/include/c++/16.1.0/ext/aligned_buffer.h \
+ D:/mingw64/include/c++/16.1.0/bits/align.h \
+ D:/mingw64/include/c++/16.1.0/bits/fs_dir.h \
+ D:/mingw64/include/c++/16.1.0/bits/fs_ops.h \
+ D:/mingw64/include/c++/16.1.0/algorithm \
+ D:/mingw64/include/c++/16.1.0/bits/stl_algo.h \
+ D:/mingw64/include/c++/16.1.0/bits/algorithmfwd.h \
+ D:/mingw64/include/c++/16.1.0/bits/stl_heap.h \
+ D:/mingw64/include/c++/16.1.0/bits/uniform_int_dist.h \
+ D:/mingw64/include/c++/16.1.0/bits/stl_tempbuf.h \
+ D:/mingw64/include/c++/16.1.0/bits/ranges_algo.h \
+ D:/mingw64/include/c++/16.1.0/bits/ranges_algobase.h \
+ D:/mingw64/include/c++/16.1.0/pstl/glue_algorithm_defs.h \
+ D:/mingw64/include/c++/16.1.0/pstl/execution_defs.h
