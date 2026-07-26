@@ -11,6 +11,7 @@
 #include <algorithm>
 
 #pragma comment(lib, "d3d11.lib")
+#pragma comment(lib, "advapi32.lib")
 
 extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
