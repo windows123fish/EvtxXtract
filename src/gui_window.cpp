@@ -133,4 +133,19 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::wstring& title, int width, 
     }
 
     if (!CreateDeviceD3D(m_hWnd)) {
-        CleanupDeviceD3
+        CleanupDeviceD3D();
+        UnregisterClassW(wc.lpszClassName, hInstance);
+        return false;
+    }
+
+    ShowWindow(m_hWnd, SW_SHOW);
+    UpdateWindow(m_hWnd);
+
+    ImGui::CreateContext();
+    ImGuiIO& io = ImGui::GetIO();
+    io.IniFilename = NULL;
+
+    // Setup Chinese font
+    ImFontConfig font_config;
+    font_config.MergeMode = false;
+    font
