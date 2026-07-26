@@ -85,4 +85,4 @@ int main(int argc, char* argv[]) {
   std::cout << "[0x0018-0x001F] Oldest Chunk Offset: 0x" << std::hex << oldest_offset << "\n";
   
   // Newest Chunk Offset (0x0020, 8 bytes)
-  uint64_t newest_offset = *re
+  uint64_t newest_offset = *reinterpret_cast<uint64_t*>(&buffer[
