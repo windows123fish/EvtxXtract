@@ -9,4 +9,5 @@ void print_hex_dump(const uint8_t* data, size_t size) {
     
     // Print hex values
     for (size_t j = 0; j < 16 && i + j < size; ++j) {
-      std::cout << std::hex << std
+      std::cout << std::hex << std::setw(2) << std::setfill('0') 
+                << static_cast<int
