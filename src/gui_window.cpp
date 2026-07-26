@@ -56,3 +56,5 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::string& title, int width, i
         title.c_str(),
         WS_OVERLAPPEDWINDOW,
         CW_USEDEFAULT, CW_USEDEFAULT,
+        rect.right - rect.left, rect.bottom - rect.top,
+        NULL, NULL, hInstance
