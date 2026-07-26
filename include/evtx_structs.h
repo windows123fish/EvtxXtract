@@ -77,4 +77,7 @@ struct EVT_FILE_HEADER {
   /**
    * @brief CRC32 checksum of the file header (4 bytes, little-endian)
    */
-  uint32_t checksum
+  uint32_t checksum;
+
+  /**
+   * @brief Reserved/unused area (4056 bytes)
