@@ -215,3 +215,6 @@ IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARA
             return 0;
         case WM_SETCURSOR:
             ImGui_ImplWin32_UpdateMouseCursor();
+            return 0;
+        default:
+            return DefWindowProc(hWnd, msg
