@@ -283,4 +283,7 @@ void GuiWindow::parseSelectedFile() {
     // Force immediate render to show loading state
     render();
     
-    const std::string& filepath = m_evtxFiles[m_selected
+    const std::string& filepath = m_evtxFiles[m_selectedFileIndex];
+    
+    try {
+        Evtx::EvtxParser parser(filepath);
