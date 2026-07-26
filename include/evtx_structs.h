@@ -33,3 +33,6 @@ namespace Evtx {
  * 0x0028 | 4    | checksum
  * 0x002C | 4056 | reserved
  * -------|------|------
+ * Total  | 4096 |
+ */
+struct EVT_FILE_HEADER {
