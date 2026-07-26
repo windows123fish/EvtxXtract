@@ -201,3 +201,5 @@ void GuiWindow::renderFileInfo() {
         // Show file header info
         ImGui::Text("魔术数: %s", m_fileHeader.is_valid() ? "有效 (ElfFile)" : "无效");
         
+        uint16_t major = m_fileHeader.get_major_version();
+        uint16_t
