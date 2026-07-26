@@ -554,13 +554,6 @@ LRESULT GuiWindow::wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) {
             }
             return 0;
             
-        case WM_SYSCOMMAND:
-            if ((wParam & 0xfff0) == SC_KEYMENU)
-                return 0;
-            break;
-            
-
-            
         default:
             return DefWindowProcW(hWnd, msg, wParam, lParam);
     }
