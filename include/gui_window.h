@@ -26,6 +26,7 @@ private:
     void renderFileInfo();
     void renderFooter();
     
+    void openFileDialog();
     void scanEvtxFiles();
     void parseSelectedFile();
     
