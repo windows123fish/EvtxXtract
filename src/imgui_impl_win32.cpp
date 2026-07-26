@@ -30,4 +30,6 @@ IMGUI_IMPL_API HWND ImGui_ImplWin32_CreateWindow(HINSTANCE hInstance, const char
 
     // Calculate window size to get client area of desired size
     RECT rect = {0, 0, width, height};
-    AdjustWindowRectEx(&rect, WS_OVERL
+    AdjustWindowRectEx(&rect, WS_OVERLAPPEDWINDOW, FALSE, 0);
+    
+    g_hWnd = CreateWindowExA
