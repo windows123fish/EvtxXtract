@@ -33,4 +33,4 @@ private:
     void scanEvtxFiles();
     void parseSelectedFile();
     
-    LRESULT wndProc(H
+    LRESULT wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
