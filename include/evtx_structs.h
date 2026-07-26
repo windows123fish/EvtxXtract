@@ -37,4 +37,6 @@ namespace Evtx {
  */
 struct EVT_FILE_HEADER {
   /**
-   * @brief Magic number: "ElfFile\x00" (
+   * @brief Magic number: "ElfFile\x00" (8 bytes)
+   */
+  std::array<uint8_t, 8> magic;
