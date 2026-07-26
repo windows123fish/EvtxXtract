@@ -460,12 +460,12 @@ void GuiWindow::parseSelectedFile() {
         
     } catch (const std::exception& e) {
         std::wstring error_msg = L"解析错误: ";
-        // 使用 MultiByteToWideChar 正确转换错误信息
+        // MSVC下what()通常为ANSI编码(CP_ACP)，而非UTF-8
         std::string what = e.what();
-        int wlen = MultiByteToWideChar(CP_UTF8, 0, what.c_str(), -1, nullptr, 0);
+        int wlen = MultiByteToWideChar(CP_ACP, 0, what.c_str(), -1, nullptr, 0);
         if (wlen > 0) {
             std::wstring wwhat(wlen, L'\0');
-            MultiByteToWideChar(CP_UTF8, 0, what.c_str(), -1, &wwhat[0], wlen);
+            MultiByteToWideChar(CP_ACP, 0, what.c_str(), -1, &wwhat[0], wlen);
             error_msg += wwhat;
         } else {
             error_msg += L"(无法转换错误信息)";
