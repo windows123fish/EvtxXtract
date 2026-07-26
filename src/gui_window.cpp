@@ -149,3 +149,6 @@ void GuiWindow::render() {
     ImGui::Render();
     ImGui_ImplGDI_RenderDrawData(ImGui::GetDrawData());
 }
+
+void GuiWindow::renderFileSelection() {
+    ImGui::BeginChild("文件选择",
