@@ -131,4 +131,6 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
                 continue;
             }
 
-            // Setup
+            // Setup clipping rectangle
+            RECT clip_rect;
+            clip_rect.left = (LONG)p
