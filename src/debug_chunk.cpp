@@ -64,4 +64,14 @@ int main(int argc, char* argv[]) {
     std::cout << "last_event_record_number: " << header.last_event_record_number << std::endl;
     std::cout << "first_event_record_id: " << header.first_event_record_id << std::endl;
     std::cout << "last_event_record_id: " << header.last_event_record_id << std::endl;
-    std::cout << "header_size: 0x" << std::hex << header.header_size <
+    std::cout << "header_size: 0x" << std::hex << header.header_size << std::endl;
+    std::cout << "last_event_offset: 0x" << header.last_event_offset << std::endl;
+    std::cout << "free_space_offset: 0x" << header.free_space_offset << std::endl;
+    std::cout << "events_checksum: 0x" << header.events_checksum << std::endl;
+    std::cout << "unknown1: 0x" << header.unknown1 << std::endl;
+    std::cout << "flags: 0x" << header.flags << std::endl;
+    std::cout << "chunk_checksum: 0x" << header.chunk_checksum << std::endl;
+    std::cout << "string_offset_array_offset: 0x" << header.string_offset_array_offset << std::endl;
+    
+    return 0;
+}
