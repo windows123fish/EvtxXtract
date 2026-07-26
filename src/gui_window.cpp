@@ -261,4 +261,5 @@ void GuiWindow::scanEvtxFiles() {
     const std::string default_dir = "C:\\Windows\\System32\\winevt\\Logs\\";
     if (fs::exists(default_dir) && fs::is_directory(default_dir)) {
         for (const auto& entry : fs::directory_iterator(default_dir)) {
-            if (entry
+            if (entry.path().extension() == ".evtx") {
+                m_evtxFiles.push_back(entry
