@@ -87,4 +87,6 @@ struct EVT_CHUNK_HEADER {
   std::string to_string() const;
 };
 
-#pragma
+#pragma pack(pop)
+
+constexpr size_t EVTX_FILE_HEADER_SIZE = 4096
