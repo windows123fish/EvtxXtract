@@ -78,4 +78,6 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::string& title, int width, i
     io.Fonts->GetTexDataAsRGBA32(&pixels, &width_, &height_, &bytes_per_pixel);
     
     // Initialize backends
-    ImGui_ImplWin3
+    ImGui_ImplWin32_Init(m_hWnd);
+    ImGui_ImplGDI_Init(m_hDC);
+    
