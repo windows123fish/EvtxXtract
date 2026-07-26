@@ -245,7 +245,7 @@ void GuiWindow::render() {
 void GuiWindow::renderFileSelection() {
     ImGui::BeginChild("文件选择", ImVec2(300, ImGui::GetWindowHeight() - 130), true);
     
-    ImGui::TextColored(ImVec4(0.4f, 1.0f, 0.6f, 1.0f), "📁 EVTX文件列表");
+    ImGui::TextColored(ImVec4(0.4f, 1.0f, 0.6f, 1.0f), "EVTX文件列表");
     ImGui::Separator();
     
     if (m_evtxFiles.empty()) {
