@@ -141,4 +141,10 @@ void GuiWindow::render() {
     renderFileInfo();
     
     // Footer
-    renderFooter
+    renderFooter();
+    
+    ImGui::End();
+    
+    // Render
+    ImGui::Render();
+    ImGui
