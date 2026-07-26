@@ -28,4 +28,6 @@ namespace Evtx {
  */
 struct EVT_FILE_HEADER {
   std::array<uint8_t, 8> magic;
-  uint32_t
+  uint32_t version;
+  uint16_t flags;
+  uint16_t chunk_count;
