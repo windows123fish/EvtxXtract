@@ -307,4 +307,7 @@ void GuiWindow::parseSelectedFile() {
         m_validChunkCount = parser.validate_chunks();
         
         // Get chunk info
-        const auto& chunks = parser.get_valid_ch
+        const auto& chunks = parser.get_valid_chunks();
+        m_chunkInfo.clear();
+        
+        uint64_t current_offset = Evtx
