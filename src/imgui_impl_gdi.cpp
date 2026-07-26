@@ -197,4 +197,8 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
 
     // Draw buffer to screen
     g_hBitmapOld = (HBITMAP)SelectObject(g_hDC, g_hBitmap);
-    BitBlt(g_hDC, 0, 0, width, height, NULL, 0, 0, SRCCOPY
+    BitBlt(g_hDC, 0, 0, width, height, NULL, 0, 0, SRCCOPY);
+    SelectObject(g_hDC, g_hBitmapOld);
+}
+
+// New frame
