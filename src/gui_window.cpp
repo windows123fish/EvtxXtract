@@ -161,4 +161,5 @@ void GuiWindow::renderFileSelection() {
         if (ImGui::Button("重新扫描")) {
             scanEvtxFiles();
         }
-    }
+    } else {
+        for (size_t i = 0; i < m_evtxFiles
