@@ -220,7 +220,7 @@ std::vector<EventRecord> EvtxParser::parse_chunk_events(size_t chunk_index, size
         }
         
         EventRecord record;
-        if (parse_event_record(chunk_offset, record)) {
+        if (parse_event_record(record_header, record)) {
             records.push_back(record);
         }
         
