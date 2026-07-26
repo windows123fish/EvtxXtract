@@ -238,4 +238,6 @@ void GuiWindow::renderFileInfo() {
                 ImGui::TableSetColumnIndex(1);
                 ImGui::Text("%u", info.event_count);
                 ImGui::TableSetColumnIndex(2);
-                ImGui::Text("0x%
+                ImGui::Text("0x%08X", info.checksum);
+            }
+            ImGui::EndTable();
