@@ -190,3 +190,6 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
                 }
             }
 
+            // Reset clipping
+            SelectClipRgn(g_hDC, NULL);
+        }
