@@ -79,4 +79,5 @@ IMGUI_IMPL_API bool ImGui_ImplWin32_Init(HWND hWnd) {
     return true;
 }
 
-// Shutdown ImGui for Win
+// Shutdown ImGui for Win32
+IMGUI_IMPL_API void ImGui_ImplWin32_Shutdown() {
