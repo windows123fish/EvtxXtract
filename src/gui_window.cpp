@@ -289,3 +289,8 @@ void GuiWindow::parseSelectedFile() {
         Evtx::EvtxParser parser(filepath);
         if (!parser.open()) {
             MessageBoxA(m_hWnd, ("无法打开文件: " + filepath).c_str(), "错误", MB_OK | MB_ICONERROR);
+            m_isParsing = false;
+            return;
+        }
+        
+        // Read file header
