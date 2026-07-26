@@ -268,3 +268,4 @@ constexpr std::array<uint8_t, 8> EVTX_FILE_MAGIC = {
     'E', 'l', 'f', 'F', 'i', 'l', 'e', 0x00
 };
 constexpr std::array<uint8_t, 8> EVTX_CHUNK_MAGIC = {
+    'E', 'l', 'f', 'C', 'h', 'n', 'k
