@@ -62,4 +62,9 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::string& title, int width, i
 
     if (!m_hWnd) {
         MessageBoxA(NULL, "窗口创建失败", "错误", MB_OK | MB_ICONERROR);
-        return false
+        return false;
+    }
+
+    m_hDC = GetDC(m_hWnd);
+    
+    // Initialize
