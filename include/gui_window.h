@@ -34,4 +34,7 @@ private:
     void parseSelectedFile();
     
     LRESULT wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
-    static LRESULT CALLBACK s_wndProc(HWND hWnd, UINT msg, WPARAM
+    static LRESULT CALLBACK s_wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
+    
+private:
+    HWND m_hWnd;
