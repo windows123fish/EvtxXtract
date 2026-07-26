@@ -53,3 +53,4 @@ int main(int argc, char* argv[]) {
   std::cout << "=== First 128 bytes of file ===\n";
   print_hex_dump(buffer, sizeof(buffer));
   
+  std::cout << "\n=== Field interpretation
