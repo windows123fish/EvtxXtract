@@ -18,3 +18,8 @@ void print_hex_dump(const uint8_t* data, size_t size) {
     for (size_t j = size - i; j < 16; ++j) {
       std::cout << "   ";
       if (j == 8) std::cout << " ";
+    }
+    
+    // Print ASCII representation
+    std::cout << " | ";
+    for
