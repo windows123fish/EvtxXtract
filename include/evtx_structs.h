@@ -37,3 +37,5 @@ struct EVT_CHUNK_HEADER {
   uint32_t free_space_offset;
   uint32_t events_checksum;
   uint32_t unknown1;
+  uint32_t flags;
+  uint32_t chunk_checksum;
