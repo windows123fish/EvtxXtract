@@ -469,6 +469,10 @@ void GuiWindow::parseSelectedFile() {
             current_offset += chunk_size;
         }
         
+        // Phase 2: Parse event records (limit to 100 for performance)
+        m_eventRecords = parser.parse_all_events(100);
+        m_selectedEventIndex = -1;
+        
         m_fileHeader.file_size = fs::file_size(filepath);
         
     } catch (const std::exception& e) {
