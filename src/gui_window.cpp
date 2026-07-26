@@ -193,4 +193,4 @@ void GuiWindow::renderFileInfo() {
     ImGui::Separator();
     
     if (!m_isParsing && m_fileHeader.magic[0] == 0) {
-        ImGui::Text("请选择一个
+        ImGui::Text("请选择一个文件并点击\"解析文件\"");
