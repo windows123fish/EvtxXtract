@@ -110,4 +110,8 @@ IMGUI_IMPL_API void ImGui_ImplWin32_NewFrame() {
     QueryPerformanceFrequency(&freq);
     QueryPerformanceCounter(&counter);
     double current_time = (double)counter.QuadPart / freq.QuadPart;
-    io.D
+    io.DeltaTime = (float)(current_time - time);
+    time = current_time;
+
+    // Set mouse position
+    POINT pos;
