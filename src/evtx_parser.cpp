@@ -7,6 +7,10 @@ namespace Evtx {
 EvtxParser::EvtxParser(const std::string& file_path) : file_path_(file_path) {
 }
 
+EvtxParser::EvtxParser(const std::wstring& file_path) {
+    file_path_ = std::filesystem::path(file_path).string();
+}
+
 EvtxParser::~EvtxParser() {
   close();
 }

@@ -4,6 +4,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <filesystem>
 
 namespace Evtx {
 
@@ -17,11 +18,18 @@ namespace Evtx {
 class EvtxParser {
  public:
   /**
-   * @brief Constructor
+   * @brief Constructor (narrow string path)
    * 
    * @param file_path Path to the .evtx file
    */
   explicit EvtxParser(const std::string& file_path);
+  
+  /**
+   * @brief Constructor (wide string path)
+   * 
+   * @param file_path Path to the .evtx file
+   */
+  explicit EvtxParser(const std::wstring& file_path);
 
   /**
    * @brief Destructor - closes the file if open

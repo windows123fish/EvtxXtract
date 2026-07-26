@@ -108,6 +108,9 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::wstring& title, int width, 
     wc.hCursor       = LoadCursorW(NULL, IDC_ARROW);
     wc.lpszClassName = L"EvtxXtract_GUI_Class";
     
+    // 注册窗口类前先取消注册（如果已存在）
+    UnregisterClassW(wc.lpszClassName, hInstance);
+    
     if (!RegisterClassW(&wc)) {
         MessageBoxW(NULL, L"窗口类注册失败", L"错误", MB_OK | MB_ICONERROR);
         return false;
@@ -117,7 +120,7 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::wstring& title, int width, 
     AdjustWindowRectEx(&rect, WS_OVERLAPPEDWINDOW, FALSE, 0);
     
     m_hWnd = CreateWindowExW(
-        0,
+        WS_EX_ACCEPTFILES,
         wc.lpszClassName,
         title.c_str(),
         WS_OVERLAPPEDWINDOW,
@@ -248,11 +251,19 @@ void GuiWindow::renderFileSelection() {
     ImGui::TextColored(ImVec4(0.4f, 1.0f, 0.6f, 1.0f), "EVTX文件列表");
     ImGui::Separator();
     
+    // 文件选择按钮
+    if (ImGui::Button("选择文件")) {
+        openFileDialog();
+    }
+    
+    if (ImGui::Button("重新扫描")) {
+        scanEvtxFiles();
+    }
+    
+    ImGui::Separator();
+    
     if (m_evtxFiles.empty()) {
         ImGui::Text("未找到EVTX文件");
-        if (ImGui::Button("重新扫描")) {
-            scanEvtxFiles();
-        }
     } else {
         for (size_t i = 0; i < m_evtxFiles.size(); i++) {
             bool isSelected = (m_selectedFileIndex == (int)i);
@@ -345,6 +356,37 @@ void GuiWindow::renderFooter() {
     ImGui::Text("按 ESC 退出");
 }
 
+void GuiWindow::openFileDialog() {
+    OPENFILENAMEW ofn{};
+    wchar_t szFile[260] = {0};
+    
+    ZeroMemory(&ofn, sizeof(ofn));
+    ofn.lStructSize = sizeof(ofn);
+    ofn.hwndOwner = m_hWnd;
+    ofn.lpstrFile = szFile;
+    ofn.nMaxFile = sizeof(szFile);
+    ofn.lpstrFilter = L"EVTX文件\0*.evtx\0所有文件\0*.*\0";
+    ofn.nFilterIndex = 1;
+    ofn.lpstrFileTitle = NULL;
+    ofn.nMaxFileTitle = 0;
+    ofn.lpstrInitialDir = NULL;
+    ofn.Flags = OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST | OFN_NOCHANGEDIR;
+    
+    if (GetOpenFileNameW(&ofn) == TRUE) {
+        std::wstring filepath = ofn.lpstrFile;
+        // 检查是否已在列表中
+        auto it = std::find(m_evtxFiles.begin(), m_evtxFiles.end(), filepath);
+        if (it == m_evtxFiles.end()) {
+            m_evtxFiles.push_back(filepath);
+        }
+        m_selectedFileIndex = static_cast<int>(std::find(m_evtxFiles.begin(), m_evtxFiles.end(), filepath) - m_evtxFiles.begin());
+        m_isParsing = false;
+        m_fileHeader = Evtx::EVT_FILE_HEADER();
+        m_chunkInfo.clear();
+        m_validChunkCount = 0;
+    }
+}
+
 void GuiWindow::scanEvtxFiles() {
     m_evtxFiles.clear();
     
@@ -383,8 +425,7 @@ void GuiWindow::parseSelectedFile() {
     const std::wstring& filepath = m_evtxFiles[m_selectedFileIndex];
     
     try {
-        std::string filepath_str(filepath.begin(), filepath.end());
-        Evtx::EvtxParser parser(filepath_str);
+        Evtx::EvtxParser parser(filepath);
         if (!parser.open()) {
             MessageBoxW(m_hWnd, (L"无法打开文件: " + filepath).c_str(), L"错误", MB_OK | MB_ICONERROR);
             m_isParsing = false;
@@ -419,8 +460,16 @@ void GuiWindow::parseSelectedFile() {
         
     } catch (const std::exception& e) {
         std::wstring error_msg = L"解析错误: ";
+        // 使用 MultiByteToWideChar 正确转换错误信息
         std::string what = e.what();
-        error_msg += std::wstring(what.begin(), what.end());
+        int wlen = MultiByteToWideChar(CP_UTF8, 0, what.c_str(), -1, nullptr, 0);
+        if (wlen > 0) {
+            std::wstring wwhat(wlen, L'\0');
+            MultiByteToWideChar(CP_UTF8, 0, what.c_str(), -1, &wwhat[0], wlen);
+            error_msg += wwhat;
+        } else {
+            error_msg += L"(无法转换错误信息)";
+        }
         MessageBoxW(m_hWnd, error_msg.c_str(), L"错误", MB_OK | MB_ICONERROR);
     }
     
@@ -451,6 +500,33 @@ LRESULT GuiWindow::wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) {
     }
     
     switch (msg) {
+        case WM_DROPFILES: {
+            HDROP hDrop = (HDROP)wParam;
+            UINT numFiles = DragQueryFileW(hDrop, 0xFFFFFFFF, NULL, 0);
+            
+            for (UINT i = 0; i < numFiles; i++) {
+                wchar_t szFileName[MAX_PATH] = {0};
+                DragQueryFileW(hDrop, i, szFileName, MAX_PATH);
+                
+                std::wstring filepath = szFileName;
+                // 只处理 .evtx 文件
+                if (fs::path(filepath).extension() == L".evtx") {
+                    auto it = std::find(m_evtxFiles.begin(), m_evtxFiles.end(), filepath);
+                    if (it == m_evtxFiles.end()) {
+                        m_evtxFiles.push_back(filepath);
+                    }
+                    m_selectedFileIndex = static_cast<int>(std::find(m_evtxFiles.begin(), m_evtxFiles.end(), filepath) - m_evtxFiles.begin());
+                    m_isParsing = false;
+                    m_fileHeader = Evtx::EVT_FILE_HEADER();
+                    m_chunkInfo.clear();
+                    m_validChunkCount = 0;
+                }
+            }
+            
+            DragFinish(hDrop);
+            return 0;
+        }
+            
         case WM_SIZE:
             if (g_pd3dDevice != nullptr && wParam != SIZE_MINIMIZED) {
                 CleanupRenderTarget();
