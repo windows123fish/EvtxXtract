@@ -70,4 +70,5 @@ target_link_libraries(EvtxXtract-GUI PRIVATE
 # Enable testing
 enable_testing()
 
-# --- v
+# --- vcpkg integration for Phase 2 ---
+# When nlohmann_json is needed for Phase
