@@ -211,3 +211,5 @@ IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARA
             return 0;
         case WM_CHAR:
             if (wParam > 0 && wParam < 0x10000)
+                io.AddInputCharacter((unsigned short)wParam);
+            return 0;
