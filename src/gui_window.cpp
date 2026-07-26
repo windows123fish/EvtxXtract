@@ -116,4 +116,9 @@ void GuiWindow::run() {
     while (msg.message != WM_QUIT && m_isRunning) {
         if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE)) {
             TranslateMessage(&msg);
-            DispatchMessage
+            DispatchMessage(&msg);
+        } else {
+            render();
+        }
+    }
+}
