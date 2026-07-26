@@ -318,4 +318,8 @@ void GuiWindow::parseSelectedFile() {
             info.offset = current_offset;
             info.event_count = static_cast<uint32_t>(chunk_header.last_event_record_number - chunk_header.first_event_record_number + 1);
             info.checksum = chunk_header.chunk_checksum;
-            m
+            m_chunkInfo.push_back(info);
+            current_offset += chunk_size;
+        }
+        
+        //
