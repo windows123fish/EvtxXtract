@@ -134,4 +134,5 @@ static void ImGui_ImplWin32_UpdateMouseCursor() {
     if (io.ConfigFlags & ImGuiConfigFlags_NoMouseCursorChange)
         return;
 
-    ImGui
+    ImGuiMouseCursor imgui_cursor = ImGui::GetMouseCursor();
+    if (imgui_c
