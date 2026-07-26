@@ -203,4 +203,7 @@ IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARA
             return 0;
         case WM_KEYDOWN:
             if (wParam < 256)
-                io.KeysDown
+                io.KeysDown[wParam] = true;
+            return 0;
+        case WM_KEYUP:
+            if (wParam < 25
