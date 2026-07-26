@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.25)
 
 project(EvtxXtract
-        VERS
+        VERSION 1.0.0
+        DESCRIPTION "High-performance streaming parser for Windows .evtx
