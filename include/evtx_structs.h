@@ -168,4 +168,7 @@ struct EVT_CHUNK_HEADER {
    * 
    * Must be exactly {0x45, 0x6C, 0x66, 0x43, 0x68, 0x6E, 0x6B, 0x00}
    */
-  std::array<uint
+  std::array<uint8_t, 8> magic;
+
+  /**
+   * @brief First event record number
