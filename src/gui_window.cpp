@@ -274,4 +274,5 @@ void GuiWindow::renderFileSelection() {
         for (size_t i = 0; i < m_evtxFiles.size(); i++) {
             bool isSelected = (m_selectedFileIndex == (int)i);
             ImGui::PushID((int)i);
-            std::string filename
+            std::string filename = fs::path(m_evtxFiles[i]).filename().string();
+            if (Im
