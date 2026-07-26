@@ -102,4 +102,5 @@ IMGUI_IMPL_API void ImGui_ImplWin32_NewFrame() {
     static double time = 0.0;
     if (time == 0.0) {
         LARGE_INTEGER freq, counter;
-        QueryPerformanceFrequency
+        QueryPerformanceFrequency(&freq);
+        QueryPerformanceCounter(&counter
