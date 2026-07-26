@@ -344,4 +344,10 @@ LRESULT CALLBACK GuiWindow::s_wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM
     }
     
     if (window) {
-        return window->wndProc(hWnd, msg, wParam
+        return window->wndProc(hWnd, msg, wParam, lParam);
+    }
+    
+    return DefWindowProc(hWnd, msg, wParam, lParam);
+}
+
+LRESULT GuiWindow::wndProc(HWND hWnd
