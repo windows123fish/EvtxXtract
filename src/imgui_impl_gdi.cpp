@@ -163,4 +163,5 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
                 for (int y = (int)min_y; y < (int)max_y; y++) {
                     for (int x = (int)min_x; x < (int)max_x; x++) {
                         // Barycentric coordinates
-                        float w0 = ((v1.y - v2.y) * (x - v2.x) + (v2.x - v1.x)
+                        float w0 = ((v1.y - v2.y) * (x - v2.x) + (v2.x - v1.x) * (y - v2.y)) /
+                                   ((v1.y - v2.y)
