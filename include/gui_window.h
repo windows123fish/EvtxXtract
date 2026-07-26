@@ -7,4 +7,7 @@
 
 // Forward declarations
 struct EVT_FILE_HEADER;
-struct EVT
+struct EVT_CHUNK_HEADER;
+
+struct ChunkInfo {
+    uint64_t offset;
