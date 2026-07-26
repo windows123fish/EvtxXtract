@@ -31,4 +31,5 @@ namespace Evtx {
  * 0x000E | 2    | chunk_count
  * 0x0010 | 8    | file_size
  * 0x0018 | 8    | oldest_chunk_offset
- * 0x0020 |
+ * 0x0020 | 8    | newest_chunk_offset
+ * 0x0028 | 4    |
