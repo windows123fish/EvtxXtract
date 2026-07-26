@@ -160,7 +160,7 @@ int main(int argc, char* argv[]) {
         std::cout << "成功\n";
         evtx_files.push_back(output_path);
       } else {
-        std::cout << "失败（可能需要管理员权限）\n";
+        std::cout << "失败\n";
       }
     }
     
