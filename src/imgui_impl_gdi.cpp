@@ -68,4 +68,4 @@ static bool ImGui_ImplGDI_CreateBuffer(int width, int height) {
     bmi.bmiHeader.biSizeImage = width * height * 4;
 
     g_Buffer = new unsigned char[width * height * 4];
-    g_hBitmap = CreateD
+    g_hBitmap = CreateDIBSection(g_hDC, &bmi, DIB_RGB_COLORS, (void**
