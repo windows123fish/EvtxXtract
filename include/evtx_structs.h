@@ -62,4 +62,7 @@ struct EVT_FILE_HEADER {
    * High 16 bits: major version
    * Low 16 bits: minor version
    */
-  uint32_t version
+  uint32_t version;
+
+  /**
+   * @brief File flags (2 bytes, little-endian)
