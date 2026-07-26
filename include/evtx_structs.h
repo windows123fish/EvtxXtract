@@ -186,4 +186,8 @@ struct EVT_CHUNK_HEADER {
   uint64_t first_event_record_id;
 
   /**
-   * @brief Last event record identifier in this chunk (8 bytes, little-end
+   * @brief Last event record identifier in this chunk (8 bytes, little-endian)
+   */
+  uint64_t last_event_record_id;
+
+  /**
