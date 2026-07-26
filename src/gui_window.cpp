@@ -276,3 +276,11 @@ void GuiWindow::scanEvtxFiles() {
 void GuiWindow::parseSelectedFile() {
     if (m_selectedFileIndex < 0 || m_selectedFileIndex >= (int)m_evtxFiles.size()) {
         return;
+    }
+    
+    m_isParsing = true;
+    
+    // Force immediate render to show loading state
+    render();
+    
+    const std::string& filepath = m_evtxFiles[m_selected
