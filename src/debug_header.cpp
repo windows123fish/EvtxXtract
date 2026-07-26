@@ -80,4 +80,5 @@ int main(int argc, char* argv[]) {
   uint64_t file_size = *reinterpret_cast<uint64_t*>(&buffer[0x10]);
   std::cout << "[0x0010-0x0017] File Size: 0x" << std::hex << file_size << " (" << std::dec << file_size << " bytes)\n";
   
-  // Oldest Chunk Offset (
+  // Oldest Chunk Offset (0x0018, 8 bytes)
+  uint64_t oldest_offset =
