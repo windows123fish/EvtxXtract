@@ -12,4 +12,6 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Enable warnings
 if(MSVC)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W4 /WX")
+else()
+    set(CMAKE_CXX_FLAGS "${CMAKE_C
