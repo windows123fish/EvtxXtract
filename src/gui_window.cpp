@@ -255,3 +255,6 @@ void GuiWindow::renderFooter() {
 }
 
 void GuiWindow::scanEvtxFiles() {
+    m_evtxFiles.clear();
+    
+    //
