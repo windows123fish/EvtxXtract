@@ -258,4 +258,9 @@ struct EVT_CHUNK_HEADER {
   /**
    * @brief Get a human-readable description of the chunk header
    * 
-   * @return String containing chunk
+   * @return String containing chunk header information
+   */
+  std::string to_string() const;
+};
+
+#pragma pack
