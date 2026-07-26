@@ -20,4 +20,5 @@ IMGUI_IMPL_API bool ImGui_ImplGDI_Init(HDC hDC) {
 }
 
 // Shutdown GDI rendering
-IMGUI_IMPL_API void ImGui
+IMGUI_IMPL_API void ImGui_ImplGDI_Shutdown() {
+    if (g_hBitmap) {
