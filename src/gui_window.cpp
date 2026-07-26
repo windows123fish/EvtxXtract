@@ -242,3 +242,9 @@ void GuiWindow::renderFileInfo() {
             }
             ImGui::EndTable();
         }
+    }
+    
+    ImGui::EndChild();
+}
+
+void GuiWindow::renderFooter() {
