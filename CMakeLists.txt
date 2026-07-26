@@ -19,3 +19,5 @@ endif()
 
 # ImGui source files
 set(IMGUI_SRC
+    external/imgui/imgui.cpp
+    external/img
