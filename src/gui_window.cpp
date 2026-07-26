@@ -189,4 +189,5 @@ void GuiWindow::renderFileInfo() {
     ImGui::SameLine();
     ImGui::BeginChild("文件信息", ImVec2(0, ImGui::GetWindowHeight() - 100), true);
     
-    ImGui::TextColored(ImVec4(0.6f, 0.8f, 1.
+    ImGui::TextColored(ImVec4(0.6f, 0.8f, 1.0f, 1.0f), "📋 文件信息");
+    ImGui::Separator();
