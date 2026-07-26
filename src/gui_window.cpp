@@ -76,6 +76,7 @@ void CleanupDeviceD3D()
 
 void CreateRenderTarget()
 {
+    // 创建渲染目标视图
     ID3D11Texture2D* pBackBuffer;
     g_pSwapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (LPVOID*)&pBackBuffer);
     g_pd3dDevice->CreateRenderTargetView(pBackBuffer, nullptr, &g_mainRenderTargetView);
