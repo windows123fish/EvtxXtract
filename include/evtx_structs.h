@@ -142,4 +142,6 @@ struct EVT_FILE_HEADER {
  * 
  * Reference: MS-EVTX Section 2.2
  * 
- * Layout verified
+ * Layout verified against real .evtx files:
+ * Offset | Size | Field
+ * -------|------
