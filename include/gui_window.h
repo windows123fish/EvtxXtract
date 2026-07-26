@@ -38,3 +38,7 @@ private:
     
 private:
     HWND m_hWnd;
+    HDC m_hDC;
+    bool m_isRunning;
+    
+    // File selection
