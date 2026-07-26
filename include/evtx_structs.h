@@ -167,3 +167,6 @@ struct EVT_FILE_HEADER {
  * 0x0044 | 4    | string_offset_array_offset
  * 0x0048 | 464  | reserved
  * -------|------|------
+ * Total  | 512  |
+ */
+struct EVT_CHUNK_HEADER
