@@ -145,27 +145,30 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::wstring& title, int width, 
     ImGuiIO& io = ImGui::GetIO();
     io.IniFilename = NULL;
 
-    // Setup Chinese font
-    ImFontConfig font_config;
-    font_config.MergeMode = false;
-    font_config.PixelSnapH = true;
+    // Setup fonts with Chinese support
+    const wchar_t* font_paths[] = {
+        L"C:\\Windows\\Fonts\\msyh.ttc",
+        L"C:\\Windows\\Fonts\\simsun.ttc"
+    };
     
-    // Try loading Microsoft YaHei font
-    const wchar_t* font_path = L"C:\\Windows\\Fonts\\msyh.ttc";
-    ImFont* chinese_font = io.Fonts->AddFontFromFileTTFW(font_path, 16.0f, &font_config, io.Fonts->GetGlyphRangesChineseSimplifiedCommon());
-    
-    if (!chinese_font) {
-        // Fallback to SimSun
-        font_path = L"C:\\Windows\\Fonts\\simsun.ttc";
-        chinese_font = io.Fonts->AddFontFromFileTTFW(font_path, 16.0f, &font_config, io.Fonts->GetGlyphRangesChineseSimplifiedCommon());
+    ImFont* loaded_font = nullptr;
+    for (const wchar_t* font_path : font_paths) {
+        if (fs::exists(font_path)) {
+            ImFontConfig config;
+            config.MergeMode = false;
+            config.GlyphRanges = io.Fonts->GetGlyphRangesChineseFull();
+            loaded_font = io.Fonts->AddFontFromFileTTFW(font_path, 16.0f, &config);
+            if (loaded_font) {
+                break;
+            }
+        }
     }
     
-    if (!chinese_font) {
-        // Final fallback to default
-        chinese_font = io.Fonts->AddFontDefault();
+    if (!loaded_font) {
+        loaded_font = io.Fonts->AddFontDefault();
     }
-    
-    io.FontDefault = chinese_font;
+
+    io.FontDefault = loaded_font;
 
     ImGui::StyleColorsDark();
 
@@ -183,3 +186,148 @@ void GuiWindow::shutdown() {
     ImGui_ImplWin32_Shutdown();
     ImGui::DestroyContext();
 
+    CleanupDeviceD3D();
+    
+    if (m_hWnd) {
+        DestroyWindow(m_hWnd);
+        m_hWnd = nullptr;
+    }
+}
+
+void GuiWindow::run() {
+    MSG msg{};
+    
+    while (msg.message != WM_QUIT && m_isRunning) {
+        if (PeekMessageW(&msg, NULL, 0, 0, PM_REMOVE)) {
+            TranslateMessage(&msg);
+            DispatchMessageW(&msg);
+            continue;
+        }
+
+        ImGui_ImplDX11_NewFrame();
+        ImGui_ImplWin32_NewFrame();
+        ImGui::NewFrame();
+        
+        render();
+        
+        ImGui::Render();
+        const float clear_color[] = { 0.1f, 0.1f, 0.1f, 1.0f };
+        g_pd3dDeviceContext->OMSetRenderTargets(1, &g_mainRenderTargetView, NULL);
+        g_pd3dDeviceContext->ClearRenderTargetView(g_mainRenderTargetView, clear_color);
+        ImGui_ImplDX11_RenderDrawData(ImGui::GetDrawData());
+
+        g_pSwapChain->Present(1, 0);
+    }
+}
+
+void GuiWindow::render() {
+    ImGui::SetNextWindowPos(ImVec2(0, 0));
+    ImGui::SetNextWindowSize(ImGui::GetIO().DisplaySize);
+    ImGui::Begin(u8"EvtxXtract - EVTX文件解析器", NULL, ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse);
+    
+    renderFileSelection();
+    renderFileInfo();
+    renderFooter();
+    
+    ImGui::End();
+}
+
+void GuiWindow::renderFileSelection() {
+    ImGui::BeginChild(u8"文件选择", ImVec2(300, ImGui::GetWindowHeight() - 100), true);
+    
+    ImGui::TextColored(ImVec4(0.4f, 1.0f, 0.6f, 1.0f), u8"📁 EVTX文件列表");
+    ImGui::Separator();
+    
+    if (m_evtxFiles.empty()) {
+        ImGui::Text(u8"未找到EVTX文件");
+        if (ImGui::Button(u8"重新扫描")) {
+            scanEvtxFiles();
+        }
+    } else {
+        for (size_t i = 0; i < m_evtxFiles.size(); i++) {
+            bool isSelected = (m_selectedFileIndex == (int)i);
+            ImGui::PushID((int)i);
+            std::wstring filename = fs::path(m_evtxFiles[i]).filename().wstring();
+            if (ImGui::Selectable(filename.c_str(), isSelected)) {
+                m_selectedFileIndex = (int)i;
+                m_isParsing = false;
+                m_fileHeader = Evtx::EVT_FILE_HEADER();
+                m_chunkInfo.clear();
+                m_validChunkCount = 0;
+            }
+            ImGui::PopID();
+        }
+        
+        ImGui::Separator();
+        
+        if (m_selectedFileIndex >= 0 && ImGui::Button(u8"解析文件")) {
+            parseSelectedFile();
+        }
+    }
+    
+    ImGui::EndChild();
+}
+
+void GuiWindow::renderFileInfo() {
+    ImGui::SameLine();
+    ImGui::BeginChild(u8"文件信息", ImVec2(0, ImGui::GetWindowHeight() - 100), true);
+    
+    ImGui::TextColored(ImVec4(0.6f, 0.8f, 1.0f, 1.0f), u8"📋 文件信息");
+    ImGui::Separator();
+    
+    if (!m_isParsing && m_fileHeader.magic[0] == 0) {
+        ImGui::Text(u8"请选择一个文件并点击\"解析文件\"");
+    } else if (m_isParsing) {
+        ImGui::TextColored(ImVec4(1.0f, 1.0f, 0.0f, 1.0f), u8"正在解析文件...");
+        ImGui::ProgressBar(0.5f, ImVec2(-1, 20), u8"处理中");
+    } else {
+        ImGui::Text(u8"魔术数: %s", m_fileHeader.validate_magic() ? u8"有效 (ElfFile)" : u8"无效");
+        
+        uint16_t major = m_fileHeader.get_major_version();
+        uint16_t minor = m_fileHeader.get_minor_version();
+        ImGui::Text(u8"版本: %u.%u", major, minor);
+        
+        ImGui::Text(u8"标志位: 0x%04X", m_fileHeader.flags);
+        ImGui::Text(u8"块数量: %u", m_fileHeader.chunk_count);
+        ImGui::Text(u8"有效块数: %u", m_validChunkCount);
+        
+        if (m_fileHeader.chunk_count != m_validChunkCount) {
+            ImGui::TextColored(ImVec4(1.0f, 0.5f, 0.5f, 1.0f), u8"警告: 文件头块数与实际不符");
+        }
+        
+        ImGui::Text(u8"文件大小: %llu bytes", m_fileHeader.file_size);
+        ImGui::Text(u8"最旧块偏移: 0x%llX", m_fileHeader.oldest_chunk_offset);
+        ImGui::Text(u8"最新块偏移: 0x%llX", m_fileHeader.newest_chunk_offset);
+        ImGui::Text(u8"校验和: 0x%08X", m_fileHeader.checksum);
+        
+        ImGui::Separator();
+        ImGui::TextColored(ImVec4(0.6f, 0.8f, 1.0f, 1.0f), u8"📦 块信息");
+        
+        if (m_chunkInfo.empty()) {
+            ImGui::Text(u8"未解析块信息");
+        } else {
+            ImGui::BeginTable(u8"chunks", 3, ImGuiTableFlags_Borders);
+            ImGui::TableSetupColumn(u8"块偏移");
+            ImGui::TableSetupColumn(u8"事件数");
+            ImGui::TableSetupColumn(u8"校验和");
+            ImGui::TableHeadersRow();
+            
+            for (const auto& info : m_chunkInfo) {
+                ImGui::TableNextRow();
+                ImGui::TableSetColumnIndex(0);
+                ImGui::Text(u8"0x%llX", info.offset);
+                ImGui::TableSetColumnIndex(1);
+                ImGui::Text(u8"%u", info.event_count);
+                ImGui::TableSetColumnIndex(2);
+                ImGui::Text(u8"0x%08X", info.checksum);
+            }
+            ImGui::EndTable();
+        }
+    }
+    
+    ImGui::EndChild();
+}
+
+void GuiWindow::renderFooter() {
+    ImGui::Separator();
+    ImGui::Text(u8"EvtxXtract v1.0.0 | 高性能EVTX文件流式解析
