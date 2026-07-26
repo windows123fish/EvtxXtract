@@ -42,4 +42,5 @@ static bool ImGui_ImplGDI_CreateBuffer(int width, int height) {
 
     // Cleanup old buffer
     if (g_hBitmap) {
-        if (g_hDC
+        if (g_hDC && g_hBitmapOld)
+            SelectObject(g_hDC, g_hBitmapOld);
