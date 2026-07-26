@@ -17,4 +17,7 @@ extern IMGUI_IMPL_API void ImGui_ImplGDI_NewFrame();
 
 namespace fs = std::filesystem;
 
-GuiWindow::GuiWindow()
+GuiWindow::GuiWindow() : 
+    m_hWnd(nullptr), 
+    m_hDC(nullptr), 
+    m
