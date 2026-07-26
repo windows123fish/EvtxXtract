@@ -21,4 +21,7 @@ namespace Evtx {
  * 
  * Reference: MS-EVTX Section 2.1
  * 
- * Layout verified against real .
+ * Layout verified against real .evtx files (hex dump analysis):
+ * 
+ * Offset | Size | Field
+ * ----
