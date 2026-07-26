@@ -174,4 +174,7 @@ IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARA
     if (ImGui::GetCurrentContext() == NULL)
         return DefWindowProc(hWnd, msg, wParam, lParam);
 
-    ImGuiIO
+    ImGuiIO& io = ImGui::GetIO();
+
+    switch (msg) {
+        case WM_M
