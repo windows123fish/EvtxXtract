@@ -224,3 +224,5 @@ struct EVT_CHUNK_HEADER {
 
   /**
    * @brief CRC32 checksum of the chunk header (4 bytes, little-endian)
+   * 
+   * Computed over bytes 0x0008 through 0x
