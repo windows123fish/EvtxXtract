@@ -64,4 +64,6 @@ int main(int argc, char* argv[]) {
   
   // Version (0x0008, 4 bytes)
   uint32_t version = *reinterpret_cast<uint32_t*>(&buffer[0x08]);
-  uint16_t major = (version >> 16) & 0x
+  uint16_t major = (version >> 16) & 0xFFFF;
+  uint16_t minor = version & 0xFFFF;
+  std
