@@ -16,3 +16,5 @@ struct EVT_FILE_HEADER {
   uint32_t version;
   uint16_t flags;
   uint16_t chunk_count;
+  uint32_t checksum;
+  std::array<uint8_t, 4
