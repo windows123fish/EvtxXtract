@@ -89,4 +89,6 @@ IMGUI_IMPL_API void ImGui_ImplWin32_Shutdown() {
 }
 
 // New frame
-IMGUI_IMPL_API void ImGui_ImplWin32_
+IMGUI_IMPL_API void ImGui_ImplWin32_NewFrame() {
+    ImGuiIO& io = ImGui::GetIO();
+    IM_ASSERT
