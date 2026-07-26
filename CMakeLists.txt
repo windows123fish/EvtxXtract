@@ -45,4 +45,6 @@ add_executable(debug_header
 
 # GUI version with ImGui
 add_executable(EvtxXtract-GUI
-    src/g
+    src/gui_main.cpp
+    src/gui_window.cpp
+    src/imgui_impl_win32.cpp
