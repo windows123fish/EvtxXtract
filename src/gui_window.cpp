@@ -20,4 +20,6 @@ namespace fs = std::filesystem;
 GuiWindow::GuiWindow() : 
     m_hWnd(nullptr), 
     m_hDC(nullptr), 
-    m_isRunning
+    m_isRunning(false),
+    m_selectedFileIndex(-1),
+    m_isParsing(false),
