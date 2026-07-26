@@ -123,3 +123,5 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
     for (int n = 0; n < draw_data->CmdListsCount; n++) {
         const ImDrawList* cmd_list = draw_data->CmdLists[n];
         const ImDrawIdx* idx_buffer = cmd_list->IdxBuffer.Data;
+
+        for (int cmd_i = 0; cmd_i < cmd_list->CmdBuffer.Size
