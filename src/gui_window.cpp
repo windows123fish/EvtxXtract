@@ -545,12 +545,7 @@ LRESULT GuiWindow::wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) {
             PostQuitMessage(0);
             return 0;
             
-        case WM_KEYDOWN:
-            if (wParam == VK_ESCAPE) {
-                m_isRunning = false;
-                PostQuitMessage(0);
-            }
-            return 0;
+
             
         case WM_DESTROY:
             m_isRunning = false;
