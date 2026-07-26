@@ -10,3 +10,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int) {
         delete g_pWindow;
         return 1;
     }
+    
+    g_pWindow->run();
+    
