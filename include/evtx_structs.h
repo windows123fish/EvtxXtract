@@ -127,4 +127,6 @@ struct EVT_FILE_HEADER {
   bool is_dirty() const noexcept;
 
   /**
-   *
+   * @brief Get a human-readable description of the header
+   * 
+   * @return String containing
