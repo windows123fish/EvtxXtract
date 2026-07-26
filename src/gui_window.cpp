@@ -197,4 +197,6 @@ void GuiWindow::renderFileInfo() {
     } else if (m_isParsing) {
         ImGui::TextColored(ImVec4(1.0f, 1.0f, 0.0f, 1.0f), "正在解析文件...");
         ImGui::ProgressBar(0.5f, ImVec2(-1, 20), "处理中");
-    } else
+    } else {
+        // Show file header info
+        ImGui::Text("魔术数: %s",
