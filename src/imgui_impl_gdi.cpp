@@ -120,4 +120,5 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
     }
 
     // Render commands
-    for (int n = 0; n < draw_data->Cmd
+    for (int n = 0; n < draw_data->CmdListsCount; n++) {
+        const ImDrawList* cmd_list = draw_data->Cmd
