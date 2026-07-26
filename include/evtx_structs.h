@@ -161,3 +161,5 @@ struct EVT_FILE_HEADER {
  * 0x0048 | 444  | reserved
  * -------|------|------
  * Total  | 512  |
+ */
+struct EVT_CHUNK_HEADER {
