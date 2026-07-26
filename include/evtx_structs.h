@@ -9,4 +9,6 @@ namespace Evtx {
 #pragma pack(push, 1)
 
 /**
- * @
+ * @brief EVT_FILE_HEADER structure
+ * 
+ * MS-EVTX Section 2.1:
