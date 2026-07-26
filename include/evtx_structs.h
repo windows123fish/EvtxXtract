@@ -242,4 +242,6 @@ struct EVT_CHUNK_HEADER {
   std::array<uint8_t, 444> reserved;
 
   /**
-   * @brief Validate
+   * @brief Validate the chunk header magic number
+   * 
+   * @return true if magic matches "Elf
