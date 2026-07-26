@@ -242,4 +242,4 @@ struct EVT_CHUNK_HEADER {
   std::array<uint8_t, 440> reserved;
 
   /**
-   *
+   * @brief Validate the chunk header magic number
