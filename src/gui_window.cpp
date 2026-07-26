@@ -330,9 +330,9 @@ void GuiWindow::renderFileInfo() {
 
 void GuiWindow::renderFooter() {
     ImGui::Separator();
-    ImGui::Text(u8"EvtxXtract v1.0.0 | 高性能EVTX文件流式解析器");
+    ImGui::Text("EvtxXtract v1.0.0 | 高性能EVTX文件流式解析器");
     ImGui::SameLine(ImGui::GetWindowWidth() - 150);
-    ImGui::Text(u8"按 ESC 退出");
+    ImGui::Text("按 ESC 退出");
 }
 
 void GuiWindow::scanEvtxFiles() {
