@@ -213,4 +213,5 @@ void GuiWindow::renderFileInfo() {
             ImGui::TextColored(ImVec4(1.0f, 0.5f, 0.5f, 1.0f), "警告: 文件头块数与实际不符");
         }
         
-        ImGui::Text("文件
+        ImGui::Text("文件大小: %llu bytes", m_fileHeader.file_size);
+        ImGui::Text("最
