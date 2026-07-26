@@ -13,4 +13,5 @@ static bool                 g_bPrevMouseVisible = true;
 // Helper to create a window class
 static WNDCLASSEXA CreateWindowClass(HINSTANCE hInstance) {
     WNDCLASSEXA wc = {0};
-    wc.cbSize        = sizeof(WNDCLASSE
+    wc.cbSize        = sizeof(WNDCLASSEXA);
+    wc.style         = CS_H
