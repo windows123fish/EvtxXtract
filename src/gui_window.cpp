@@ -304,4 +304,5 @@ void GuiWindow::parseSelectedFile() {
         m_validChunkCount = 0;
         m_chunkInfo.clear();
         
-        // Scan for chunks (each chunk is
+        // Scan for chunks (each chunk is 64KB)
+        uint64_t file_size = fs::file_size(filepath
