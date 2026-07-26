@@ -164,4 +164,29 @@ int main(int argc, char* argv[]) {
     std::cout << "\n";
   }
 
-  std::cout << "\n
+  std::cout << "\nEnter the number of the file to analyze (or 'all' for all files): ";
+  std::string input;
+  std::getline(std::cin, input);
+
+  if (input == "all" || input == "ALL" || input == "All") {
+    for (const auto& file : evtx_files) {
+      analyze_file(file);
+      std::cout << "\n" << std::string(60, '-') << "\n\n";
+    }
+  } else {
+    try {
+      size_t index = std::stoull(input) - 1;
+      if (index < evtx_files.size()) {
+        analyze_file(evtx_files[index]);
+      } else {
+        std::cerr << "Invalid selection: " << input << "\n";
+        return 1;
+      }
+    } catch (const std::exception&) {
+      std::cerr << "Invalid input: " << input << "\n";
+      return 1;
+    }
+  }
+
+  return 0;
+}
