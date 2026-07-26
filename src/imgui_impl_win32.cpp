@@ -1,2 +1,5 @@
 #include <imgui.h>
-#include
+#include <windows.h>
+
+// Forward declarations
+extern IMGUI_IMPL_API LRESULT ImGui_Impl
