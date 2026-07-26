@@ -90,4 +90,4 @@ int main(int argc, char* argv[]) {
   
   // Checksum (0x0028, 4 bytes)
   uint32_t checksum = *reinterpret_cast<uint32_t*>(&buffer[0x28]);
-  std::cout << "[0x0028-0x002B
+  std::cout << "[0x0028-0x002B] Checksum: 0x" << std
