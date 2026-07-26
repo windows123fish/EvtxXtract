@@ -198,4 +198,6 @@ struct EVT_CHUNK_HEADER {
   uint64_t last_event_record_id;
 
   /**
-   * @brief Header size in bytes (
+   * @brief Header size in bytes (4 bytes, little-endian)
+   * 
+   * Currently always 128 (
