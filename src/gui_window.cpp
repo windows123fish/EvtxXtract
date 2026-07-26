@@ -184,4 +184,9 @@ void GuiWindow::renderDrawData(ImDrawData* draw_data) {
     }
     
     // Clear buffer
-    memset(buffer, 0, width * height
+    memset(buffer, 0, width * height * 4);
+    
+    // Get font texture
+    ImGuiIO& io = ImGui::GetIO();
+    unsigned char* font_pixels = NULL;
+    int font_width =
