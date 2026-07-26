@@ -136,46 +136,46 @@ int main(int argc, char* argv[]) {
     return 0;
   }
 
-  // No path provided - automatically scan Windows Event Log directory
-  std::cout << "EvtxXtract v1.0.0 - Automatic Log Scanner\n";
-  std::cout << "===========================================\n\n";
+  // 未提供路径 - 自动扫描Windows事件日志目录
+  std::cout << "EvtxXtract v1.0.0 - 自动日志扫描器\n";
+  std::cout << "=============================================\n\n";
 
   const std::string default_log_dir = "C:\\Windows\\System32\\winevt\\Logs\\";
-  std::cout << "Scanning default Event Log directory: " << default_log_dir << "\n\n";
+  std::cout << "正在扫描默认事件日志目录: " << default_log_dir << "\n\n";
 
   std::vector<std::string> evtx_files = find_evtx_files(default_log_dir);
 
-  // If no files found in default directory, try to export using wevtutil
+  // 如果在默认目录未找到文件，尝试使用wevtutil导出
   if (evtx_files.empty()) {
-    std::cout << "No .evtx files found in the default directory.\n";
-    std::cout << "Attempting to export event logs using wevtutil...\n\n";
+    std::cout << "在默认目录中未找到.evtx文件。\n";
+    std::cout << "正在尝试使用wevtutil导出事件日志...\n\n";
     
     const std::string temp_dir = fs::temp_directory_path().string();
     const std::vector<std::string> log_names = {"System", "Application", "Security"};
     
     for (const auto& log_name : log_names) {
       std::string output_path = temp_dir + "\\" + log_name + "_export.evtx";
-      std::cout << "Exporting " << log_name << " log... ";
+      std::cout << "正在导出 " << log_name << " 日志... ";
       
       if (export_event_log(log_name, output_path)) {
-        std::cout << "OK\n";
+        std::cout << "成功\n";
         evtx_files.push_back(output_path);
       } else {
-        std::cout << "FAILED (may need Administrator privileges)\n";
+        std::cout << "失败（可能需要管理员权限）\n";
       }
     }
     
     if (evtx_files.empty()) {
-      std::cerr << "\nFailed to access event logs.\n";
-      std::cerr << "Please run this program as Administrator or specify a file path.\n";
-      std::cerr << "\nUsage: " << argv[0] << " <evtx_file_path>\n";
+      std::cerr << "\n无法访问事件日志。\n";
+      std::cerr << "请以管理员身份运行此程序，或指定一个文件路径。\n";
+      std::cerr << "\n用法: " << argv[0] << " <evtx_file_path>\n";
       return 1;
     }
     
     std::cout << "\n";
   }
 
-  std::cout << "Found " << evtx_files.size() << " .evtx file(s):\n";
+  std::cout << "找到 " << evtx_files.size() << " 个 .evtx 文件:\n";
   std::cout << "-----------------------------------------------------\n";
   
   for (size_t i = 0; i < evtx_files.size(); ++i) {
@@ -183,15 +183,15 @@ int main(int argc, char* argv[]) {
     
     try {
       uint64_t file_size = fs::file_size(evtx_files[i]);
-      std::cout << " (" << file_size << " bytes)";
+      std::cout << " (" << file_size << " 字节)";
     } catch (...) {
-      std::cout << " (size unavailable)";
+      std::cout << " (大小不可用)";
     }
     
     std::cout << "\n";
   }
 
-  std::cout << "\nEnter the number of the file to analyze (or 'all' for all files): ";
+  std::cout << "\n请输入要分析的文件编号（或输入 'all' 分析所有文件）: ";
   std::string input;
   std::getline(std::cin, input);
 
@@ -206,11 +206,11 @@ int main(int argc, char* argv[]) {
       if (index < evtx_files.size()) {
         analyze_file(evtx_files[index]);
       } else {
-        std::cerr << "Invalid selection: " << input << "\n";
+        std::cerr << "无效的选择: " << input << "\n";
         return 1;
       }
     } catch (const std::exception&) {
-      std::cerr << "Invalid input: " << input << "\n";
+      std::cerr << "无效的输入: " << input << "\n";
       return 1;
     }
   }
