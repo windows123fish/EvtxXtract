@@ -35,4 +35,7 @@ struct EVT_FILE_HEADER {
   uint64_t oldest_chunk_offset;
   uint64_t newest_chunk_offset;
   uint32_t checksum;
-  std::array<uint8_t, 405
+  std::array<uint8_t, 4052> reserved;
+
+  bool validate_magic() const noexcept;
+  uint16_t
