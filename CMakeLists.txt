@@ -50,4 +50,8 @@ add_executable(EvtxXtract-GUI
     src/imgui_impl_win32.cpp
     src/imgui_impl_gdi.cpp
     src/evtx_parser.cpp
-    src
+    src/evtx_structs.cpp
+    ${IMGUI_SRC}
+)
+
+# Include directories for
