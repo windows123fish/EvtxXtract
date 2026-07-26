@@ -229,3 +229,6 @@ void GuiWindow::renderFileInfo() {
             ImGui::TableSetupColumn("块偏移");
             ImGui::TableSetupColumn("事件数");
             ImGui::TableSetupColumn("校验和");
+            ImGui::TableHeadersRow();
+            
+            for (const auto& info : m_chunkInfo)
