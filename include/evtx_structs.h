@@ -105,4 +105,68 @@ static_assert(sizeof(EVT_FILE_HEADER) == EVTX_FILE_HEADER_SIZE,
 static_assert(sizeof(EVT_CHUNK_HEADER) == EVTX_CHUNK_HEADER_SIZE,
               "EVT_CHUNK_HEADER must be exactly 512 bytes");
 
+/**
+ * @brief EVT_EVENT_RECORD_HEADER structure
+ * 
+ * MS-EVTX Section 2.3: Event Record Structure
+ * 
+ * Offset | Size | Field
+ * -------|------|------
+ * 0x0000 | 4    | size
+ * 0x0004 | 4    | magic (0x20202020)
+ * 0x0008 | 8    | record_id
+ * 0x0010 | 8    | timestamp (FILETIME)
+ * 0x0018 | ...  | data (binary XML)
+ */
+struct EVT_EVENT_RECORD_HEADER {
+    uint32_t size;
+    uint32_t magic;
+    uint64_t record_id;
+    uint64_t timestamp;
+    
+    bool validate_magic() const noexcept;
+    std::string get_timestamp_string() const;
+};
+
+constexpr size_t EVTX_EVENT_RECORD_HEADER_SIZE = 24;
+constexpr uint32_t EVTX_EVENT_RECORD_MAGIC = 0x20202020;
+
+/**
+ * @brief Binary XML Token Types (MS-EVTX Section 2.4.1)
+ */
+enum class BXmlTokenType : uint8_t {
+    EndOfStream = 0x00,
+    OpenStartElement = 0x01,
+    CloseStartElement = 0x02,
+    CloseElement = 0x03,
+    Value = 0x04,
+    Attribute = 0x05,
+    CDataSection = 0x06,
+    CharRef = 0x07,
+    EntityRef = 0x08,
+    ProcessingInstruction = 0x09,
+    Comment = 0x0A,
+    StartOfStream = 0x0B,
+    WhiteSpace = 0x0C,
+    EndElementTag = 0x0D,
+    StartElementTag = 0x0E
+};
+
+/**
+ * @brief Event Record structure for parsed data
+ */
+struct EventRecord {
+    uint64_t record_id;
+    std::string timestamp;
+    uint32_t event_id;
+    std::string provider_name;
+    std::string level;
+    std::string channel;
+    std::string computer;
+    std::string message;
+    std::string xml_content;
+    
+    std::string to_json() const;
+};
+
 }  // namespace Evtx
