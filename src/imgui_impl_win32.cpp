@@ -125,4 +125,7 @@ IMGUI_IMPL_API void ImGui_ImplWin32_NewFrame() {
     io.MouseDown[2] = (GetAsyncKeyState(VK_MBUTTON) & 0x8000) != 0;
 
     // Set mouse wheel
-    // Wheel messages are handled in
+    // Wheel messages are handled in WndProc
+}
+
+// Update mouse cursor
