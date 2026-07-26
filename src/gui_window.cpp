@@ -79,4 +79,7 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::string& title, int width, i
     // Scan for .evtx files
     scanEvtxFiles();
     
-    ShowWindow(m_hWnd, SW_SH
+    ShowWindow(m_hWnd, SW_SHOW);
+    UpdateWindow(m_hWnd);
+    m_isRunning = true;
+    
