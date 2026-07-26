@@ -72,3 +72,6 @@ IMGUI_IMPL_API bool ImGui_ImplWin32_Init(HWND hWnd) {
     ImGuiIO& io = ImGui::GetIO();
     
     // Setup back-end capabilities flags
+    io.BackendPlatformName = "imgui_impl_win32";
+    io.BackendFlags |= ImGuiBackendFlags_HasMouseCursors;
+    io.BackendFlags |= ImGuiBackendFlags
