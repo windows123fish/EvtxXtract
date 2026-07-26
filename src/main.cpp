@@ -70,7 +70,6 @@ void analyze_file(const std::string& file_path) {
     if (!parser.open()) {
       std::cerr << "失败\n";
       std::cerr << "错误: " << parser.get_last_error() << "\n";
-      std::cerr << "注意: 访问系统日志可能需要以管理员身份运行此程序。\n";
       return;
     }
     std::cout << "成功\n";
