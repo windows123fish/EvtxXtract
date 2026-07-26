@@ -153,10 +153,7 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::wstring& title, int width, 
     ImFont* loaded_font = nullptr;
     for (const char* font_path : font_paths) {
         if (fs::exists(font_path)) {
-            ImFontConfig config;
-            config.MergeMode = false;
-            config.GlyphRanges = io.Fonts->GetGlyphRangesChineseFull();
-            loaded_font = io.Fonts->AddFontFromFileTTF(font_path, 16.0f, &config);
+            loaded_font = io.Fonts->AddFontFromFileTTF(font_path, 16.0f, nullptr, io.Fonts->GetGlyphRangesChineseSimplifiedCommon());
             if (loaded_font) {
                 break;
             }
@@ -168,6 +165,7 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::wstring& title, int width, 
     }
 
     io.FontDefault = loaded_font;
+    io.Fonts->Build();
 
     ImGui::StyleColorsDark();
 
