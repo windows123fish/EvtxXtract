@@ -115,4 +115,5 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
         hFontDC = CreateCompatibleDC(g_hDC);
         font_buffer = new unsigned char[font_width * font_height * 4];
         hFontBitmap = CreateDIBSection(hFontDC, &bmi, DIB_RGB_COLORS, (void**)&font_buffer, NULL, 0);
-        SelectObject(h
+        SelectObject(hFontDC, hFontBitmap);
+        memcpy
