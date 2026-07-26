@@ -1,0 +1,3 @@
+D:\mingw64\bin\cmake.exe -E rm -f CMakeFiles\cmTC_f7d8c.dir/objects.a
+D:\mingw64\bin\ar.exe qc CMakeFiles\cmTC_f7d8c.dir/objects.a @CMakeFiles\cmTC_f7d8c.dir\objects1.rsp
+D:\mingw64\bin\c++.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\cmTC_f7d8c.dir/objects.a -Wl,--no-whole-archive -o cmTC_f7d8c.exe -Wl,--out-implib,libcmTC_f7d8c.dll.a -Wl,--major-image-version,0,--minor-image-version,0
