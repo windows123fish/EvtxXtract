@@ -58,4 +58,10 @@ int main(int argc, char* argv[]) {
     std::cout << "=== Chunk Header Hex Dump (First 64 bytes) ===" << std::endl;
     print_hex(reinterpret_cast<uint8_t*>(&header), 64);
     
-    std::cout << "\n=== Struct Fields ==
+    std::cout << "\n=== Struct Fields ===" << std::endl;
+    std::cout << "magic: " << std::string(reinterpret_cast<char*>(header.magic), 7) << std::endl;
+    std::cout << "first_event_record_number: " << std::dec << header.first_event_record_number << std::endl;
+    std::cout << "last_event_record_number: " << header.last_event_record_number << std::endl;
+    std::cout << "first_event_record_id: " << header.first_event_record_id << std::endl;
+    std::cout << "last_event_record_id: " << header.last_event_record_id << std::endl;
+    std::cout << "header_size: 0x" << std::hex << header.header_size <
