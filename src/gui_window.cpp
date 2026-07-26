@@ -243,4 +243,4 @@ void GuiWindow::renderDrawData(ImDrawData* draw_data) {
                             
                             int idx = (y * width + x) * 4;
                             float alpha = a / 255.0f;
-                            buffer[idx] =
+                            buffer[idx] = static_cast<unsigned char>(buffer[idx] * (1 - alpha) + r * alpha);
