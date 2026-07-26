@@ -26,3 +26,6 @@ IMGUI_IMPL_API void ImGui_ImplGDI_Shutdown() {
             SelectObject(g_hDC, g_hBitmapOld);
         DeleteObject(g_hBitmap);
         g_hBitmap = NULL;
+        g_hBitmapOld = NULL;
+    }
+    if (g_Buffer)
