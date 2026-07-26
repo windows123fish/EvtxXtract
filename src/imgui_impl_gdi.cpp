@@ -184,4 +184,9 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
                             float alpha = a / 255.0f;
                             dst_r = (unsigned char)(dst_r * (1 - alpha) + r * alpha);
                             dst_g = (unsigned char)(dst_g * (1 - alpha) + g * alpha);
-                            dst_b = (unsigned char)(dst_b * (1 - alpha
+                            dst_b = (unsigned char)(dst_b * (1 - alpha) + b * alpha);
+                        }
+                    }
+                }
+            }
+
