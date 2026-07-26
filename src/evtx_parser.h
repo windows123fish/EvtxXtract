@@ -99,6 +99,32 @@ class EvtxParser {
    */
   const std::string& get_last_error() const noexcept;
 
+  // Phase 2: Event Record Parsing
+  
+  /**
+   * @brief Parse all event records from the file
+   * 
+   * @param max_records Maximum number of records to parse (0 = all)
+   * @return Vector of parsed event records
+   */
+  std::vector<EventRecord> parse_all_events(size_t max_records = 0);
+
+  /**
+   * @brief Parse event records from a specific chunk
+   * 
+   * @param chunk_index Index of the chunk to parse
+   * @param max_records Maximum number of records to parse (0 = all)
+   * @return Vector of parsed event records
+   */
+  std::vector<EventRecord> parse_chunk_events(size_t chunk_index, size_t max_records = 0);
+
+  /**
+   * @brief Get total number of events in the file
+   * 
+   * @return Total event count
+   */
+  uint64_t get_total_event_count() const noexcept;
+
  private:
   /**
    * @brief Set an error message
@@ -106,6 +132,51 @@ class EvtxParser {
    * @param error Error message to store
    */
   void set_error(const std::string& error);
+
+  /**
+   * @brief Parse a single event record from current file position
+   * 
+   * @param chunk_offset Offset of the chunk containing this record
+   * @param record Event record to populate
+   * @return true if parsing succeeded
+   */
+  bool parse_event_record(uint64_t chunk_offset, EventRecord& record);
+
+  /**
+   * @brief Parse binary XML data
+   * 
+   * @param data Binary XML data
+   * @param size Size of the data
+   * @param record Event record to populate with parsed data
+   */
+  void parse_binary_xml(const uint8_t* data, size_t size, EventRecord& record);
+
+  /**
+   * @brief Parse a BXml token
+   * 
+   * @param data Binary data pointer (will be advanced)
+   * @param end End of data
+   * @param record Event record to populate
+   * @param current_element Current XML element name
+   */
+  void parse_bxml_token(const uint8_t*& data, const uint8_t* end, EventRecord& record, std::string& current_element);
+
+  /**
+   * @brief Read a variable-length string from binary XML
+   * 
+   * @param data Binary data pointer (will be advanced)
+   * @param end End of data
+   * @return The parsed string
+   */
+  std::string read_bxml_string(const uint8_t*& data, const uint8_t* end);
+
+  /**
+   * @brief Read a variable-length integer from binary XML
+   * 
+   * @param data Binary data pointer (will be advanced)
+   * @return The parsed integer
+   */
+  uint64_t read_vlq(const uint8_t*& data);
 
   std::string file_path_;
   std::ifstream file_stream_;
