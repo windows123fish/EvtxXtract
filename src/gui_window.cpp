@@ -288,4 +288,4 @@ void GuiWindow::parseSelectedFile() {
     try {
         Evtx::EvtxParser parser(filepath);
         if (!parser.open()) {
-            MessageBoxA(m_hWnd, ("无法打开文件:
+            MessageBoxA(m_hWnd, ("无法打开文件: " + filepath).c_str(), "错误", MB_OK | MB_ICONERROR);
