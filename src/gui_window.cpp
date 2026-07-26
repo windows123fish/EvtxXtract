@@ -495,6 +495,13 @@ LRESULT CALLBACK GuiWindow::s_wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM
 }
 
 LRESULT GuiWindow::wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) {
+    // 优先处理窗口关闭消息，避免被 ImGui 拦截
+    if (msg == WM_CLOSE || msg == WM_DESTROY) {
+        m_isRunning = false;
+        PostQuitMessage(0);
+        return 0;
+    }
+    
     if (ImGui_ImplWin32_WndProcHandler(hWnd, msg, wParam, lParam)) {
         return 0;
     }
