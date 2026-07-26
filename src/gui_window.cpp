@@ -54,3 +54,5 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::string& title, int width, i
         0,
         wc.lpszClassName,
         title.c_str(),
+        WS_OVERLAPPEDWINDOW,
+        CW_USEDEFAULT, CW_USEDEFAULT,
