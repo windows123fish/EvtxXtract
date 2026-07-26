@@ -46,4 +46,6 @@ struct EVT_FILE_HEADER {
   std::array<uint8_t, 8> magic;
 
   /**
-   * @brief File
+   * @brief File format version (4 bytes, little-endian)
+   * 
+   * High 16
