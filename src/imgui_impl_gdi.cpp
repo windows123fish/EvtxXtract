@@ -182,3 +182,4 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
                             unsigned char& dst_b = g_Buffer[idx + 2];
 
                             float alpha = a / 255.0f;
+                            dst_r = (unsigned char)(dst_r * (1 - alpha) + r *
