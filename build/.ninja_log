@@ -10,3 +10,5 @@
 1278	1823	8067539950535133	debug_header.exe	4354c83cef164bb9
 86	1709	8067587906600220	CMakeFiles/EvtxXtract.dir/src/evtx_structs.cpp.obj	15615791e1cad5e3
 55	1907	8067587906286880	CMakeFiles/EvtxXtract.dir/src/evtx_parser.cpp.obj	47ef90daa8bdeddf
+17	2786	8067587905909014	CMakeFiles/EvtxXtract.dir/src/main.cpp.obj	2286aa730f14c03f
+2787	3424	8067587933596228	EvtxXtract.exe	bbfe48aefebc46b5
