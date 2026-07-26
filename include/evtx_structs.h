@@ -142,4 +142,6 @@ struct EVT_FILE_HEADER {
 };
 
 /**
- * @
+ * @brief EVT_CHUNK_HEADER structure
+ * 
+ * Represents the 512-byte
