@@ -254,4 +254,6 @@ void GuiWindow::renderDrawData(ImDrawData* draw_data) {
     }
     
     // Draw to screen
-    HBITMAP oldBitmap = (HBITMAP)SelectObject
+    HBITMAP oldBitmap = (HBITMAP)SelectObject(m_hDC, hBitmap);
+    BitBlt(m_hDC, 0, 0, width, height, NULL, 0, 0, SRCCOPY);
+    Select
