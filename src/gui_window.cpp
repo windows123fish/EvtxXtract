@@ -120,4 +120,5 @@ void GuiWindow::render() {
     ImGui::NewFrame();
     
     // Main window
-    ImGui::SetNextWindowPos(ImVec2
+    ImGui::SetNextWindowPos(ImVec2(0, 0));
+    ImGui::SetNextWindowSize(ImGui::GetIO
