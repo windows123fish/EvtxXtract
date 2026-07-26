@@ -15,4 +15,5 @@ void print_hex_dump(const uint8_t* data, size_t size) {
     }
     
     // Fill remaining space
-    for (size_t j
+    for (size_t j = size - i; j < 16; ++j) {
+      std::cout
