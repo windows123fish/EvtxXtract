@@ -40,4 +40,7 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::string& title, int width, i
     wc.hInstance     = hInstance;
     wc.hCursor       = LoadCursor(NULL, IDC_ARROW);
     wc.hbrBackground = (HBRUSH)GetStockObject(BLACK_BRUSH);
-    wc.lpszClassName = "Ev
+    wc.lpszClassName = "EvtxXtract_GUI_Class";
+    
+    if (!RegisterClassExA(&wc)) {
+        MessageBoxA(NULL, "窗口类注册失败", "错误", MB_OK | MB_
