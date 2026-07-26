@@ -271,4 +271,5 @@ constexpr std::array<uint8_t, 8> EVTX_CHUNK_MAGIC = {
     'E', 'l', 'f', 'C', 'h', 'n', 'k', 0x00
 };
 
-// Compile-time
+// Compile-time size validation
+static_assert(sizeof(EVT_FILE_HEADER) == EVTX_FILE_HEADER_SIZE,
