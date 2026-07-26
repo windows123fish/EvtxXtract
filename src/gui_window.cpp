@@ -189,4 +189,4 @@ void GuiWindow::renderFileInfo() {
     ImGui::SameLine();
     ImGui::BeginChild("文件信息", ImVec2(0, ImGui::GetWindowHeight() - 100), true);
     
-    ImGui::TextCol
+    ImGui::TextColored(ImVec4(0.6f, 0.8f, 1.
