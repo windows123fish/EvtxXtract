@@ -24,4 +24,7 @@ namespace Evtx {
  * 0x0018 | 8    | oldest_chunk_offset
  * 0x0020 | 8    | newest_chunk_offset
  * 0x0028 | 4    | checksum
- * 0x002C | 4052 |
+ * 0x002C | 4052 | reserved
+ */
+struct EVT_FILE_HEADER {
+  std::array<uint8_t,
