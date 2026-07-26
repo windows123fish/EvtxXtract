@@ -12,13 +12,15 @@ bool EVT_FILE_HEADER::validate_magic() const noexcept {
 }
 
 uint16_t EVT_FILE_HEADER::get_major_version() const noexcept {
-  // Major version is stored directly in version_major field
-  return version_major;
+  // Version is stored as little-endian 32-bit value:
+  // Major version in high 16 bits, minor in low 16 bits
+  // Since we're on x86 (little-endian), we can directly access
+  return static_cast<uint16_t>((version >> 16) & 0xFFFF);
 }
 
 uint16_t EVT_FILE_HEADER::get_minor_version() const noexcept {
-  // Minor version is stored directly in version_minor field
-  return version_minor;
+  // Minor version is in the low 16 bits of the version field
+  return static_cast<uint16_t>(version & 0xFFFF);
 }
 
 bool EVT_FILE_HEADER::is_dirty() const noexcept {
