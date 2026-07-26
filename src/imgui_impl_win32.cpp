@@ -115,3 +115,5 @@ IMGUI_IMPL_API void ImGui_ImplWin32_NewFrame() {
 
     // Set mouse position
     POINT pos;
+    GetCursorPos(&pos);
+    ScreenToClient(g_hWnd, &pos);
