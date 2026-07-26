@@ -366,4 +366,8 @@ LRESULT GuiWindow::wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) {
             
         case WM_DESTROY:
             m_isRunning = false;
-            PostQ
+            PostQuitMessage(0);
+            return 0;
+            
+        default:
+            return ImGui_
