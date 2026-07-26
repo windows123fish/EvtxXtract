@@ -53,6 +53,13 @@ std::vector<std::string> find_evtx_files(const std::string& directory) {
 }
 
 bool export_event_log(const std::string& log_name, const std::string& output_path) {
+  // 如果输出文件已存在，先删除它
+  try {
+    fs::remove(output_path);
+  } catch (...) {
+    // 删除失败不影响后续操作
+  }
+  
   std::string command = "wevtutil epl " + log_name + " \"" + output_path + "\"";
   int result = std::system(command.c_str());
   return result == 0;
