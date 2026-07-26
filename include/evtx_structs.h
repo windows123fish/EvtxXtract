@@ -144,4 +144,5 @@ struct EVT_FILE_HEADER {
  * 
  * Layout verified against real .evtx files:
  * Offset | Size | Field
- * -------|------
+ * -------|------|------
+ * 0x0000 | 8    | magic ("Elf
