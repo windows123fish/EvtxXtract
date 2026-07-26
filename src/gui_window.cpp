@@ -321,4 +321,8 @@ void GuiWindow::parseSelectedFile() {
                 m_chunkInfo.push_back(info);
             }
             
-            current_offset += chunk
+            current_offset += chunk_size;
+        }
+        
+        // Update file size with actual size
+        m_fileHeader.file
