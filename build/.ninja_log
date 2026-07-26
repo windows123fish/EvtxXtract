@@ -14,3 +14,6 @@
 520	9058	8067599676526970	CMakeFiles/EvtxXtract-GUI.dir/external/imgui/backends/imgui_impl_dx11.cpp.obj	8004c5a49c84d2ec
 144	9108	8067599672763842	CMakeFiles/EvtxXtract-GUI.dir/src/gui_main.cpp.obj	4acbe989a2e5182a
 397	9314	8067599675292072	CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_widgets.cpp.obj	66b37927b1c12c3c
+178	11255	8067599673107726	CMakeFiles/EvtxXtract-GUI.dir/src/gui_window.cpp.obj	e3da86bed4d9a5f8
+281	11671	8067599674146726	CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui.cpp.obj	695f4bc180176d3a
+11671	12494	8067599788030371	EvtxXtract-GUI.exe	eea06b612815ee3c
