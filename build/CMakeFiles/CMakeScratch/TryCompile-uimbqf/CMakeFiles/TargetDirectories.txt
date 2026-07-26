@@ -1,0 +1,3 @@
+D:/main/EvtxXtract/build/CMakeFiles/CMakeScratch/TryCompile-uimbqf/CMakeFiles/cmTC_47fd7.dir
+D:/main/EvtxXtract/build/CMakeFiles/CMakeScratch/TryCompile-uimbqf/CMakeFiles/edit_cache.dir
+D:/main/EvtxXtract/build/CMakeFiles/CMakeScratch/TryCompile-uimbqf/CMakeFiles/rebuild_cache.dir
