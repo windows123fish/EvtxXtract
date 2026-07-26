@@ -1,3 +1,0 @@
-D:/main/EvtxXtract/build/CMakeFiles/CMakeScratch/TryCompile-jiapld/CMakeFiles/cmTC_f7d8c.dir
-D:/main/EvtxXtract/build/CMakeFiles/CMakeScratch/TryCompile-jiapld/CMakeFiles/edit_cache.dir
-D:/main/EvtxXtract/build/CMakeFiles/CMakeScratch/TryCompile-jiapld/CMakeFiles/rebuild_cache.dir
