@@ -47,7 +47,7 @@ add_executable(debug_header
 )
 
 # GUI version with ImGui
-add_executable(EvtxXtract-GUI
+add_executable(EvtxXtract-GUI WIN32
     src/gui_main.cpp
     src/gui_window.cpp
     src/evtx_parser.cpp
@@ -70,6 +70,11 @@ target_link_libraries(EvtxXtract-GUI PRIVATE
     dwmapi
     d3d11
     d3dcompiler
+)
+
+# Force entry point for MSVC
+target_link_options(EvtxXtract-GUI PRIVATE
+    "$<$<CXX_COMPILER_ID:MSVC>:/subsystem:windows /entry:WinMainCRTStartup>"
 )
 
 # Enable testing
