@@ -51,4 +51,7 @@ struct EVT_FILE_HEADER {
    * 
    * Currently always 1
    */
-  uint1
+  uint16_t version_major;
+
+  /**
+   * @brief Minor version (2 bytes,
