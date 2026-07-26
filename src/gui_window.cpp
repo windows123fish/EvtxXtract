@@ -333,4 +333,8 @@ void GuiWindow::parseSelectedFile() {
 }
 
 LRESULT CALLBACK GuiWindow::s_wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) {
-    GuiWindow*
+    GuiWindow* window = nullptr;
+    
+    if (msg == WM_NCCREATE) {
+        CREATESTRUCT* cs = reinterpret_cast<CREATESTRUCT*>(lParam);
+        window = reinterpret_cast<GuiWindow
