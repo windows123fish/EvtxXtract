@@ -137,4 +137,5 @@ struct EVT_FILE_HEADER {
 /**
  * @brief EVT_CHUNK_HEADER structure
  * 
- * Represents the 512
+ * Represents the 512-byte header at the beginning of each 64KB chunk.
+ * The magic number "
