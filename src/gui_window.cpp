@@ -295,4 +295,5 @@ void GuiWindow::parseSelectedFile() {
         
         // Read file header
         if (!parser.read_file_header()) {
-            MessageBoxA(m_hWnd, "读取文件
+            MessageBoxA(m_hWnd, "读取文件头失败", "错误", MB_OK | MB_ICONERROR);
+            m_isParsing =
