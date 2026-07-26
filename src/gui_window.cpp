@@ -332,4 +332,5 @@ void GuiWindow::parseSelectedFile() {
     m_isParsing = false;
 }
 
-LRESULT CALLBACK GuiWindow
+LRESULT CALLBACK GuiWindow::s_wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) {
+    GuiWindow*
