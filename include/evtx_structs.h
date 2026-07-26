@@ -75,4 +75,6 @@ struct EVT_FILE_HEADER {
   uint16_t chunk_count;
 
   /**
-   * @brief CRC32 checksum of the file
+   * @brief CRC32 checksum of the file header (4 bytes, little-endian)
+   */
+  uint32_t checksum
