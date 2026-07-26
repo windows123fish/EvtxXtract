@@ -91,4 +91,8 @@ IMGUI_IMPL_API void ImGui_ImplWin32_Shutdown() {
 // New frame
 IMGUI_IMPL_API void ImGui_ImplWin32_NewFrame() {
     ImGuiIO& io = ImGui::GetIO();
-    IM_ASSERT
+    IM_ASSERT(io.Fonts->IsBuilt() && "Font atlas not built!");
+
+    // Set display size
+    RECT rect;
+    GetClientRect(g_hWnd, &rect);
