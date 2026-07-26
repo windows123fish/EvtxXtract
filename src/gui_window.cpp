@@ -247,4 +247,6 @@ void GuiWindow::renderFileInfo() {
     ImGui::EndChild();
 }
 
-void GuiWindow::renderFooter
+void GuiWindow::renderFooter() {
+    ImGui::Separator();
+    ImGui::Text("EvtxXtract v1
