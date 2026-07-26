@@ -178,4 +178,5 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
                             // Blend with background
                             int idx = (y * width + x) * 4;
                             unsigned char& dst_r = g_Buffer[idx];
-                            unsigned char& dst_g
+                            unsigned char& dst_g = g_Buffer[idx + 1];
+                            unsigned char& dst_b = g_Buffer
