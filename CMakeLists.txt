@@ -24,4 +24,8 @@ set(IMGUI_SRC
     external/imgui/imgui_tables.cpp
     external/imgui/imgui_widgets.cpp
     external/imgui/imgui_demo.cpp
-    external/imgui
+    external/imgui/backends/imgui_impl_win32.cpp
+)
+
+# Add source files for console version
+add_executable(EvtxXtract
