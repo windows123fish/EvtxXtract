@@ -86,4 +86,6 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
     // Create/resize buffer
     int width = (int)draw_data->DisplaySize.x;
     int height = (int)draw_data->DisplaySize.y;
-    if
+    if (!ImGui_ImplGDI_CreateBuffer(width, height))
+        return;
+
