@@ -28,4 +28,5 @@ namespace Evtx {
  * 0x0010 | 8    | oldest_chunk_offset
  * 0x0018 | 8    | newest_chunk_offset
  * 0x0020 | 4    | version (major << 16 | minor)
- * 0x0024 | 2
+ * 0x0024 | 2    | flags
+ * 0x0026 | 2    | chunk_count
