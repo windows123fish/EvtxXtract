@@ -1,18 +1,10 @@
 # ninja log v7
-10	1729	8067547431644875	CMakeFiles/EvtxXtract.dir/src/main.cpp.obj	b9807664d744cfc6
-62	1248	8067545646678432	CMakeFiles/EvtxXtract.dir/src/evtx_structs.cpp.obj	97469e576bad7707
-38	1300	8067545646428679	CMakeFiles/EvtxXtract.dir/src/evtx_parser.cpp.obj	2f1f17b95d99d674
-1731	2203	8067547448841190	EvtxXtract.exe	c67885f5e99217de
-11	667	8067587843123118	build.ninja	985975f1082a7255
-11	667	8067587842811898	D:/main/EvtxXtract/build/cmake_install.cmake	985975f1082a7255
-11	667	8067587842892506	D:/main/EvtxXtract/build/CTestTestfile.cmake	985975f1082a7255
-9	1276	8067539937854604	CMakeFiles/debug_header.dir/src/debug_header.cpp.obj	f3e5f305ea2f1b5
-1278	1823	8067539950535133	debug_header.exe	4354c83cef164bb9
-86	1709	8067587906600220	CMakeFiles/EvtxXtract.dir/src/evtx_structs.cpp.obj	15615791e1cad5e3
-55	1907	8067587906286880	CMakeFiles/EvtxXtract.dir/src/evtx_parser.cpp.obj	47ef90daa8bdeddf
-17	2786	8067587905909014	CMakeFiles/EvtxXtract.dir/src/main.cpp.obj	2286aa730f14c03f
-2787	3424	8067587933596228	EvtxXtract.exe	bbfe48aefebc46b5
+17	2680	8067588158072333	CMakeFiles/EvtxXtract.dir/src/main.cpp.obj	2286aa730f14c03f
 85	1624	8067588158759685	CMakeFiles/EvtxXtract.dir/src/evtx_structs.cpp.obj	15615791e1cad5e3
 54	1779	8067588158438470	CMakeFiles/EvtxXtract.dir/src/evtx_parser.cpp.obj	47ef90daa8bdeddf
-17	2680	8067588158072333	CMakeFiles/EvtxXtract.dir/src/main.cpp.obj	2286aa730f14c03f
 2680	3322	8067588184697291	EvtxXtract.exe	bbfe48aefebc46b5
+11	667	8067591805807835	build.ninja	985975f1082a7255
+11	667	8067591805311688	D:/main/EvtxXtract/build/cmake_install.cmake	985975f1082a7255
+11	667	8067591805443330	D:/main/EvtxXtract/build/CTestTestfile.cmake	985975f1082a7255
+9	1276	8067539937854604	CMakeFiles/debug_header.dir/src/debug_header.cpp.obj	f3e5f305ea2f1b5
+1278	1823	8067539950535133	debug_header.exe	4354c83cef164bb9

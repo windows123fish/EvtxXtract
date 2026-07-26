@@ -132,6 +132,135 @@ build debug_header.exe: CXX_EXECUTABLE_LINKER__debug_header_ CMakeFiles/debug_he
   TARGET_PDB = debug_header.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\debug_header.dir
 
+# =============================================================================
+# Object build statements for EXECUTABLE target EvtxXtract-GUI
+
+
+#############################################
+# Order-only phony target for EvtxXtract-GUI
+
+build cmake_object_order_depends_target_EvtxXtract-GUI: phony || .
+
+build CMakeFiles/EvtxXtract-GUI.dir/src/gui_main.cpp.obj: CXX_COMPILER__EvtxXtract-GUI_unscanned_ D$:/main/EvtxXtract/src/gui_main.cpp || cmake_object_order_depends_target_EvtxXtract-GUI
+  DEP_FILE = CMakeFiles\EvtxXtract-GUI.dir\src\gui_main.cpp.obj.d
+  FLAGS = -Wall -Wextra -Wpedantic -std=c++20
+  INCLUDES = -ID:/main/EvtxXtract/include -ID:/main/EvtxXtract/external/imgui -ID:/main/EvtxXtract/external/imgui/backends
+  OBJECT_DIR = CMakeFiles\EvtxXtract-GUI.dir
+  OBJECT_FILE_DIR = CMakeFiles\EvtxXtract-GUI.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\EvtxXtract-GUI.dir\
+  TARGET_PDB = EvtxXtract-GUI.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract-GUI.dir
+
+build CMakeFiles/EvtxXtract-GUI.dir/src/gui_window.cpp.obj: CXX_COMPILER__EvtxXtract-GUI_unscanned_ D$:/main/EvtxXtract/src/gui_window.cpp || cmake_object_order_depends_target_EvtxXtract-GUI
+  DEP_FILE = CMakeFiles\EvtxXtract-GUI.dir\src\gui_window.cpp.obj.d
+  FLAGS = -Wall -Wextra -Wpedantic -std=c++20
+  INCLUDES = -ID:/main/EvtxXtract/include -ID:/main/EvtxXtract/external/imgui -ID:/main/EvtxXtract/external/imgui/backends
+  OBJECT_DIR = CMakeFiles\EvtxXtract-GUI.dir
+  OBJECT_FILE_DIR = CMakeFiles\EvtxXtract-GUI.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\EvtxXtract-GUI.dir\
+  TARGET_PDB = EvtxXtract-GUI.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract-GUI.dir
+
+build CMakeFiles/EvtxXtract-GUI.dir/src/evtx_parser.cpp.obj: CXX_COMPILER__EvtxXtract-GUI_unscanned_ D$:/main/EvtxXtract/src/evtx_parser.cpp || cmake_object_order_depends_target_EvtxXtract-GUI
+  DEP_FILE = CMakeFiles\EvtxXtract-GUI.dir\src\evtx_parser.cpp.obj.d
+  FLAGS = -Wall -Wextra -Wpedantic -std=c++20
+  INCLUDES = -ID:/main/EvtxXtract/include -ID:/main/EvtxXtract/external/imgui -ID:/main/EvtxXtract/external/imgui/backends
+  OBJECT_DIR = CMakeFiles\EvtxXtract-GUI.dir
+  OBJECT_FILE_DIR = CMakeFiles\EvtxXtract-GUI.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\EvtxXtract-GUI.dir\
+  TARGET_PDB = EvtxXtract-GUI.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract-GUI.dir
+
+build CMakeFiles/EvtxXtract-GUI.dir/src/evtx_structs.cpp.obj: CXX_COMPILER__EvtxXtract-GUI_unscanned_ D$:/main/EvtxXtract/src/evtx_structs.cpp || cmake_object_order_depends_target_EvtxXtract-GUI
+  DEP_FILE = CMakeFiles\EvtxXtract-GUI.dir\src\evtx_structs.cpp.obj.d
+  FLAGS = -Wall -Wextra -Wpedantic -std=c++20
+  INCLUDES = -ID:/main/EvtxXtract/include -ID:/main/EvtxXtract/external/imgui -ID:/main/EvtxXtract/external/imgui/backends
+  OBJECT_DIR = CMakeFiles\EvtxXtract-GUI.dir
+  OBJECT_FILE_DIR = CMakeFiles\EvtxXtract-GUI.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\EvtxXtract-GUI.dir\
+  TARGET_PDB = EvtxXtract-GUI.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract-GUI.dir
+
+build CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui.cpp.obj: CXX_COMPILER__EvtxXtract-GUI_unscanned_ D$:/main/EvtxXtract/external/imgui/imgui.cpp || cmake_object_order_depends_target_EvtxXtract-GUI
+  DEP_FILE = CMakeFiles\EvtxXtract-GUI.dir\external\imgui\imgui.cpp.obj.d
+  FLAGS = -Wall -Wextra -Wpedantic -std=c++20
+  INCLUDES = -ID:/main/EvtxXtract/include -ID:/main/EvtxXtract/external/imgui -ID:/main/EvtxXtract/external/imgui/backends
+  OBJECT_DIR = CMakeFiles\EvtxXtract-GUI.dir
+  OBJECT_FILE_DIR = CMakeFiles\EvtxXtract-GUI.dir\external\imgui
+  TARGET_COMPILE_PDB = CMakeFiles\EvtxXtract-GUI.dir\
+  TARGET_PDB = EvtxXtract-GUI.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract-GUI.dir
+
+build CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_draw.cpp.obj: CXX_COMPILER__EvtxXtract-GUI_unscanned_ D$:/main/EvtxXtract/external/imgui/imgui_draw.cpp || cmake_object_order_depends_target_EvtxXtract-GUI
+  DEP_FILE = CMakeFiles\EvtxXtract-GUI.dir\external\imgui\imgui_draw.cpp.obj.d
+  FLAGS = -Wall -Wextra -Wpedantic -std=c++20
+  INCLUDES = -ID:/main/EvtxXtract/include -ID:/main/EvtxXtract/external/imgui -ID:/main/EvtxXtract/external/imgui/backends
+  OBJECT_DIR = CMakeFiles\EvtxXtract-GUI.dir
+  OBJECT_FILE_DIR = CMakeFiles\EvtxXtract-GUI.dir\external\imgui
+  TARGET_COMPILE_PDB = CMakeFiles\EvtxXtract-GUI.dir\
+  TARGET_PDB = EvtxXtract-GUI.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract-GUI.dir
+
+build CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_tables.cpp.obj: CXX_COMPILER__EvtxXtract-GUI_unscanned_ D$:/main/EvtxXtract/external/imgui/imgui_tables.cpp || cmake_object_order_depends_target_EvtxXtract-GUI
+  DEP_FILE = CMakeFiles\EvtxXtract-GUI.dir\external\imgui\imgui_tables.cpp.obj.d
+  FLAGS = -Wall -Wextra -Wpedantic -std=c++20
+  INCLUDES = -ID:/main/EvtxXtract/include -ID:/main/EvtxXtract/external/imgui -ID:/main/EvtxXtract/external/imgui/backends
+  OBJECT_DIR = CMakeFiles\EvtxXtract-GUI.dir
+  OBJECT_FILE_DIR = CMakeFiles\EvtxXtract-GUI.dir\external\imgui
+  TARGET_COMPILE_PDB = CMakeFiles\EvtxXtract-GUI.dir\
+  TARGET_PDB = EvtxXtract-GUI.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract-GUI.dir
+
+build CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_widgets.cpp.obj: CXX_COMPILER__EvtxXtract-GUI_unscanned_ D$:/main/EvtxXtract/external/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_EvtxXtract-GUI
+  DEP_FILE = CMakeFiles\EvtxXtract-GUI.dir\external\imgui\imgui_widgets.cpp.obj.d
+  FLAGS = -Wall -Wextra -Wpedantic -std=c++20
+  INCLUDES = -ID:/main/EvtxXtract/include -ID:/main/EvtxXtract/external/imgui -ID:/main/EvtxXtract/external/imgui/backends
+  OBJECT_DIR = CMakeFiles\EvtxXtract-GUI.dir
+  OBJECT_FILE_DIR = CMakeFiles\EvtxXtract-GUI.dir\external\imgui
+  TARGET_COMPILE_PDB = CMakeFiles\EvtxXtract-GUI.dir\
+  TARGET_PDB = EvtxXtract-GUI.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract-GUI.dir
+
+build CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_demo.cpp.obj: CXX_COMPILER__EvtxXtract-GUI_unscanned_ D$:/main/EvtxXtract/external/imgui/imgui_demo.cpp || cmake_object_order_depends_target_EvtxXtract-GUI
+  DEP_FILE = CMakeFiles\EvtxXtract-GUI.dir\external\imgui\imgui_demo.cpp.obj.d
+  FLAGS = -Wall -Wextra -Wpedantic -std=c++20
+  INCLUDES = -ID:/main/EvtxXtract/include -ID:/main/EvtxXtract/external/imgui -ID:/main/EvtxXtract/external/imgui/backends
+  OBJECT_DIR = CMakeFiles\EvtxXtract-GUI.dir
+  OBJECT_FILE_DIR = CMakeFiles\EvtxXtract-GUI.dir\external\imgui
+  TARGET_COMPILE_PDB = CMakeFiles\EvtxXtract-GUI.dir\
+  TARGET_PDB = EvtxXtract-GUI.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract-GUI.dir
+
+build CMakeFiles/EvtxXtract-GUI.dir/external/imgui/backends/imgui_impl_win32.cpp.obj: CXX_COMPILER__EvtxXtract-GUI_unscanned_ D$:/main/EvtxXtract/external/imgui/backends/imgui_impl_win32.cpp || cmake_object_order_depends_target_EvtxXtract-GUI
+  DEP_FILE = CMakeFiles\EvtxXtract-GUI.dir\external\imgui\backends\imgui_impl_win32.cpp.obj.d
+  FLAGS = -Wall -Wextra -Wpedantic -std=c++20
+  INCLUDES = -ID:/main/EvtxXtract/include -ID:/main/EvtxXtract/external/imgui -ID:/main/EvtxXtract/external/imgui/backends
+  OBJECT_DIR = CMakeFiles\EvtxXtract-GUI.dir
+  OBJECT_FILE_DIR = CMakeFiles\EvtxXtract-GUI.dir\external\imgui\backends
+  TARGET_COMPILE_PDB = CMakeFiles\EvtxXtract-GUI.dir\
+  TARGET_PDB = EvtxXtract-GUI.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract-GUI.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target EvtxXtract-GUI
+
+
+#############################################
+# Link the executable EvtxXtract-GUI.exe
+
+build EvtxXtract-GUI.exe: CXX_EXECUTABLE_LINKER__EvtxXtract-GUI_ CMakeFiles/EvtxXtract-GUI.dir/src/gui_main.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/src/gui_window.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/src/evtx_parser.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/src/evtx_structs.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_draw.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_tables.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_widgets.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_demo.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/external/imgui/backends/imgui_impl_win32.cpp.obj
+  FLAGS = -Wall -Wextra -Wpedantic
+  LINK_LIBRARIES = -lgdi32  -luser32  -lshell32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\EvtxXtract-GUI.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\EvtxXtract-GUI.dir\
+  TARGET_FILE = EvtxXtract-GUI.exe
+  TARGET_IMPLIB = libEvtxXtract-GUI.dll.a
+  TARGET_PDB = EvtxXtract-GUI.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract-GUI.dir
+
 
 #############################################
 # Utility command for test
@@ -172,6 +301,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build EvtxXtract: phony EvtxXtract.exe
 
+build EvtxXtract-GUI: phony EvtxXtract-GUI.exe
+
 build debug_header: phony debug_header.exe
 
 # =============================================================================
@@ -182,7 +313,7 @@ build debug_header: phony debug_header.exe
 #############################################
 # Folder: D:/main/EvtxXtract/build
 
-build all: phony EvtxXtract.exe debug_header.exe
+build all: phony EvtxXtract.exe debug_header.exe EvtxXtract-GUI.exe
 
 # =============================================================================
 # Built-in targets
