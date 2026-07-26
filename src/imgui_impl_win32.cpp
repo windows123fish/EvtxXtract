@@ -96,4 +96,7 @@ IMGUI_IMPL_API void ImGui_ImplWin32_NewFrame() {
     // Set display size
     RECT rect;
     GetClientRect(g_hWnd, &rect);
-    io.DisplaySize = ImVec2((float)(rect.right - rect.left), (float
+    io.DisplaySize = ImVec2((float)(rect.right - rect.left), (float)(rect.bottom - rect.top));
+
+    // Set time
+    static double time = 0
