@@ -61,3 +61,6 @@ int main(int argc, char* argv[]) {
     std::cout << buffer[i];
   }
   std::cout << "\n";
+  
+  // Version (0x0008, 4 bytes)
+  uint3
