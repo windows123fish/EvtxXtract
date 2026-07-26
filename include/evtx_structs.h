@@ -100,3 +100,5 @@ struct EVT_FILE_HEADER {
 
   /**
    * @brief Validate the file header magic number
+   * 
+   * @return true if magic matches "ElfFile\x00",
