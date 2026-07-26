@@ -294,3 +294,5 @@ void GuiWindow::parseSelectedFile() {
         }
         
         // Read file header
+        if (!parser.read_file_header()) {
+            MessageBoxA(m_hWnd, "读取文件
