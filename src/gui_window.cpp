@@ -325,4 +325,7 @@ void GuiWindow::parseSelectedFile() {
         }
         
         // Update file size with actual size
-        m_fileHeader.file
+        m_fileHeader.file_size = file_size;
+        
+    } catch (const std::exception& e) {
+        MessageBoxA(m_hWnd, ("解析错误:
