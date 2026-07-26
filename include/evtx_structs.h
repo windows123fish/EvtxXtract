@@ -195,4 +195,7 @@ struct EVT_CHUNK_HEADER {
    * 
    * Currently always 128 (0x80)
    */
-  uint
+  uint32_t header_size;
+
+  /**
+   * @brief Offset of the last event record
