@@ -16,4 +16,4 @@ namespace Evtx {
  * Verified against real .evtx file hex dump:
  * Offset | Size | Field
  * -------|------|------
- * 0x0000 |
+ * 0x0000 | 8    | magic ("ElfFile\x0
