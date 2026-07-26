@@ -45,7 +45,7 @@ std::vector<std::string> find_evtx_files(const std::string& directory) {
       }
     }
   } catch (const fs::filesystem_error& e) {
-    std::cerr << "Error scanning directory: " << e.what() << "\n";
+    std::cerr << "扫描目录时出错: " << e.what() << "\n";
   }
   
   std::sort(files.begin(), files.end());
