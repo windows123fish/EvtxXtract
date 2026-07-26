@@ -135,4 +135,4 @@ static void ImGui_ImplWin32_UpdateMouseCursor() {
         return;
 
     ImGuiMouseCursor imgui_cursor = ImGui::GetMouseCursor();
-    if (imgui_c
+    if (imgui_cursor == ImGuiMouseCursor_None || io.Mouse
