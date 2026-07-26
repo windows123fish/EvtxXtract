@@ -86,3 +86,7 @@ IMGUI_IMPL_API void ImGui_ImplWin32_Shutdown() {
         g_hDC = NULL;
     }
     g_hWnd = NULL;
+}
+
+// New frame
+IMGUI_IMPL_API void ImGui_ImplWin32_
