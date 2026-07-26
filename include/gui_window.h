@@ -20,4 +20,10 @@ public:
     GuiWindow();
     ~GuiWindow();
     
-    bool
+    bool init(HINSTANCE hInstance, const std::string& title, int width, int height);
+    void shutdown();
+    void run();
+    
+private:
+    void render();
+    void
