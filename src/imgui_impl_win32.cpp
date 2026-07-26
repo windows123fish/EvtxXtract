@@ -150,4 +150,7 @@ static void ImGui_ImplWin32_UpdateMouseCursor() {
 
         // Change OS mouse cursor
         if (imgui_cursor != g_LastMouseCursor) {
-            g_LastMouseCursor = img
+            g_LastMouseCursor = imgui_cursor;
+            LPCTSTR cursor_id = IDC_ARROW;
+            switch (imgui_cursor) {
+                case
