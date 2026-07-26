@@ -85,4 +85,6 @@ struct EVT_FILE_HEADER {
   uint64_t oldest_chunk_offset;
 
   /**
-   * @brief Offset of the newest chunk in the file (8 bytes, little
+   * @brief Offset of the newest chunk in the file (8 bytes, little-endian)
+   * 
+   * If no chunks exist, this is set to 0
