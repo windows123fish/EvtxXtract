@@ -94,4 +94,6 @@ struct EVT_FILE_HEADER {
   /**
    * @brief Reserved/unused area (4052 bytes)
    * 
-   * Remaining bytes of the 4KB
+   * Remaining bytes of the 4KB header, typically filled with zeros
+   */
+  std::array<uint8_t, 4
