@@ -8,4 +8,6 @@ static HWND                 g_hWnd = NULL;
 static HDC                  g_hDC = NULL;
 static ImGuiMouseCursor     g_LastMouseCursor = ImGuiMouseCursor_COUNT;
 static bool                 g_bCursorDisabled = false;
-static bool
+static bool                 g_bPrevMouseVisible = true;
+
+//
