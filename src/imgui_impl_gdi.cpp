@@ -96,4 +96,7 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
     ImGuiIO& io = ImGui::GetIO();
     unsigned char* font_pixels = NULL;
     int font_width = 0, font_height = 0, font_bytes_per_pixel = 0;
-    io.Fonts->GetTexDataAsRGBA32(&font_pixels, &font_width, &font_height
+    io.Fonts->GetTexDataAsRGBA32(&font_pixels, &font_width, &font_height, &font_bytes_per_pixel);
+
+    // Create font bitmap if not exists
+    static
