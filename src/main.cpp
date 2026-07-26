@@ -22,15 +22,15 @@ namespace fs = std::filesystem;
  */
 
 void print_usage(const std::string& program_name) {
-  std::cerr << "Usage: " << program_name << " [evtx_file_path]\n\n";
-  std::cerr << "EvtxXtract - High-performance streaming parser for Windows .evtx files\n\n";
-  std::cerr << "Phase 1: File Reconnaissance\n";
-  std::cerr << "  - Validates file header magic number ('ElfFile')\n";
-  std::cerr << "  - Traverses and validates all chunks ('ElfChnk')\n";
-  std::cerr << "  - Displays essential file metadata\n\n";
-  std::cerr << "Arguments:\n";
-  std::cerr << "  <evtx_file_path>  Path to the .evtx file to analyze (optional)\n";
-  std::cerr << "  If no path is provided, automatically scans Windows Event Log directory\n";
+  std::cerr << "用法: " << program_name << " [evtx_file_path]\n\n";
+  std::cerr << "EvtxXtract - 高性能Windows .evtx文件流式解析器\n\n";
+  std::cerr << "阶段1: 文件侦察\n";
+  std::cerr << "  - 验证文件头魔术数 ('ElfFile')\n";
+  std::cerr << "  - 遍历并验证所有块 ('ElfChnk')\n";
+  std::cerr << "  - 显示基本文件元数据\n\n";
+  std::cerr << "参数:\n";
+  std::cerr << "  <evtx_file_path>  要分析的.evtx文件路径（可选）\n";
+  std::cerr << "  如果未提供路径，自动扫描Windows事件日志目录\n";
 }
 
 std::vector<std::string> find_evtx_files(const std::string& directory) {
