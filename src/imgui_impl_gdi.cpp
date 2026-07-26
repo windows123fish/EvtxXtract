@@ -141,4 +141,5 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
 
             // Draw indexed triangles
             for (int i = 0; i < pcmd->ElemCount; i += 3) {
-                const ImDrawIdx idx0 = idx
+                const ImDrawIdx idx0 = idx_buffer[pcmd->IdxOffset + i];
+                const ImDrawIdx idx1 = idx_buffer
