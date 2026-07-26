@@ -49,4 +49,5 @@ struct EVT_FILE_HEADER {
  * 
  * MS-EVTX Section 2.2: Chunk Header Structure (512 bytes)
  * 
- * Verified against real .evtx
+ * Verified against real .evtx file hex dump:
+ * Offset | Size |
