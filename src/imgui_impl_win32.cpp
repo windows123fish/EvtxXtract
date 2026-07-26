@@ -201,4 +201,6 @@ IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARA
         case WM_MOUSEWHEEL:
             io.MouseWheel += (float)GET_WHEEL_DELTA_WPARAM(wParam) / WHEEL_DELTA;
             return 0;
-        case WM_KEY
+        case WM_KEYDOWN:
+            if (wParam < 256)
+                io.KeysDown
