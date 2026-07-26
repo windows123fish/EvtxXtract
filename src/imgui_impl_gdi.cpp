@@ -153,3 +153,5 @@ IMGUI_IMPL_API void ImGui_ImplGDI_RenderDrawData(ImDrawData* draw_data) {
                 const ImVec4& c1 = cmd_list->VtxBuffer[idx1].col;
                 const ImVec4& c2 = cmd_list->VtxBuffer[idx2].col;
 
+                // Simple triangle rasterization
+                // This
