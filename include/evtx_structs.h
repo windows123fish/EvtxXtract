@@ -96,3 +96,6 @@ struct EVT_FILE_HEADER {
  * 
  * Represents the 512-byte header at the beginning of each 64KB chunk.
  * 
+ * Layout verified against real .evtx files:
+ * Offset | Size | Field
+ * ----
