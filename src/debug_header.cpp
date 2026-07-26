@@ -8,4 +8,4 @@ void print_hex_dump(const uint8_t* data, size_t size) {
     std::cout << std::hex << std::setw(8) << std::setfill('0') << i << "  ";
     
     // Print hex values
-    for (size_t j =
+    for (size_t j = 0; j < 16 && i + j < size; ++j) {
