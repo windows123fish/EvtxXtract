@@ -98,3 +98,6 @@ struct EVT_FILE_HEADER {
    */
   uint32_t checksum;
 
+  /**
+   * @brief Reserved/unused area (4068 bytes)
+   *
