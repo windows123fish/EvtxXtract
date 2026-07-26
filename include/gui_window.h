@@ -43,4 +43,8 @@ private:
     
     // File selection
     std::vector<std::string> m_evtxFiles;
-    int m_selected
+    int m_selectedFileIndex;
+    
+    // Parsing state
+    bool m_isParsing;
+    EVT
