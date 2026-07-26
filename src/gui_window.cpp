@@ -214,4 +214,5 @@ void GuiWindow::renderFileInfo() {
         }
         
         ImGui::Text("文件大小: %llu bytes", m_fileHeader.file_size);
-        ImGui::Text("最旧块偏移: 0x%llX", m_fileHeader.oldest_chunk
+        ImGui::Text("最旧块偏移: 0x%llX", m_fileHeader.oldest_chunk_offset);
+        ImGui::Text("最新块偏移: 0x%llX", m
