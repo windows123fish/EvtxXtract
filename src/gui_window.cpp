@@ -14,4 +14,6 @@ GuiWindow::GuiWindow() :
     m_hWnd(nullptr), 
     m_hDC(nullptr), 
     m_isRunning(false),
-    m_selected
+    m_selectedFileIndex(-1),
+    m_isParsing(false),
+    m_validChunkCount(0
