@@ -47,4 +47,8 @@ struct EVT_FILE_HEADER {
   std::array<uint8_t, 8> magic;
 
   /**
-   * @brief Major version (2 bytes, little
+   * @brief Major version (2 bytes, little-endian)
+   * 
+   * Currently always 1
+   */
+  uint1
