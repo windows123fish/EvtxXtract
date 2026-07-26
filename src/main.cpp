@@ -166,7 +166,7 @@ int main(int argc, char* argv[]) {
     
     if (evtx_files.empty()) {
       std::cerr << "\n无法访问事件日志。\n";
-      std::cerr << "请以管理员身份运行此程序，或指定一个文件路径。\n";
+      std::cerr << "请指定一个文件路径，或将.evtx文件复制到可访问的位置。\n";
       std::cerr << "\n用法: " << argv[0] << " <evtx_file_path>\n";
       return 1;
     }
