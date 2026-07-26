@@ -1,3 +1,5 @@
 # ninja log v7
 116	2711	8067617879360541	CMakeFiles/debug_header.dir/src/debug_header.cpp.obj	fc4e5e07b859783f
 87	3047	8067617879059115	CMakeFiles/EvtxXtract.dir/src/evtx_structs.cpp.obj	6766094663e0f613
+48	3496	8067617878677136	CMakeFiles/EvtxXtract.dir/src/evtx_parser.cpp.obj	b7758db2023270eb
+2723	4554	8067617905435854	debug_header.exe	30705854202d94fa
