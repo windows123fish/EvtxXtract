@@ -87,4 +87,6 @@ struct EVT_FILE_HEADER {
   /**
    * @brief CRC32 checksum of the file header (4 bytes, little-endian)
    * 
-   * Computed over bytes 0x0008 through
+   * Computed over bytes 0x0008 through 0x0FFF of the header
+   */
+  uint32_t checksum;
