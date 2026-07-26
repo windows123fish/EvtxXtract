@@ -15,4 +15,6 @@ static WNDCLASSEXA CreateWindowClass(HINSTANCE hInstance) {
     WNDCLASSEXA wc = {0};
     wc.cbSize        = sizeof(WNDCLASSEXA);
     wc.style         = CS_HREDRAW | CS_VREDRAW | CS_OWNDC;
-    wc.lpfnWndProc   = ImGui_ImplWin32_W
+    wc.lpfnWndProc   = ImGui_ImplWin32_WndProcHandler;
+    wc.hInstance     = hInstance;
+    wc.hCursor
