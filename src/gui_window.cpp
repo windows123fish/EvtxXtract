@@ -155,4 +155,9 @@ void GuiWindow::renderDrawData(ImDrawData* draw_data) {
     // Create buffer
     static HBITMAP hBitmap = NULL;
     static unsigned char* buffer = NULL;
-    static int buffer_width = 0, buffer_height = 0
+    static int buffer_width = 0, buffer_height = 0;
+    
+    if (buffer_width != width || buffer_height != height) {
+        if (hBitmap) {
+            DeleteObject(hBitmap);
+            hBitmap = NULL;
