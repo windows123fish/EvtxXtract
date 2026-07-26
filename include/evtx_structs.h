@@ -106,3 +106,6 @@ struct EVT_FILE_HEADER {
   bool validate_magic() const noexcept;
 
   /**
+   * @brief Get the major version number
+   * 
+   * @return Major version
