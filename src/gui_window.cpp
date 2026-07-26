@@ -233,14 +233,14 @@ void GuiWindow::render() {
 }
 
 void GuiWindow::renderFileSelection() {
-    ImGui::BeginChild(u8"文件选择", ImVec2(300, ImGui::GetWindowHeight() - 100), true);
+    ImGui::BeginChild("文件选择", ImVec2(300, ImGui::GetWindowHeight() - 100), true);
     
-    ImGui::TextColored(ImVec4(0.4f, 1.0f, 0.6f, 1.0f), u8"📁 EVTX文件列表");
+    ImGui::TextColored(ImVec4(0.4f, 1.0f, 0.6f, 1.0f), "📁 EVTX文件列表");
     ImGui::Separator();
     
     if (m_evtxFiles.empty()) {
-        ImGui::Text(u8"未找到EVTX文件");
-        if (ImGui::Button(u8"重新扫描")) {
+        ImGui::Text("未找到EVTX文件");
+        if (ImGui::Button("重新扫描")) {
             scanEvtxFiles();
         }
     } else {
@@ -260,7 +260,7 @@ void GuiWindow::renderFileSelection() {
         
         ImGui::Separator();
         
-        if (m_selectedFileIndex >= 0 && ImGui::Button(u8"解析文件")) {
+        if (m_selectedFileIndex >= 0 && ImGui::Button("解析文件")) {
             parseSelectedFile();
         }
     }
