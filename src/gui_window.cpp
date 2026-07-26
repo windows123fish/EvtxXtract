@@ -199,4 +199,5 @@ void GuiWindow::renderFileInfo() {
         ImGui::ProgressBar(0.5f, ImVec2(-1, 20), "处理中");
     } else {
         // Show file header info
-        ImGui::Text("魔术数: %s",
+        ImGui::Text("魔术数: %s", m_fileHeader.is_valid() ? "有效 (ElfFile)" : "无效");
+        
