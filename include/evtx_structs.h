@@ -215,4 +215,7 @@ struct EVT_CHUNK_HEADER {
   /**
    * @brief Unknown field (4 bytes)
    */
-  uint32
+  uint32_t unknown1;
+
+  /**
+   * @brief Chunk flags (4 bytes, little
