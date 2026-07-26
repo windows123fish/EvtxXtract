@@ -63,6 +63,14 @@ void analyze_file(const std::string& file_path) {
   std::cout << "=========================================\n";
   std::cout << "正在分析文件: " << file_path << "\n\n";
 
+  // 获取实际文件大小
+  uint64_t actual_file_size = 0;
+  try {
+    actual_file_size = fs::file_size(file_path);
+  } catch (...) {
+    actual_file_size = 0;
+  }
+
   try {
     Evtx::EvtxParser parser(file_path);
 
@@ -110,8 +118,7 @@ void analyze_file(const std::string& file_path) {
     std::cout << "状态: " << (file_header.validate_magic() ? "有效" : "无效") << "\n";
     std::cout << "版本: " << file_header.get_major_version() << "." << file_header.get_minor_version() << "\n";
     std::cout << "脏标记: " << (file_header.is_dirty() ? "已设置（文件可能已损坏）" : "未设置") << "\n";
-    std::cout << "文件大小: " << file_header.file_size << " 字节\n";
-    std::cout << "预期块数: " << file_header.chunk_count << "\n";
+    std::cout << "文件大小: " << actual_file_size << " 字节\n";
     std::cout << "已验证块数: " << valid_chunk_count << "\n";
 
     parser.close();
