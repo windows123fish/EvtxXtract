@@ -253,3 +253,5 @@ void GuiWindow::renderDrawData(ImDrawData* draw_data) {
         }
     }
     
+    // Draw to screen
+    HBITMAP oldBitmap = (HBITMAP)SelectObject
