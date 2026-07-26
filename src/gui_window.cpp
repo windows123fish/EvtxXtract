@@ -359,4 +359,8 @@ LRESULT GuiWindow::wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) {
             
         case WM_KEYDOWN:
             if (wParam == VK_ESCAPE) {
-                m_isRunning = false
+                m_isRunning = false;
+                PostQuitMessage(0);
+            }
+            return 0;
+            
