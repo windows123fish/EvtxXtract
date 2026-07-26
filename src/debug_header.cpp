@@ -40,4 +40,5 @@ int main(int argc, char* argv[]) {
     return 1;
   }
 
-  std::
+  std::ifstream file(argv[1], std::ios::binary);
+  if (!file) {
