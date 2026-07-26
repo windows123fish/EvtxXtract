@@ -37,3 +37,7 @@ namespace Evtx {
  * 0x002C | 4068 | reserved
  * -------|------|------
  * Total  | 4096 |
+ */
+struct EVT_FILE_HEADER {
+  /**
+   * @brief Magic number: "
