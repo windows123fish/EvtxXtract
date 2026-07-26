@@ -169,4 +169,6 @@ struct EVT_FILE_HEADER {
  * -------|------|------
  * Total  | 512  |
  */
-struct EVT_CHUNK_HEADER
+struct EVT_CHUNK_HEADER {
+  /**
+   * @brief Magic number: "ElfChnk\x00
