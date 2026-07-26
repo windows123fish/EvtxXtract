@@ -69,3 +69,6 @@ IMGUI_IMPL_API bool ImGui_ImplWin32_Init(HWND hWnd) {
     g_hDC = GetDC(hWnd);
     
     ImGui::CreateContext();
+    ImGuiIO& io = ImGui::GetIO();
+    
+    // Setup back-end capabilities flags
