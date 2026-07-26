@@ -70,4 +70,4 @@ int main(int argc, char* argv[]) {
   
   // Flags (0x000C, 2 bytes)
   uint16_t flags = *reinterpret_cast<uint16_t*>(&buffer[0x0C]);
-  std::cout << "[0x000C-0
+  std::cout << "[0x000C-0x000D] Flags: 0x" << std::hex << flags << "\
