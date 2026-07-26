@@ -15,4 +15,9 @@ struct ChunkInfo {
     uint32_t checksum;
 };
 
-class
+class GuiWindow {
+public:
+    GuiWindow();
+    ~GuiWindow();
+    
+    bool
