@@ -1,4 +1,4 @@
-#include "../include/evtx_structs.h"
+#include "evtx_structs.h"
 #include <cstring>
 #include <iomanip>
 #include <sstream>
