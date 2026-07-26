@@ -28,3 +28,7 @@ GuiWindow::GuiWindow() :
 }
 
 GuiWindow::~GuiWindow() {
+    shutdown();
+}
+
+bool GuiWindow::init(HINSTANCE hInstance, const std::
