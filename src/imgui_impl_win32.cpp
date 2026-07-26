@@ -148,3 +148,5 @@ static void ImGui_ImplWin32_UpdateMouseCursor() {
             ShowCursor(true);
         }
 
+        // Change OS mouse cursor
+        if (imgui_cursor != g_LastMouseCursor)
