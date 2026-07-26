@@ -128,4 +128,6 @@ struct EVT_CHUNK_HEADER {
   uint32_t events_checksum;
   uint32_t unknown1;
   uint32_t flags;
-  uint32_t
+  uint32_t chunk_checksum;
+  uint32_t string_offset_array_offset;
+  std::array
