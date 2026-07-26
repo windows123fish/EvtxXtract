@@ -22,3 +22,5 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     return 0;
 }
 
+// DllMain - required for Windows DLL/EXE
+BOOL APIENTRY DllMain(H
