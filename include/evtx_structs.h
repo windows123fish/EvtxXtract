@@ -43,4 +43,7 @@ struct EVT_FILE_HEADER {
    * 
    * Must be exactly {0x45, 0x6C, 0x66, 0x46, 0x69, 0x6C, 0x65, 0x00}
    */
-  std::array<uint8_t, 8> magic
+  std::array<uint8_t, 8> magic;
+
+  /**
+   * @brief File
