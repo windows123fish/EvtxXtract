@@ -40,4 +40,5 @@ namespace Evtx {
 struct EVT_FILE_HEADER {
   /**
    * @brief Magic number: "ElfFile\x00" (8 bytes)
-   *
+   * 
+   * Must be exactly {0x45, 0x6C, 0
