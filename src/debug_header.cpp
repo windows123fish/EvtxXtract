@@ -88,4 +88,5 @@ int main(int argc, char* argv[]) {
   uint64_t newest_offset = *reinterpret_cast<uint64_t*>(&buffer[0x20]);
   std::cout << "[0x0020-0x0027] Newest Chunk Offset: 0x" << std::hex << newest_offset << "\n";
   
-  // Checksum (0x0028,
+  // Checksum (0x0028, 4 bytes)
+  uint32_t
