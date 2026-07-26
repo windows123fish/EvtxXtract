@@ -311,7 +311,7 @@ void GuiWindow::renderFileInfo() {
         ImGui::Text("校验和: 0x%08X", m_fileHeader.checksum);
         
         ImGui::Separator();
-        ImGui::TextColored(ImVec4(0.6f, 0.8f, 1.0f, 1.0f), "📦 块信息");
+        ImGui::TextColored(ImVec4(0.6f, 0.8f, 1.0f, 1.0f), "块信息");
         
         if (m_chunkInfo.empty()) {
             ImGui::Text("未解析块信息");
