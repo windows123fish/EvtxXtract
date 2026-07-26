@@ -219,4 +219,5 @@ void GuiWindow::renderFileInfo() {
         ImGui::Text("校验和: 0x%08X", m_fileHeader.checksum);
         
         // Show chunk info
-        ImGui::
+        ImGui::Separator();
+        ImGui::TextColored(
