@@ -9,3 +9,6 @@
 222	6700	8067594788279999	CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_widgets.cpp.obj	66b37927b1c12c3c
 128	8577	8067594787342787	CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui.cpp.obj	695f4bc180176d3a
 17	5144	8067595176790915	CMakeFiles/EvtxXtract-GUI.dir/src/gui_window.cpp.obj	e3da86bed4d9a5f8
+11	520	8067595390516493	build.ninja	985975f1082a7255
+11	520	8067595390516493	D:/main/EvtxXtract/build/cmake_install.cmake	985975f1082a7255
+11	520	8067595390516493	D:/main/EvtxXtract/build/CTestTestfile.cmake	985975f1082a7255

@@ -50,8 +50,6 @@ build CMakeFiles/EvtxXtract.dir/src/main.cpp.obj: CXX_COMPILER__EvtxXtract_unsca
   INCLUDES = -ID:/main/EvtxXtract/include
   OBJECT_DIR = CMakeFiles\EvtxXtract.dir
   OBJECT_FILE_DIR = CMakeFiles\EvtxXtract.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\EvtxXtract.dir\
-  TARGET_PDB = EvtxXtract.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract.dir
 
 build CMakeFiles/EvtxXtract.dir/src/evtx_parser.cpp.obj: CXX_COMPILER__EvtxXtract_unscanned_ D$:/main/EvtxXtract/src/evtx_parser.cpp || cmake_object_order_depends_target_EvtxXtract
@@ -60,8 +58,6 @@ build CMakeFiles/EvtxXtract.dir/src/evtx_parser.cpp.obj: CXX_COMPILER__EvtxXtrac
   INCLUDES = -ID:/main/EvtxXtract/include
   OBJECT_DIR = CMakeFiles\EvtxXtract.dir
   OBJECT_FILE_DIR = CMakeFiles\EvtxXtract.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\EvtxXtract.dir\
-  TARGET_PDB = EvtxXtract.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract.dir
 
 build CMakeFiles/EvtxXtract.dir/src/evtx_structs.cpp.obj: CXX_COMPILER__EvtxXtract_unscanned_ D$:/main/EvtxXtract/src/evtx_structs.cpp || cmake_object_order_depends_target_EvtxXtract
@@ -70,8 +66,6 @@ build CMakeFiles/EvtxXtract.dir/src/evtx_structs.cpp.obj: CXX_COMPILER__EvtxXtra
   INCLUDES = -ID:/main/EvtxXtract/include
   OBJECT_DIR = CMakeFiles\EvtxXtract.dir
   OBJECT_FILE_DIR = CMakeFiles\EvtxXtract.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\EvtxXtract.dir\
-  TARGET_PDB = EvtxXtract.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract.dir
 
 
@@ -88,10 +82,9 @@ build EvtxXtract.exe: CXX_EXECUTABLE_LINKER__EvtxXtract_ CMakeFiles/EvtxXtract.d
   OBJECT_DIR = CMakeFiles\EvtxXtract.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\EvtxXtract.dir\
   TARGET_FILE = EvtxXtract.exe
   TARGET_IMPLIB = libEvtxXtract.dll.a
-  TARGET_PDB = EvtxXtract.pdb
+  TARGET_PDB = EvtxXtract.exe.dbg
   TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract.dir
 
 # =============================================================================
@@ -108,8 +101,6 @@ build CMakeFiles/debug_header.dir/src/debug_header.cpp.obj: CXX_COMPILER__debug_
   FLAGS = -Wall -Wextra -Wpedantic -std=c++20
   OBJECT_DIR = CMakeFiles\debug_header.dir
   OBJECT_FILE_DIR = CMakeFiles\debug_header.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\debug_header.dir\
-  TARGET_PDB = debug_header.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\debug_header.dir
 
 
@@ -126,10 +117,9 @@ build debug_header.exe: CXX_EXECUTABLE_LINKER__debug_header_ CMakeFiles/debug_he
   OBJECT_DIR = CMakeFiles\debug_header.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\debug_header.dir\
   TARGET_FILE = debug_header.exe
   TARGET_IMPLIB = libdebug_header.dll.a
-  TARGET_PDB = debug_header.pdb
+  TARGET_PDB = debug_header.exe.dbg
   TARGET_SUPPORT_DIR = CMakeFiles\debug_header.dir
 
 # =============================================================================
@@ -147,8 +137,6 @@ build CMakeFiles/EvtxXtract-GUI.dir/src/gui_main.cpp.obj: CXX_COMPILER__EvtxXtra
   INCLUDES = -ID:/main/EvtxXtract/include -ID:/main/EvtxXtract/external/imgui -ID:/main/EvtxXtract/external/imgui/backends
   OBJECT_DIR = CMakeFiles\EvtxXtract-GUI.dir
   OBJECT_FILE_DIR = CMakeFiles\EvtxXtract-GUI.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\EvtxXtract-GUI.dir\
-  TARGET_PDB = EvtxXtract-GUI.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract-GUI.dir
 
 build CMakeFiles/EvtxXtract-GUI.dir/src/gui_window.cpp.obj: CXX_COMPILER__EvtxXtract-GUI_unscanned_ D$:/main/EvtxXtract/src/gui_window.cpp || cmake_object_order_depends_target_EvtxXtract-GUI
@@ -157,8 +145,6 @@ build CMakeFiles/EvtxXtract-GUI.dir/src/gui_window.cpp.obj: CXX_COMPILER__EvtxXt
   INCLUDES = -ID:/main/EvtxXtract/include -ID:/main/EvtxXtract/external/imgui -ID:/main/EvtxXtract/external/imgui/backends
   OBJECT_DIR = CMakeFiles\EvtxXtract-GUI.dir
   OBJECT_FILE_DIR = CMakeFiles\EvtxXtract-GUI.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\EvtxXtract-GUI.dir\
-  TARGET_PDB = EvtxXtract-GUI.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract-GUI.dir
 
 build CMakeFiles/EvtxXtract-GUI.dir/src/evtx_parser.cpp.obj: CXX_COMPILER__EvtxXtract-GUI_unscanned_ D$:/main/EvtxXtract/src/evtx_parser.cpp || cmake_object_order_depends_target_EvtxXtract-GUI
@@ -167,8 +153,6 @@ build CMakeFiles/EvtxXtract-GUI.dir/src/evtx_parser.cpp.obj: CXX_COMPILER__EvtxX
   INCLUDES = -ID:/main/EvtxXtract/include -ID:/main/EvtxXtract/external/imgui -ID:/main/EvtxXtract/external/imgui/backends
   OBJECT_DIR = CMakeFiles\EvtxXtract-GUI.dir
   OBJECT_FILE_DIR = CMakeFiles\EvtxXtract-GUI.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\EvtxXtract-GUI.dir\
-  TARGET_PDB = EvtxXtract-GUI.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract-GUI.dir
 
 build CMakeFiles/EvtxXtract-GUI.dir/src/evtx_structs.cpp.obj: CXX_COMPILER__EvtxXtract-GUI_unscanned_ D$:/main/EvtxXtract/src/evtx_structs.cpp || cmake_object_order_depends_target_EvtxXtract-GUI
@@ -177,8 +161,6 @@ build CMakeFiles/EvtxXtract-GUI.dir/src/evtx_structs.cpp.obj: CXX_COMPILER__Evtx
   INCLUDES = -ID:/main/EvtxXtract/include -ID:/main/EvtxXtract/external/imgui -ID:/main/EvtxXtract/external/imgui/backends
   OBJECT_DIR = CMakeFiles\EvtxXtract-GUI.dir
   OBJECT_FILE_DIR = CMakeFiles\EvtxXtract-GUI.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\EvtxXtract-GUI.dir\
-  TARGET_PDB = EvtxXtract-GUI.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract-GUI.dir
 
 build CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui.cpp.obj: CXX_COMPILER__EvtxXtract-GUI_unscanned_ D$:/main/EvtxXtract/external/imgui/imgui.cpp || cmake_object_order_depends_target_EvtxXtract-GUI
@@ -187,8 +169,6 @@ build CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui.cpp.obj: CXX_COMPILER__
   INCLUDES = -ID:/main/EvtxXtract/include -ID:/main/EvtxXtract/external/imgui -ID:/main/EvtxXtract/external/imgui/backends
   OBJECT_DIR = CMakeFiles\EvtxXtract-GUI.dir
   OBJECT_FILE_DIR = CMakeFiles\EvtxXtract-GUI.dir\external\imgui
-  TARGET_COMPILE_PDB = CMakeFiles\EvtxXtract-GUI.dir\
-  TARGET_PDB = EvtxXtract-GUI.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract-GUI.dir
 
 build CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_draw.cpp.obj: CXX_COMPILER__EvtxXtract-GUI_unscanned_ D$:/main/EvtxXtract/external/imgui/imgui_draw.cpp || cmake_object_order_depends_target_EvtxXtract-GUI
@@ -197,8 +177,6 @@ build CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_draw.cpp.obj: CXX_COMPI
   INCLUDES = -ID:/main/EvtxXtract/include -ID:/main/EvtxXtract/external/imgui -ID:/main/EvtxXtract/external/imgui/backends
   OBJECT_DIR = CMakeFiles\EvtxXtract-GUI.dir
   OBJECT_FILE_DIR = CMakeFiles\EvtxXtract-GUI.dir\external\imgui
-  TARGET_COMPILE_PDB = CMakeFiles\EvtxXtract-GUI.dir\
-  TARGET_PDB = EvtxXtract-GUI.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract-GUI.dir
 
 build CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_tables.cpp.obj: CXX_COMPILER__EvtxXtract-GUI_unscanned_ D$:/main/EvtxXtract/external/imgui/imgui_tables.cpp || cmake_object_order_depends_target_EvtxXtract-GUI
@@ -207,8 +185,6 @@ build CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_tables.cpp.obj: CXX_COM
   INCLUDES = -ID:/main/EvtxXtract/include -ID:/main/EvtxXtract/external/imgui -ID:/main/EvtxXtract/external/imgui/backends
   OBJECT_DIR = CMakeFiles\EvtxXtract-GUI.dir
   OBJECT_FILE_DIR = CMakeFiles\EvtxXtract-GUI.dir\external\imgui
-  TARGET_COMPILE_PDB = CMakeFiles\EvtxXtract-GUI.dir\
-  TARGET_PDB = EvtxXtract-GUI.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract-GUI.dir
 
 build CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_widgets.cpp.obj: CXX_COMPILER__EvtxXtract-GUI_unscanned_ D$:/main/EvtxXtract/external/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_EvtxXtract-GUI
@@ -217,8 +193,6 @@ build CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_widgets.cpp.obj: CXX_CO
   INCLUDES = -ID:/main/EvtxXtract/include -ID:/main/EvtxXtract/external/imgui -ID:/main/EvtxXtract/external/imgui/backends
   OBJECT_DIR = CMakeFiles\EvtxXtract-GUI.dir
   OBJECT_FILE_DIR = CMakeFiles\EvtxXtract-GUI.dir\external\imgui
-  TARGET_COMPILE_PDB = CMakeFiles\EvtxXtract-GUI.dir\
-  TARGET_PDB = EvtxXtract-GUI.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract-GUI.dir
 
 build CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_demo.cpp.obj: CXX_COMPILER__EvtxXtract-GUI_unscanned_ D$:/main/EvtxXtract/external/imgui/imgui_demo.cpp || cmake_object_order_depends_target_EvtxXtract-GUI
@@ -227,8 +201,6 @@ build CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_demo.cpp.obj: CXX_COMPI
   INCLUDES = -ID:/main/EvtxXtract/include -ID:/main/EvtxXtract/external/imgui -ID:/main/EvtxXtract/external/imgui/backends
   OBJECT_DIR = CMakeFiles\EvtxXtract-GUI.dir
   OBJECT_FILE_DIR = CMakeFiles\EvtxXtract-GUI.dir\external\imgui
-  TARGET_COMPILE_PDB = CMakeFiles\EvtxXtract-GUI.dir\
-  TARGET_PDB = EvtxXtract-GUI.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract-GUI.dir
 
 build CMakeFiles/EvtxXtract-GUI.dir/external/imgui/backends/imgui_impl_win32.cpp.obj: CXX_COMPILER__EvtxXtract-GUI_unscanned_ D$:/main/EvtxXtract/external/imgui/backends/imgui_impl_win32.cpp || cmake_object_order_depends_target_EvtxXtract-GUI
@@ -237,8 +209,6 @@ build CMakeFiles/EvtxXtract-GUI.dir/external/imgui/backends/imgui_impl_win32.cpp
   INCLUDES = -ID:/main/EvtxXtract/include -ID:/main/EvtxXtract/external/imgui -ID:/main/EvtxXtract/external/imgui/backends
   OBJECT_DIR = CMakeFiles\EvtxXtract-GUI.dir
   OBJECT_FILE_DIR = CMakeFiles\EvtxXtract-GUI.dir\external\imgui\backends
-  TARGET_COMPILE_PDB = CMakeFiles\EvtxXtract-GUI.dir\
-  TARGET_PDB = EvtxXtract-GUI.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract-GUI.dir
 
 
@@ -251,14 +221,13 @@ build CMakeFiles/EvtxXtract-GUI.dir/external/imgui/backends/imgui_impl_win32.cpp
 
 build EvtxXtract-GUI.exe: CXX_EXECUTABLE_LINKER__EvtxXtract-GUI_ CMakeFiles/EvtxXtract-GUI.dir/src/gui_main.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/src/gui_window.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/src/evtx_parser.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/src/evtx_structs.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_draw.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_tables.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_widgets.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/external/imgui/imgui_demo.cpp.obj CMakeFiles/EvtxXtract-GUI.dir/external/imgui/backends/imgui_impl_win32.cpp.obj
   FLAGS = -Wall -Wextra -Wpedantic
-  LINK_LIBRARIES = -lgdi32  -luser32  -lshell32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = -lgdi32  -luser32  -lshell32  -ldwmapi  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\EvtxXtract-GUI.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\EvtxXtract-GUI.dir\
   TARGET_FILE = EvtxXtract-GUI.exe
   TARGET_IMPLIB = libEvtxXtract-GUI.dll.a
-  TARGET_PDB = EvtxXtract-GUI.pdb
+  TARGET_PDB = EvtxXtract-GUI.exe.dbg
   TARGET_SUPPORT_DIR = CMakeFiles\EvtxXtract-GUI.dir
 
 
@@ -322,14 +291,14 @@ build all: phony EvtxXtract.exe debug_header.exe EvtxXtract-GUI.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja D$:/main/EvtxXtract/build/cmake_install.cmake D$:/main/EvtxXtract/build/CTestTestfile.cmake: RERUN_CMAKE | CMakeCache.txt CMakeFiles/4.3.3/CMakeCXXCompiler.cmake CMakeFiles/4.3.3/CMakeRCCompiler.cmake CMakeFiles/4.3.3/CMakeSystem.cmake D$:/main/EvtxXtract/CMakeLists.txt D$:/mingw64/share/cmake-4.3/Modules/CMakeCXXCompiler.cmake.in D$:/mingw64/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp D$:/mingw64/share/cmake-4.3/Modules/CMakeCXXInformation.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeCompilerIdDetection.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeDetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeDetermineCompilerSupport.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeDetermineRCCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeGenericSystem.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeInitializeConfigs.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeLanguageInformation.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeNinjaFindMake.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeParseImplicitIncludeInfo.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeParseImplicitLinkInfo.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeParseLibraryArchitecture.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeRCCompiler.cmake.in D$:/mingw64/share/cmake-4.3/Modules/CMakeRCInformation.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeSystem.cmake.in D$:/mingw64/share/cmake-4.3/Modules/CMakeSystemSpecificInformation.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeTestCompilerCommon.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeTestRCCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/ADSP-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/ARMCC-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/ARMClang-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/AppleClang-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/Borland-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompilerInternal.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/Cray-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/CrayClang-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/Diab-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/Embarcadero-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/Fujitsu-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/GHS-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/GNU-CXX-CXXImportStd.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/GNU-CXX.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/GNU.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/HP-CXX-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/IAR-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/Intel-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/MSVC-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/NVHPC-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/NVIDIA-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/OrangeC-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/PGI-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/PathScale-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/Renesas-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/SCO-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/TI-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/TIClang-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/Tasking-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/Watcom-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/XL-CXX-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Internal/CMakeCXXLinkerInformation.cmake D$:/mingw64/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake D$:/mingw64/share/cmake-4.3/Modules/Internal/CMakeDetermineLinkerId.cmake D$:/mingw64/share/cmake-4.3/Modules/Internal/CMakeInspectCXXLinker.cmake D$:/mingw64/share/cmake-4.3/Modules/Internal/FeatureTesting.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Linker/GNU.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Linker/Windows-CXX.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Linker/Windows-GNU-CXX.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Linker/Windows-GNU.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Windows-Determine-CXX.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Windows-GNU-CXX.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Windows-GNU.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Windows-Initialize.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Windows-windres.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Windows.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/WindowsPaths.cmake
+build build.ninja D$:/main/EvtxXtract/build/cmake_install.cmake D$:/main/EvtxXtract/build/CTestTestfile.cmake: RERUN_CMAKE | CMakeCache.txt CMakeFiles/4.3.3/CMakeCXXCompiler.cmake CMakeFiles/4.3.3/CMakeRCCompiler.cmake CMakeFiles/4.3.3/CMakeSystem.cmake D$:/main/EvtxXtract/CMakeLists.txt D$:/mingw64/share/cmake-4.3/Modules/CMakeCXXInformation.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeGenericSystem.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeInitializeConfigs.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeLanguageInformation.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeRCInformation.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeSystemSpecificInformation.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/GNU-CXX.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/GNU.cmake D$:/mingw64/share/cmake-4.3/Modules/Internal/CMakeCXXLinkerInformation.cmake D$:/mingw64/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Linker/GNU.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Linker/Windows-CXX.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Linker/Windows-GNU-CXX.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Linker/Windows-GNU.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Windows-GNU-CXX.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Windows-GNU.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Windows-Initialize.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Windows-windres.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Windows.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/WindowsPaths.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build CMakeCache.txt CMakeFiles/4.3.3/CMakeCXXCompiler.cmake CMakeFiles/4.3.3/CMakeRCCompiler.cmake CMakeFiles/4.3.3/CMakeSystem.cmake D$:/main/EvtxXtract/CMakeLists.txt D$:/mingw64/share/cmake-4.3/Modules/CMakeCXXCompiler.cmake.in D$:/mingw64/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp D$:/mingw64/share/cmake-4.3/Modules/CMakeCXXInformation.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeCompilerIdDetection.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeDetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeDetermineCompilerSupport.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeDetermineRCCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeGenericSystem.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeInitializeConfigs.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeLanguageInformation.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeNinjaFindMake.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeParseImplicitIncludeInfo.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeParseImplicitLinkInfo.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeParseLibraryArchitecture.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeRCCompiler.cmake.in D$:/mingw64/share/cmake-4.3/Modules/CMakeRCInformation.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeSystem.cmake.in D$:/mingw64/share/cmake-4.3/Modules/CMakeSystemSpecificInformation.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeTestCompilerCommon.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeTestRCCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/ADSP-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/ARMCC-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/ARMClang-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/AppleClang-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/Borland-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/Clang-DetermineCompilerInternal.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/Cray-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/CrayClang-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/Diab-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/Embarcadero-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/Fujitsu-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/GHS-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/GNU-CXX-CXXImportStd.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/GNU-CXX.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/GNU.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/HP-CXX-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/IAR-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/Intel-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/MSVC-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/NVHPC-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/NVIDIA-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/OrangeC-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/PGI-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/PathScale-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/Renesas-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/SCO-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/TI-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/TIClang-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/Tasking-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/Watcom-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/XL-CXX-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake D$:/mingw64/share/cmake-4.3/Modules/Internal/CMakeCXXLinkerInformation.cmake D$:/mingw64/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake D$:/mingw64/share/cmake-4.3/Modules/Internal/CMakeDetermineLinkerId.cmake D$:/mingw64/share/cmake-4.3/Modules/Internal/CMakeInspectCXXLinker.cmake D$:/mingw64/share/cmake-4.3/Modules/Internal/FeatureTesting.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Linker/GNU.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Linker/Windows-CXX.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Linker/Windows-GNU-CXX.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Linker/Windows-GNU.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Windows-Determine-CXX.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Windows-GNU-CXX.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Windows-GNU.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Windows-Initialize.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Windows-windres.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Windows.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/WindowsPaths.cmake: phony
+build CMakeCache.txt CMakeFiles/4.3.3/CMakeCXXCompiler.cmake CMakeFiles/4.3.3/CMakeRCCompiler.cmake CMakeFiles/4.3.3/CMakeSystem.cmake D$:/main/EvtxXtract/CMakeLists.txt D$:/mingw64/share/cmake-4.3/Modules/CMakeCXXInformation.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeGenericSystem.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeInitializeConfigs.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeLanguageInformation.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeRCInformation.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeSystemSpecificInformation.cmake D$:/mingw64/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/GNU-CXX.cmake D$:/mingw64/share/cmake-4.3/Modules/Compiler/GNU.cmake D$:/mingw64/share/cmake-4.3/Modules/Internal/CMakeCXXLinkerInformation.cmake D$:/mingw64/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Linker/GNU.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Linker/Windows-CXX.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Linker/Windows-GNU-CXX.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Linker/Windows-GNU.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Windows-GNU-CXX.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Windows-GNU.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Windows-Initialize.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Windows-windres.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/Windows.cmake D$:/mingw64/share/cmake-4.3/Modules/Platform/WindowsPaths.cmake: phony
 
 
 #############################################
