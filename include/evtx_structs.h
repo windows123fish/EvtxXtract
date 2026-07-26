@@ -27,4 +27,5 @@ namespace Evtx {
  * 0x002C | 4052 | reserved
  */
 struct EVT_FILE_HEADER {
-  std::array<uint8_t,
+  std::array<uint8_t, 8> magic;
+  uint32_t
