@@ -141,3 +141,9 @@ void GuiWindow::render() {
     // Custom GDI rendering
     renderDrawData(ImGui::GetDrawData());
 }
+
+void GuiWindow::renderDrawData(ImDrawData* draw_data) {
+    if (!m_hDC || !draw_data)
+        return;
+
+    // Get display size
