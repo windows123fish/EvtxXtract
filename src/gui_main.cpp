@@ -17,4 +17,4 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int) {
     return 0;
 }
 
-BOOL APIENTRY DllMain
+BOOL APIENTRY DllMain(HMODULE, DWORD, LPVOID) {
