@@ -157,3 +157,4 @@ static_assert(sizeof(EVT_FILE_HEADER) == EVTX_FILE_HEADER_SIZE,
 static_assert(sizeof(EVT_CHUNK_HEADER) == EVTX_CHUNK_HEADER_SIZE,
               "EVT_CHUNK_HEADER must be exactly 512 bytes");
 
+}  // namespace Evtx
