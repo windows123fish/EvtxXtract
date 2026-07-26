@@ -228,4 +228,5 @@ void GuiWindow::renderDrawData(ImDrawData* draw_data) {
                         float w0 = ((v1.y - v2.y) * (x - v2.x) + (v2.x - v1.x) * (y - v2.y)) / 
                                    ((v1.y - v2.y) * (v0.x - v2.x) + (v2.x - v1.x) * (v0.y - v2.y));
                         float w1 = ((v2.y - v0.y) * (x - v2.x) + (v0.x - v2.x) * (y - v2.y)) / 
-                                   ((v1.y - v2.y) * (v0.x - v2.x) + (v2.x - v1
+                                   ((v1.y - v2.y) * (v0.x - v2.x) + (v2.x - v1.x) * (v0.y - v2.y));
+                        float w2 = 1
