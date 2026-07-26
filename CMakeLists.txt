@@ -43,29 +43,29 @@ add_executable(debug_header
     src/debug_header.cpp
 )
 
-# GUI version with ImGui
-add_executable(EvtxXtract-GUI
-    src/gui_main.cpp
-    src/gui_window.cpp
-    src/imgui_impl_win32.cpp
-    src/imgui_impl_gdi.cpp
-    src/evtx_parser.cpp
-    src/evtx_structs.cpp
-    ${IMGUI_SRC}
-)
-
-# Include directories for GUI
-target_include_directories(EvtxXtract-GUI PRIVATE
-    include
-    external/imgui
-)
-
-# Link against Win32 libraries
-target_link_libraries(EvtxXtract-GUI PRIVATE
-    gdi32
-    user32
-    shell32
-)
+# GUI version with ImGui (disabled - missing imgui_draw.cpp)
+# add_executable(EvtxXtract-GUI
+#     src/gui_main.cpp
+#     src/gui_window.cpp
+#     src/imgui_impl_win32.cpp
+#     src/imgui_impl_gdi.cpp
+#     src/evtx_parser.cpp
+#     src/evtx_structs.cpp
+#     ${IMGUI_SRC}
+# )
+# 
+# # Include directories for GUI
+# target_include_directories(EvtxXtract-GUI PRIVATE
+#     include
+#     external/imgui
+# )
+# 
+# # Link against Win32 libraries
+# target_link_libraries(EvtxXtract-GUI PRIVATE
+#     gdi32
+#     user32
+#     shell32
+# )
 
 # Enable testing
 enable_testing()
