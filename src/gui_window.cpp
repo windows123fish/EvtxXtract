@@ -145,18 +145,18 @@ bool GuiWindow::init(HINSTANCE hInstance, const std::wstring& title, int width, 
     io.IniFilename = NULL;
 
     // Setup fonts with Chinese support
-    const wchar_t* font_paths[] = {
-        L"C:\\Windows\\Fonts\\msyh.ttc",
-        L"C:\\Windows\\Fonts\\simsun.ttc"
+    const char* font_paths[] = {
+        "C:\\Windows\\Fonts\\msyh.ttc",
+        "C:\\Windows\\Fonts\\simsun.ttc"
     };
     
     ImFont* loaded_font = nullptr;
-    for (const wchar_t* font_path : font_paths) {
+    for (const char* font_path : font_paths) {
         if (fs::exists(font_path)) {
             ImFontConfig config;
             config.MergeMode = false;
             config.GlyphRanges = io.Fonts->GetGlyphRangesChineseFull();
-            loaded_font = io.Fonts->AddFontFromFileTTFW(font_path, 16.0f, &config);
+            loaded_font = io.Fonts->AddFontFromFileTTF(font_path, 16.0f, &config);
             if (loaded_font) {
                 break;
             }
