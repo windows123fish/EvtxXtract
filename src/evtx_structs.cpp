@@ -65,4 +65,57 @@ std::string EVT_CHUNK_HEADER::to_string() const {
   return oss.str();
 }
 
+bool EVT_EVENT_RECORD_HEADER::validate_magic() const noexcept {
+    return magic == EVTX_EVENT_RECORD_MAGIC;
+}
+
+std::string EVT_EVENT_RECORD_HEADER::get_timestamp_string() const {
+    // Convert FILETIME (100-nanosecond intervals since 1601-01-01) to time_t
+    // FILETIME is in little-endian format
+    uint64_t filetime = timestamp;
+    
+    // Convert to time_t (seconds since 1970-01-01)
+    // FILETIME epoch is 1601-01-01, time_t epoch is 1970-01-01
+    // Difference is 11644473600 seconds
+    const uint64_t FILETIME_TO_TIME_T_OFFSET = 11644473600ULL;
+    const uint64_t HUNDRED_NS_PER_SECOND = 10000000ULL;
+    
+    uint64_t seconds_since_epoch = (filetime / HUNDRED_NS_PER_SECOND) - FILETIME_TO_TIME_T_OFFSET;
+    
+    std::time_t tt = static_cast<std::time_t>(seconds_since_epoch);
+    std::tm tm_buf{};
+    
+#ifdef _WIN32
+    gmtime_s(&tm_buf, &tt);
+#else
+    gmtime_r(&tt, &tm_buf);
+#endif
+    
+    std::ostringstream oss;
+    oss << std::setfill('0')
+        << (tm_buf.tm_year + 1900) << "-"
+        << std::setw(2) << (tm_buf.tm_mon + 1) << "-"
+        << std::setw(2) << tm_buf.tm_mday << " "
+        << std::setw(2) << tm_buf.tm_hour << ":"
+        << std::setw(2) << tm_buf.tm_min << ":"
+        << std::setw(2) << tm_buf.tm_sec << " UTC";
+    
+    return oss.str();
+}
+
+std::string EventRecord::to_json() const {
+    std::ostringstream oss;
+    oss << "{\n"
+        << "  \"record_id\": " << record_id << ",\n"
+        << "  \"timestamp\": \"" << timestamp << "\",\n"
+        << "  \"event_id\": " << event_id << ",\n"
+        << "  \"provider_name\": \"" << provider_name << "\",\n"
+        << "  \"level\": \"" << level << "\",\n"
+        << "  \"channel\": \"" << channel << "\",\n"
+        << "  \"computer\": \"" << computer << "\",\n"
+        << "  \"message\": \"" << message << "\"\n"
+        << "}";
+    return oss.str();
+}
+
 }  // namespace Evtx
