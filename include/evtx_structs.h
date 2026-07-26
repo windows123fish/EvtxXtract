@@ -157,4 +157,5 @@ struct EVT_FILE_HEADER {
  * 0x0010 | 8    | last_event_record_number
  * 0x0018 | 8    | first_event_record_id
  * 0x0020 | 8    | last_event_record_id
- * 0x0028 |
+ * 0x0028 | 4    | header_size (always 128 = 0x80)
+ *
