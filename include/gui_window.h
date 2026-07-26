@@ -30,6 +30,9 @@ private:
     void scanEvtxFiles();
     void parseSelectedFile();
     
+    bool isAdmin();
+    bool runAsAdmin();
+    
     LRESULT wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
     static LRESULT CALLBACK s_wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
     
