@@ -233,4 +233,5 @@ void GuiWindow::renderDrawData(ImDrawData* draw_data) {
                         
                         if (w0 >= 0 && w1 >= 0 && w2 >= 0) {
                             const ImVec4& c0 = cmd_list->VtxBuffer[idx0].col;
-                            const ImVec
+                            const ImVec4& c1 = cmd_list->VtxBuffer[idx1].col;
+                            const Im
