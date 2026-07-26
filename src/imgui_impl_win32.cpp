@@ -14,4 +14,4 @@ static bool                 g_bPrevMouseVisible = true;
 static WNDCLASSEXA CreateWindowClass(HINSTANCE hInstance) {
     WNDCLASSEXA wc = {0};
     wc.cbSize        = sizeof(WNDCLASSEXA);
-    wc.style         = CS_H
+    wc.style         = CS_HREDRAW | CS_VREDRAW | CS_
