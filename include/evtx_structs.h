@@ -212,3 +212,7 @@ struct EVT_CHUNK_HEADER {
    */
   uint32_t events_checksum;
 
+  /**
+   * @brief Unknown field (4 bytes)
+   */
+  uint32
