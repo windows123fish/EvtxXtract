@@ -222,4 +222,5 @@ void GuiWindow::renderDrawData(ImDrawData* draw_data) {
                 int max_x = static_cast<int>(std::min(clip_x1, std::max(std::max(v0.x, v1.x), v2.x)));
                 int max_y = static_cast<int>(std::min(clip_y1, std::max(std::max(v0.y, v1.y), v2.y)));
                 
-                for (int y = min_y; y < max_y; y++)
+                for (int y = min_y; y < max_y; y++) {
+                    for (int x = min_x; x < max_x; x++) {
