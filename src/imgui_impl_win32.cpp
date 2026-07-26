@@ -129,4 +129,6 @@ IMGUI_IMPL_API void ImGui_ImplWin32_NewFrame() {
 }
 
 // Update mouse cursor
-static void ImGui_ImplWin32_
+static void ImGui_ImplWin32_UpdateMouseCursor() {
+    ImGuiIO& io = ImGui::GetIO();
+    if
