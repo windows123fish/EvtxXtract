@@ -120,3 +120,6 @@ struct EVT_FILE_HEADER {
   uint16_t get_minor_version() const noexcept;
 
   /**
+   * @brief Check if the dirty flag is set
+   * 
+   * @return true if
