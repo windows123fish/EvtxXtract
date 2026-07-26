@@ -227,4 +227,6 @@ IMGUI_IMPL_API HWND ImGui_ImplWin32_GetHwnd() {
 }
 
 // Get device context
-IMGUI_IMPL_API HDC ImGui
+IMGUI_IMPL_API HDC ImGui_ImplWin32_GetHDC() {
+    return g_hDC;
+}
